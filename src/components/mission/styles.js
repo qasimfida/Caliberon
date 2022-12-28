@@ -41,7 +41,7 @@ export const ImagesBox = styled(Box)({
 
 	"& .absolatedImage": {
 		position: "absolute",
-		"& :first-child": {
+		"& :first-of-type": {
 			width: "280px",
 			height: "278px",
 			textAlign: "center",

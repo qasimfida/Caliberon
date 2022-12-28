@@ -13,7 +13,7 @@ export const StyledTypo = styled(Typography)({
 
 export const ButtonWrapper = styled("div")({
 	marginTop: "50px",
-	"& :first-child": {
+	"& :first-of-type": {
 		marginRight: "10px",
 	},
 });

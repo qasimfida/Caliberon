@@ -8,13 +8,13 @@ export const DetailsWrapper = styled.div`
 	margin-top: 10px;
 `;
 
-export const ServicesDetails = styled("p")((props, { palette }) => ({
+export const ServicesDetails = styled("p")(({ theme }) => ({
 	fontFamily: "Poppins",
 	fontWeight: "300",
 	fontStyle: "normal",
 	fontSize: "16px",
 	marginTop: "11px 0 0 0",
-	color: palette.colors.primary,
+	color: theme.palette.primary,
 	display: "flex",
 	alignItems: "center",
 }));

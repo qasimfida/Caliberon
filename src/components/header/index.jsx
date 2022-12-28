@@ -91,7 +91,10 @@ const Header = () => {
 							}}
 						>
 							{pages.map((item) => (
-								<MenuItem key={item} onClick={() => onClickLink(item.path)}>
+								<MenuItem
+									key={item.path}
+									onClick={() => onClickLink(item.path)}
+								>
 									<Typography textAlign="center">{item.title}</Typography>
 								</MenuItem>
 							))}
@@ -107,7 +110,7 @@ const Header = () => {
 					>
 						{pages.map((item) => (
 							<Button
-								key={item}
+								key={item.path}
 								variant="text"
 								onClick={() => onClickLink(item.path)}
 								className={item.path === active ? "active" : "btn"}
