@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import { Typography, Box, Button, css } from "@mui/material";
+import { Typography, Box, css } from "@mui/material";
 import { sectionVarients } from "../theme/theme";
+import Button from "./button";
 
 export const Section = styled(Box)((props) => ({
 	height: "auto",
@@ -85,4 +86,5 @@ export const MainWrapper = styled(Box)`
 export const SeeAllButton = styled(Button)`
 	margin: 60px auto 0;
 	display: flex;
+	text-transform: unset;
 `;

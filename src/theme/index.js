@@ -8,6 +8,7 @@ let theme = createTheme({
 					props: { variant: "contained", color: "white" },
 					style: {
 						color: "#f54c0a",
+						background: "#fff",
 						textTransform: "none",
 					},
 				},
