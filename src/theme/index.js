@@ -5,11 +5,24 @@ let theme = createTheme({
     MuiButton: {
       variants: [
         {
-          props: { variant: "contained", color: "white" },
+          props: { variant: "contained" },
           style: {
-            color: "#f54c0a",
-            background: "#fff",
+            color: "#fff",
+            background: "#f54c0a",
             textTransform: "none",
+          },
+        },
+        {
+          props: { variant: "outlined" },
+          style: {
+            color: "#000",
+            backgroundColor: "#fff",
+            textTransform: "none",
+            borderColor: "#fff",
+            "&:hover": {
+              borderColor: "#fff",
+              color: "#fff",
+            },
           },
         },
       ],
@@ -27,11 +40,11 @@ let theme = createTheme({
       main: "#fff",
     },
     lightGray: {
-      main: "#748494"
+      main: "#748494",
     },
     black: {
-      main: "#000000"
-    }
+      main: "#000000",
+    },
   },
 });
 export default theme;

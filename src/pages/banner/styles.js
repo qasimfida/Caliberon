@@ -17,11 +17,3 @@ export const ButtonWrapper = styled("div")({
     marginRight: "10px",
   },
 });
-export const StyledButton = styled(Button)(({ theme }) => ({
-  background: theme?.palette?.white?.main,
-  borderColor: theme?.palette?.white?.main,
-  marginLeft: "20px",
-  "&:hover": {
-    background: "#fff6f6",
-  },
-}));

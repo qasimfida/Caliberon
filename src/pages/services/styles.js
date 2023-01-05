@@ -31,7 +31,6 @@ export const MainBox = styled(Box)({
   position: "relative",
 });
 export const ServicesBox = styled(Box)(({ theme }) => ({
-  padding: "200px 0px 150px 0px",
   position: "relative",
   backgroundColor: theme?.palette?.white?.main,
   paddingLeft: "24px",
@@ -51,12 +50,12 @@ export const GuidBox = styled(Box)({
 });
 
 export const GuidContent = styled(Box)(({ theme }) => ({
-  padding: "200px 0px 150px 0px",
   position: "relative",
   backgroundColor: theme?.palette?.white?.main,
   marginLeft: "24px",
   marginRight: "24px",
   marginBottom: "24px",
+  padding: "0 24px",
 }));
 export const CardsBox = styled(Box)({
   position: "relative",

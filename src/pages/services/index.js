@@ -115,7 +115,9 @@ const Services = () => {
           <Details>
             <AboutDesc variant="span">Are you Ready to </AboutDesc>
             <AboutHeading variant="h3">Start with us</AboutHeading>
-            <Button onClick={onClickContact}>Contact Us</Button>
+            <Button variant="outlined" onClick={onClickContact}>
+              Contact Us
+            </Button>
           </Details>
         </Container>
       </ContactDetailsBox>
