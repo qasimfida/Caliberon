@@ -4,14 +4,14 @@ export const DetailsWrapper = styled.div`
   margin-top: 10px;
 `;
 
-export const TestimonialDetails = styled.p`
-  font-family: Poppins;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 16px;
-  margin-top: 11px 0 0 0;
-  color: #54595f;
-`;
+export const TestimonialDetails = styled("p")(({theme}) => ({
+  fontFamily: "Poppins",
+  fontWeight: "300",
+  fontStyle: "normal",
+  fontSize: "16px",
+  marginTop: "11px 0 0 0",
+  color: theme?.palette?.lightGray?.main,
+}));
 
 export const UserName = styled.h4`
   font-family: Poppins;
@@ -33,8 +33,8 @@ export const TestimonialCard = styled("div")({
     zIndex: 0,
   },
 });
-export const TestimonialWrapper = styled("div")({
-  background: "#fff",
+export const TestimonialWrapper = styled("div")(({theme}) => ({
+  background: theme?.palette?.white?.main,
   textAlign: "center",
   display: "flex",
   flexDirection: "column",
@@ -42,16 +42,15 @@ export const TestimonialWrapper = styled("div")({
   padding: "70px 32px 24px",
   margin: "20px 0",
   position: "relative",
-  // boxShadow: "1px 0px 39px 2px #fbb9a0 inset",
   zIndex: 1,
-});
+}));
 
 export const TestimonialContentWrapper = styled("div")({
   position: "relative",
 });
-export const RattingWrapper = styled("div")({
+export const RattingWrapper = styled("div")(({theme}) => ({
   position: "relative",
   "& .MuiRating-root": {
-    color: "#f54c0a",
+    color: theme?.palette?.primary?.main,
   },
-});
+}));

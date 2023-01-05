@@ -8,7 +8,7 @@ export const AboutHeading = styled(Typography)`
   color: #fff;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: ${(props) => (props.variant === "h3" ? "24px" : "")}
+  margin-bottom: ${(props) => (props.variant === "h3" ? "24px" : "")};
 `;
 
 export const AboutDesc = styled(Typography)`
@@ -21,23 +21,24 @@ export const AboutDesc = styled(Typography)`
   margin-bottom: ${(props) => (props.variant === "span" ? "24px" : "40px")};
 `;
 
-export const StyledBox = styled(Box)({
+export const StyledBox = styled(Box)(({ theme }) => ({
   padding: "200px 0px 150px 0px",
-  backgroundColor: "#f54c0a",
+  backgroundColor: theme?.palette?.primary?.main,
   display: "flex",
   position: "relative",
-});
+}));
 export const MainBox = styled(Box)({
   position: "relative",
 });
-export const ServicesBox = styled(Box)({
+export const ServicesBox = styled(Box)(({ theme }) => ({
+  padding: "200px 0px 150px 0px",
   position: "relative",
-  backgroundColor: "#fff",
+  backgroundColor: theme?.palette?.white?.main,
   paddingLeft: "24px",
   paddingRight: "24px",
   paddingBottom: "24px",
-  margin: "3rem 0"
-});
+  margin: "3rem 0",
+}));
 export const GuidBox = styled(Box)({
   width: "100%",
   height: "20rem",
@@ -49,14 +50,14 @@ export const GuidBox = styled(Box)({
   backgroundPosition: "center center",
 });
 
-export const GuidContent = styled(Box)({
+export const GuidContent = styled(Box)(({ theme }) => ({
+  padding: "200px 0px 150px 0px",
   position: "relative",
-  backgroundColor: "#fff",
+  backgroundColor: theme?.palette?.white?.main,
   marginLeft: "24px",
   marginRight: "24px",
   marginBottom: "24px",
-  padding: "0 24px",
-});
+}));
 export const CardsBox = styled(Box)({
   position: "relative",
   padding: "24px 0",
@@ -64,10 +65,10 @@ export const CardsBox = styled(Box)({
 export const Details = styled(Box)({
   textAlign: "center",
 });
-export const ContactDetailsBox = styled(Box)({
+export const ContactDetailsBox = styled(Box)(({ theme }) => ({
   padding: "100px 0px 100px 0px",
-  backgroundColor: "#f54c0a",
+  backgroundColor: theme?.palette?.primary?.main,
   display: "flex",
   alignItems: "center",
   position: "relative",
-});
+}));
