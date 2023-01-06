@@ -17,7 +17,11 @@ import {
   MainWrapper,
 } from "../../components/common";
 import Button from "../../components/button";
-import { SeeMore, Item } from "./styles";
+import Client1 from "../../assests/client1.png";
+import Client2 from "../../assests/client2.png";
+import Client3 from "../../assests/client3.png";
+import Client4 from "../../assests/client4.png";
+import { SeeMore, Item, SponsorsWrapper } from "./styles";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -95,6 +99,20 @@ const HomePage = () => {
       img: Fayyaz,
       userDetails:
         "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
+    },
+  ];
+  const sponsors = [
+    {
+      img: Client1,
+    },
+    {
+      img: Client2,
+    },
+    {
+      img: Client3,
+    },
+    {
+      img: Client4,
     },
   ];
   const ClickServices = () => {
@@ -178,6 +196,14 @@ const HomePage = () => {
           </MainWrapper>
         </Container>
       </Section>
+      <Container>
+        <Heading>Sponsors</Heading>
+        <SponsorsWrapper>
+          {sponsors.map((item, key) => (
+            <img src={item.img} alt="" />
+          ))}
+        </SponsorsWrapper>
+      </Container>
       <Contact />
     </div>
   );
