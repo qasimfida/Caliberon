@@ -4,7 +4,7 @@ import { Typography, Box, Accordion } from "@mui/material";
 export const UserTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "44px",
-  color: theme?.palette?.primary?.main,
+  color: theme?.palette?.white?.main,
   fontWeight: "bold",
 }));
 
@@ -38,13 +38,13 @@ export const MainBox = styled(Box)(({ theme }) => ({
 }));
 export const StyledBox = styled(Box)(({ theme }) => ({
   padding: "100px 0px 100px 0px",
-  backgroundColor: theme?.palette?.white?.main,
+  backgroundColor: theme?.palette?.primary?.main,
   display: "flex",
   position: "relative",
 }));
 export const ContactDetailsBox = styled(Box)(({ theme }) => ({
   padding: "100px 0px 100px 0px",
-  backgroundColor: theme?.palette?.white?.main,
+  backgroundColor: theme?.palette?.primary?.main,
   display: "flex",
   position: "relative",
 }));
