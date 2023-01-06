@@ -22,9 +22,11 @@ export const SponsorsWrapper = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  flexWrap: "wrap",
+  padding: "2rem 16px",
   "& img": {
+    padding: "1rem 0",
     width: "100px",
     height: "100%",
-    padding: "3rem",
   },
 });
