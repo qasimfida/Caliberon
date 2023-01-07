@@ -85,3 +85,22 @@ export const CustomizeAccordion = styled(Accordion)({
     borderBottomRightRadius: "0 !important",
   },
 });
+
+// ProcessBar Title
+
+export const ProgressBarSubHeading = styled(Typography)({
+  padding:"0px 55px",
+	fontFamily: "Poppins",
+	fontSize: "20px",
+	color: "#f54c0a",
+	lineHeight: "4",
+});
+
+export const ProgressBarHeading = styled(Typography)({
+  padding:"0px 55px",
+	fontFamily: "Poppins",
+	fontSize: "44px",
+	color: "#000000",
+	fontWeight: "bold",
+	lineHeight: "1",
+});

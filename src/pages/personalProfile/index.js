@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react'
 import {
   Container,
   Grid,
+  Box,
+  Stack,
   AccordionSummary,
   AccordionDetails,
   Typography,
-} from "@mui/material";
+} from '@mui/material'
 import {
   UserTitle,
   StyledBox,
@@ -14,12 +16,14 @@ import {
   UserData,
   AboutDesc,
   UserSocialIcons,
+  ProgressBarSubHeading,
+  ProgressBarHeading,
   MainBox,
   DiscriptionBox,
   CustomizeAccordion,
   ContactDetailsBox,
-} from "./styles";
-import { useLocation } from "react-router-dom";
+} from './styles'
+import { useLocation } from 'react-router-dom'
 import {
   Instagram,
   LinkedIn,
@@ -27,11 +31,35 @@ import {
   Facebook,
   Phone,
   Mail,
-} from "@mui/icons-material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+} from '@mui/icons-material'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import CircularProgressWithLabel from '../../components/ProgressBar'
 
 const PersonalProfile = () => {
-  const { state } = useLocation();
+  const { state } = useLocation()
+
+  const progressBarData = [
+    {
+      name: 'Wordpress',
+      percentage: 90,
+      id: '1',
+    },
+    {
+      name: 'Frontend',
+      percentage: 50,
+      id: '2',
+    },
+    {
+      name: 'UI/UX',
+      percentage: 40,
+      id: '3',
+    },
+    {
+      name: 'Book Keeping',
+      percentage: 100,
+      id: '4',
+    },
+  ]
   return (
     <MainBox>
       <StyledBox>
@@ -68,6 +96,19 @@ const PersonalProfile = () => {
             exchange.
           </AboutDesc>
         </Container>
+        <Box>
+          <ProgressBarSubHeading>TEAM PROGRESS</ProgressBarSubHeading>
+          <ProgressBarHeading>Meet the Co-Founders</ProgressBarHeading>
+          <Stack direction={'row'}>
+            {progressBarData.map((item, id) => (
+              <CircularProgressWithLabel
+                progressBarName={item.name}
+                progressBarPercent={item.percentage}
+                key={id}
+              />
+            ))}
+          </Stack>
+        </Box>
       </DiscriptionBox>
 
       <Container>
@@ -101,7 +142,7 @@ const PersonalProfile = () => {
         </Container>
       </ContactDetailsBox>
     </MainBox>
-  );
-};
+  )
+}
 
-export default PersonalProfile;
+export default PersonalProfile
