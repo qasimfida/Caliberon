@@ -13,7 +13,7 @@ const ServicesItem = ({ serviceName, key }) => {
     });
   };
   return (
-    <ServicesWrapper key={key} onClick={handleClick}>
+    <ServicesWrapper onClick={handleClick}>
       <UserName>{serviceName}</UserName>
       <ArrowForwardIcon />
     </ServicesWrapper>

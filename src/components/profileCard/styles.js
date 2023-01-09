@@ -30,18 +30,18 @@ export const UserName = styled.h4`
 	line-height: 1.2;
 	margin: 0;
 `;
-export const ProfileWrapper = styled('div')((theme) => ({
+export const ProfileWrapper = styled('div')(({theme: {palette: {white}}}) => ({
 	boxShadow: '0px 0px 6px 3px rgba(82, 67, 67, 0.33)',
 	overflow: "hidden",
 	cursor: "grabbing",
-	background: theme?.palette?.white?.main,
+	background: white?.main,
 }));
-export const UserRole = styled('h4')((theme) => ({
+export const UserRole = styled('h4')(({theme: {palette: {primary}}}) => ({
 	fontFamily: "Poppins",
 	textTransform: "uppercase",
 	fontSize: "1rem",
 	fontWeight: "700",
-	color: theme?.palette?.primary?.main,
+	color: primary?.main,
 	margin: "0 0 5px 0",
 	letterSpacing: "1px",
 }));
