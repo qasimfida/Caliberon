@@ -19,7 +19,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import SendIcon from '@mui/icons-material/Send';
 import { Instagram, LinkedIn, Twitter, Facebook } from '@mui/icons-material';
-import { Section, Heading, Discription, MainWrapper } from '../../components/common';
+import { Section, Heading, Description, MainWrapper } from '../../components/common';
 import { useLocation } from 'react-router-dom';
 
 const ContactForm = () => {
@@ -46,9 +46,9 @@ const ContactForm = () => {
             <Heading variant="h2" color={'primary'} align="center">
               Get in Touch
             </Heading>
-            <Discription color={'primary'} title="subheading" align="center">
+            <Description color={'primary'} title="subheading" align="center">
               We are here to help you
-            </Discription>
+            </Description>
           </>
         )}
         <MainWrapper>
@@ -62,9 +62,9 @@ const ContactForm = () => {
                   {contactDetails.map((item) => (
                     <ContactItem key={item.info}>
                       {item.icon}
-                      <Discription color={'primary'} title="details">
+                      <Description color={'primary'} title="details">
                         {item.info}
-                      </Discription>
+                      </Description>
                     </ContactItem>
                   ))}
                 </ContactDetails>

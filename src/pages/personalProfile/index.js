@@ -15,7 +15,7 @@ import {
   AboutDesc,
   UserSocialIcons,
   MainBox,
-  DiscriptionBox,
+  DescriptionBox,
   CustomizeAccordion,
   ContactDetailsBox,
 } from "./styles";
@@ -52,7 +52,7 @@ const PersonalProfile = () => {
           </Grid>
         </Container>
       </StyledBox>
-      <DiscriptionBox>
+      <DescriptionBox>
         <Container>
           <AboutDesc>
             {state.userName} has a diversified experience of over 25 years
@@ -68,7 +68,7 @@ const PersonalProfile = () => {
             exchange.
           </AboutDesc>
         </Container>
-      </DiscriptionBox>
+      </DescriptionBox>
 
       <Container>
         <CustomizeAccordion>

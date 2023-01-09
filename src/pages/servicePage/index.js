@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MainBox, ServicesItemWrapper } from './styles';
 import MainSection from '../../components/layout/mainSection';
-import { Heading, Discription, MainWrapper } from '../../components/common';
+import { Heading, Description, MainWrapper } from '../../components/common';
 import { Container, Grid } from '@mui/material';
 import ServicesItem from '../../components/serviceItems';
 import Contact from '../../components/contactForm';
@@ -32,16 +32,16 @@ const ServicePage = () => {
           <Grid container spacing={[8]}>
             <Grid item xs={12} sm={6} md={7}>
               <Heading variant="h3">Business Growth Management</Heading>
-              <Discription>
+              <Description>
                 Continually myocardinate holistic mindshare with client-based web services. Assertively e-enable
                 catalysts for change before tested markets. Phosfluorescently maintain wireless scenarios after
                 intermandated applications. Conveniently predominate revolutionary quality vectors through future-proof
                 manufactured products. Enthusiastically transform distinctive collaboration.
-              </Discription>
+              </Description>
             </Grid>
             <Grid item xs={12} sm={6} md={5}>
               <ServicesItemWrapper>
-                <Discription weight="bold">Our Services</Discription>
+                <Description weight="bold">Our Services</Description>
                 {data.map((item, key) => (
                   <div key={key}>
                     <ServicesItem serviceName={item.servicesName} />

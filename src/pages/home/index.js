@@ -7,7 +7,7 @@ import ServicesCard from '../../components/servicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
 import { Container, Grid } from '@mui/material';
 import { services, testimonialsData, users, sponsors } from './data';
-import { Section, Heading, Discription, MainWrapper } from '../../components/common';
+import { Section, Heading, Description, MainWrapper } from '../../components/common';
 import Button from '../../components/button';
 
 import { SeeMore, Item, SponsorsWrapper } from './styles';
@@ -34,9 +34,9 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading>Our Services</Heading>
-          <Discription align="center">
+          <Description align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Discription>
+          </Description>
           <MainWrapper>
             <Grid container spacing={[3]}>
               {services.map((item, key) => (
@@ -61,10 +61,10 @@ const HomePage = () => {
       <Section variant="primary">
         <Container>
           <Heading color="primary">Our Team</Heading>
-          <Discription color="primary" align="center">
+          <Description color="primary" align="center">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Zahid
-          </Discription>
+          </Description>
           <MainWrapper>
             <Grid container spacing={[4]}>
               {users.map((item, key) => (
@@ -91,17 +91,13 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading>Testimonials</Heading>
-          <Discription align="center">Some testimonials from our customers</Discription>
+          <Description align="center">Some testimonials from our customers</Description>
           <MainWrapper>
-            {/* <Grid container spacing={[8]}> */}
             <Slider {...settings}>
               {testimonialsData.map((item, key) => (
-                // <Grid item xs={12} sm={6} md={4} key={key}>
                 <TestimonialsCard name={item.name} comment={item.comment} />
-                // </Grid>
               ))}
             </Slider>
-            {/* </Grid> */}
           </MainWrapper>
         </Container>
       </Section>

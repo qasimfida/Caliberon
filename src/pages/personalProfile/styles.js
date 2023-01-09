@@ -78,7 +78,7 @@ export const ContactDetailsBox = styled(Box)(
     position: 'relative',
   })
 );
-export const DiscriptionBox = styled(Box)({
+export const DescriptionBox = styled(Box)({
   padding: '100px 0px 50px 0px',
 });
 export const UserImage = styled.img`
