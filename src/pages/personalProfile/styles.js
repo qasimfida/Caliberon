@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Typography, Box, Accordion } from "@mui/material";
+import { Typography, Box, Accordion, Paper } from "@mui/material";
 
 export const UserTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
@@ -104,3 +104,11 @@ export const ProgressBarHeading = styled(Typography)({
 	fontWeight: "bold",
 	lineHeight: "1",
 });
+
+// ProgressBar Container 
+export const ProgressContainer = styled(Paper)({
+  display:"flex",
+  justifyContent:"space-evenly",
+  alignItems:"center",
+  marginTop:"60px"
+})

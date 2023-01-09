@@ -1,25 +1,25 @@
 import React from 'react'
 import Box from '@mui/material/Box'
 import { Typography } from '@mui/material'
-import ProgressBarStyled from './styles'
-import { NameProgressBar , Progress } from './styles'
+import StyledProgressBar from './styles'
+import { NameProgressBar , ProgressLabel } from './styles'
 
-const ProgresBar = ({ progressBarName, progressBarPercent }) => {
+const ProgresBar = ({ Labelinstead, percentage,size,thickness }) => {
   return (
-    <ProgressBarStyled>
-      <Progress
+    <StyledProgressBar elevation={0}>
+      <ProgressLabel
         variant="determinate"
-        value={progressBarPercent}
-        size={140}
-        thickness={5}
+        value={percentage}
+        size={size}
+        thickness={thickness}
       />
       <Box>
         <Typography variant="caption" component="div">
-          {`${progressBarPercent}%`}
+          {`${percentage}%`}
         </Typography>
       </Box>
-      <NameProgressBar>{progressBarName}</NameProgressBar>
-    </ProgressBarStyled>
+      <NameProgressBar>{Labelinstead}</NameProgressBar>
+    </StyledProgressBar>
   )
 }
 

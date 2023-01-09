@@ -3,7 +3,6 @@ import {
   Container,
   Grid,
   Box,
-  Stack,
   AccordionSummary,
   AccordionDetails,
   Typography,
@@ -22,6 +21,7 @@ import {
   DiscriptionBox,
   CustomizeAccordion,
   ContactDetailsBox,
+  ProgressContainer
 } from './styles'
 import { useLocation } from 'react-router-dom'
 import {
@@ -99,15 +99,17 @@ const PersonalProfile = () => {
         <Box>
           <ProgressBarSubHeading>TEAM PROGRESS</ProgressBarSubHeading>
           <ProgressBarHeading>Meet the Co-Founders</ProgressBarHeading>
-          <Stack direction={'row'}>
+          <ProgressContainer elevation={0} >
             {progressBarData.map((item, id) => (
               <CircularProgressWithLabel
-                progressBarName={item.name}
-                progressBarPercent={item.percentage}
+              Labelinstead ={item.name}
+              percentage ={item.percentage}
                 key={id}
+                size={140}
+                thickness={5}
               />
             ))}
-          </Stack>
+          </ProgressContainer>
         </Box>
       </DiscriptionBox>
 
