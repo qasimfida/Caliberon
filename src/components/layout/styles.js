@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 import { Typography, Box } from "@mui/material";
 
-export const AboutHeading = styled(Typography)((props) => ({
+export const AboutHeading = styled(Typography)(({ theme }) => ({
   position: "relative",
   fontFamily: "Poppins",
   fontSize: "70px",
-  color: "#fff",
+  color: theme?.palette?.white?.main,
   fontWeight: "bold",
   lineHeight: 1,
   margin: "20px 0",
@@ -16,7 +16,7 @@ export const AboutHeading = styled(Typography)((props) => ({
     position: "absolute",
     display: "block",
     top: 0,
-    backgroundColor: "#fff",
+    backgroundColor: theme?.palette?.white?.main,
     borderRadius: "5px 5px 5px 5px !important",
     width: "3px",
     height: "40px",
@@ -25,17 +25,17 @@ export const AboutHeading = styled(Typography)((props) => ({
   },
 }));
 
-export const MainBox = styled(Box)({
+export const MainBox = styled(Box)(({ theme }) => ({
   paddingTop: "105px",
   paddingBottom: "70px",
-  backgroundColor: "#f54c0a",
+  backgroundColor: theme?.palette?.primary?.main,
   backgroundImage: "linear-gradient(74deg, #f54c0a 40%, #e7cf285c 100%)",
   display: "flex",
   alignItems: "center",
   position: "relative",
-});
+}));
 
-export const Details = styled(Box)({
+export const Details = styled(Box)(({ theme }) => ({
   textAlign: "center",
   "& ol": {
     justifyContent: "center",
@@ -45,16 +45,16 @@ export const Details = styled(Box)({
     "& a": {
       fontSize: "16px",
       "&:hover": {
-        color: "#fff",
+        color: theme?.palette?.white?.main,
         textDecoration: "none",
         fontWeight: "bold",
       },
     },
   },
   "& p": {
-    color: "#fff",
+    color: theme?.palette?.white?.main,
     fontSize: "16px",
     fontWeight: "bold",
     textTransform: "capitalize",
   },
-});
+}));

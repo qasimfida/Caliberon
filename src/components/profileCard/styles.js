@@ -30,21 +30,21 @@ export const UserName = styled.h4`
 	line-height: 1.2;
 	margin: 0;
 `;
-export const ProfileWrapper = styled.div`
-	box-shadow: 0px 0px 6px 3px rgba(82, 67, 67, 0.33);
-	overflow: hidden;
-	cursor: grabbing;
-	background: #fff;
-`;
-export const UserRole = styled.h4`
-	font-family: Poppins;
-	text-transform: uppercase;
-	font-size: 1rem;
-	font-weight: 700;
-	color: #f54c0a;
-	margin: 0 0 5px 0;
-	letter-spacing: 1px;
-`;
+export const ProfileWrapper = styled('div')((theme) => ({
+	boxShadow: '0px 0px 6px 3px rgba(82, 67, 67, 0.33)',
+	overflow: "hidden",
+	cursor: "grabbing",
+	background: theme?.palette?.white?.main,
+}));
+export const UserRole = styled('h4')((theme) => ({
+	fontFamily: "Poppins",
+	textTransform: "uppercase",
+	fontSize: "1rem",
+	fontWeight: "700",
+	color: theme?.palette?.primary?.main,
+	margin: "0 0 5px 0",
+	letterSpacing: "1px",
+}));
 
 export const Image = styled("img")({
 	objectFit: "cover",

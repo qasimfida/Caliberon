@@ -1,105 +1,123 @@
-import Slider from '../../components/slider'
-import { useNavigate } from 'react-router-dom'
-import Contact from '../../components/contactForm'
-import ProfileCard from '../../components/profileCard'
-import Ideate from '../../assests/ideate.png'
-import Business from '../../assests/business.png'
-import Marketing from '../../assests/marketing.png'
-import ServicesCard from '../../components/servicesCard'
-import TestimonialsCard from '../../components/testimonialsCard'
-import { Container, Grid} from '@mui/material'
-import Fayyaz from './../../assests/user.jpeg'
-import MD from './../../assests/md.jpg'
+import Slider from "../../components/slider";
+import { useNavigate } from "react-router-dom";
+import Contact from "../../components/contactForm";
+import ProfileCard from "../../components/profileCard";
+import Ideate from "../../assests/ideate.png";
+import Business from "../../assests/business.png";
+import Marketing from "../../assests/marketing.png";
+import ServicesCard from "../../components/servicesCard";
+import TestimonialsCard from "../../components/testimonialsCard";
+import { Container, Grid } from "@mui/material";
+import Fayyaz from "./../../assests/user.jpeg";
+import MD from "./../../assests/md.jpg";
 import {
   Section,
   Heading,
   Discription,
   MainWrapper,
-  SeeAllButton,
-} from '../../components/common'
-import { SeeMore, Item } from './styles'
+} from "../../components/common";
+import Button from "../../components/button";
+import Client1 from "../../assests/client1.png";
+import Client2 from "../../assests/client2.png";
+import Client3 from "../../assests/client3.png";
+import Client4 from "../../assests/client4.png";
+import { SeeMore, Item, SponsorsWrapper } from "./styles";
 
 const HomePage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const services = [
     {
-      name: 'Ideate',
+      name: "Ideate",
       img: Ideate,
       serviceDetails:
-        'We help you develop creative ideas so that your business can grow more rapidly',
+        "We help you develop creative ideas so that your business can grow more rapidly",
     },
     {
-      name: 'Business Growth',
+      name: "Business Growth",
       img: Business,
       active: true,
       serviceDetails:
-        'We also provide services by providing input for your business growth',
+        "We also provide services by providing input for your business growth",
     },
     {
-      name: 'Degital Marketing',
+      name: "Degital Marketing",
       img: Marketing,
       serviceDetails:
-        'We also help you market your products through an online marketplace',
+        "We also help you market your products through an online marketplace",
     },
-  ]
+  ];
   const testimonialsData = [
     {
-      name: 'Ronald Richards',
+      name: "Ronald Richards",
       comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
     {
-      name: 'Guy Hawkins',
+      name: "Guy Hawkins",
       comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
     {
-      name: 'Kristin Watsons',
+      name: "Kristin Watsons",
       comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
     {
-      name: 'Robert Fox',
+      name: "Robert Fox",
       comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
     {
-      name: 'Savannah Nguyen',
+      name: "Savannah Nguyen",
       comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
     {
-      name: 'Courtney Henry',
+      name: "Courtney Henry",
       comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     },
-  ]
+  ];
   const users = [
     {
-      name: 'Mian Dad',
-      role: 'Bookkeeper',
+      name: "Mian Dad",
+      role: "Bookkeeper",
       img: MD,
       userDetails:
-        'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
     },
     {
-      name: 'Fayyaz',
-      role: 'Web Developer',
+      name: "Fayyaz",
+      role: "Web Developer",
       img: Fayyaz,
       userDetails:
-        'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
     },
     {
-      name: 'Fayyaz',
-      role: 'Web Developer',
+      name: "Fayyaz",
+      role: "Web Developer",
       img: Fayyaz,
       userDetails:
-        'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
     },
-  ]
+  ];
+  const sponsors = [
+    {
+      img: Client1,
+    },
+    {
+      img: Client2,
+    },
+    {
+      img: Client3,
+    },
+    {
+      img: Client4,
+    },
+  ];
   const ClickServices = () => {
-    navigate('/services')
-  }
+    navigate("/services");
+  };
   return (
     <div>
       <Slider />
@@ -123,13 +141,11 @@ const HomePage = () => {
                 </Grid>
               ))}
             </Grid>
-            <SeeAllButton
-              variant="contained"
-              size="large"
-              onClick={ClickServices}
-            >
-              See more
-            </SeeAllButton>
+            <SeeMore>
+              <Button variant="contained" onClick={ClickServices}>
+                See more
+              </Button>
+            </SeeMore>
           </MainWrapper>
         </Container>
       </Section>
@@ -156,14 +172,9 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <SeeAllButton
-                variant="contained"
-                size="large"
-                color="white"
-                onClick={ClickServices}
-              >
+              <Button variant="outlined" onClick={ClickServices}>
                 See more
-              </SeeAllButton>
+              </Button>
             </SeeMore>
           </MainWrapper>
         </Container>
@@ -185,9 +196,17 @@ const HomePage = () => {
           </MainWrapper>
         </Container>
       </Section>
+      <Container>
+        <Heading>Sponsors</Heading>
+        <SponsorsWrapper>
+          {sponsors.map((item, key) => (
+            <img src={item.img} alt="" />
+          ))}
+        </SponsorsWrapper>
+      </Container>
       <Contact />
     </div>
-  )
-}
+  );
+};
 
 export default HomePage

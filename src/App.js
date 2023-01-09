@@ -11,6 +11,7 @@ import Contact from "./pages/contact";
 import PersonalProfile from "./pages/personalProfile";
 import Services from "./pages/services";
 import Team from "./pages/team";
+import ServicePage from "./pages/servicePage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/home/contact/:name" element={<PersonalProfile />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/team" element={<Team />}></Route>
+        <Route path="/services/:name" element={<ServicePage />}></Route>
       </Routes>
       <Footer />
     </div>
