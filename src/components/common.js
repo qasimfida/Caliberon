@@ -84,5 +84,5 @@ export const Discription = styled(Typography)((props) => ({
   },
 }));
 export const MainWrapper = styled(Box)`
-  margin-top: 6rem;
+  margin-top: 5rem;
 `;

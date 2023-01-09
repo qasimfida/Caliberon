@@ -28,15 +28,28 @@ export const UserName = styled.h4`
 `;
 export const TestimonialCard = styled('div')({
   position: 'relative',
+  boxShadow: '0.5rem 0.5rem black, -0.5rem -0.5rem #ccc',
+  margin: '1.5rem',
   '&:before': {
-    content: `' '`,
-    position: 'absolute',
-    height: 'calc(100% + 40px)',
-    width: '50%',
-    top: '-20px',
-    background: 'red',
-    left: '-20px',
-    zIndex: 0,
+      content: `' '`,
+    //   position: 'absolute',
+    //   height: 'calc(100% + 40px)',
+    //   width: '50%',
+    //   top: '-20px',
+    //   background: 'red',
+    //   left: '-20px',
+    //   zIndex: 0,
+
+    // position: 'absolute',
+    // height: '100%',
+    // width: '100%',
+    // border: '4px solid black',
+    // backgroundColor: 'red',
+    // bottom: '-18px',
+    // right: '-18px',
+    // borderRadius: '6px',
+    // transform: 'translateZ(42px)',
+    // boxSizing: 'content-box',
   },
 });
 export const TestimonialWrapper = styled('div')(

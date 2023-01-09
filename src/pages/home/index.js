@@ -2,7 +2,7 @@ import Carousel from '../../components/slider';
 import { useNavigate } from 'react-router-dom';
 import Contact from '../../components/contactForm';
 import ProfileCard from '../../components/profileCard';
-
+import Slider from 'react-slick';
 import ServicesCard from '../../components/servicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
 import { Container, Grid } from '@mui/material';
@@ -17,6 +17,16 @@ const HomePage = () => {
 
   const ClickServices = () => {
     navigate('/services');
+  };
+  const settings = {
+    className: 'center',
+    centerMode: true,
+    infinite: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    speed: 500,
+    arrows: true,
+    autoplay: true,
   };
   return (
     <div>
@@ -83,13 +93,15 @@ const HomePage = () => {
           <Heading>Testimonials</Heading>
           <Discription align="center">Some testimonials from our customers</Discription>
           <MainWrapper>
-            <Grid container spacing={[8]}>
+            {/* <Grid container spacing={[8]}> */}
+            <Slider {...settings}>
               {testimonialsData.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
-                  <TestimonialsCard name={item.name} comment={item.comment} />
-                </Grid>
+                // <Grid item xs={12} sm={6} md={4} key={key}>
+                <TestimonialsCard name={item.name} comment={item.comment} />
+                // </Grid>
               ))}
-            </Grid>
+            </Slider>
+            {/* </Grid> */}
           </MainWrapper>
         </Container>
       </Section>
