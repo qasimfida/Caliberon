@@ -1,4 +1,4 @@
-import Slider from "../../components/slider";
+import Carousel from "../../components/slider";
 import { useNavigate } from "react-router-dom";
 import Contact from "../../components/contactForm";
 import ProfileCard from "../../components/profileCard";
@@ -21,6 +21,7 @@ import Client1 from "../../assests/client1.png";
 import Client2 from "../../assests/client2.png";
 import Client3 from "../../assests/client3.png";
 import Client4 from "../../assests/client4.png";
+import Slider from "react-slick";
 import { SeeMore, Item, SponsorsWrapper } from "./styles";
 
 const HomePage = () => {
@@ -120,7 +121,7 @@ const HomePage = () => {
   };
   return (
     <div>
-      <Slider />
+      <Carousel />
       <Section>
         <Container>
           <Heading>Our Services</Heading>
