@@ -3,10 +3,10 @@ import { Container, Breadcrumbs, Typography, Link } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import { AboutHeading, MainBox, Details } from "./styles";
 
-const MainSection = (props) => {
+const MainSection = ({serviceName}) => {
   const location = useLocation();
-  const name = props.serviceName
-    ? props.serviceName
+  const name = serviceName
+    ? serviceName
     : location.pathname.replace("/", "");
   return (
     <MainBox>
@@ -19,7 +19,7 @@ const MainSection = (props) => {
             </Link>
             <Typography color="text.primary">
               {" "}
-              {props.serviceName ? "Services / " + props.serviceName : name}
+              {serviceName ? "Services / " + serviceName : name}
             </Typography>
           </Breadcrumbs>
         </Details>

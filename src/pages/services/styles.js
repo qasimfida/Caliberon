@@ -21,18 +21,18 @@ export const AboutDesc = styled(Typography)`
   margin-bottom: ${(props) => (props.variant === "span" ? "24px" : "40px")};
 `;
 
-export const StyledBox = styled(Box)(({ theme }) => ({
+export const StyledBox = styled(Box)(({ theme: {palette: {primary}} }) => ({
   padding: "200px 0px 150px 0px",
-  backgroundColor: theme?.palette?.primary?.main,
+  backgroundColor: primary?.main,
   display: "flex",
   position: "relative",
 }));
 export const MainBox = styled(Box)({
   position: "relative",
 });
-export const ServicesBox = styled(Box)(({ theme }) => ({
+export const ServicesBox = styled(Box)(({ theme: {palette: {white}} }) => ({
   position: "relative",
-  backgroundColor: theme?.palette?.white?.main,
+  backgroundColor: white?.main,
   paddingLeft: "24px",
   paddingRight: "24px",
   paddingBottom: "24px",
@@ -49,9 +49,9 @@ export const GuidBox = styled(Box)({
   backgroundPosition: "center center",
 });
 
-export const GuidContent = styled(Box)(({ theme }) => ({
+export const GuidContent = styled(Box)(({ theme: {palette: {white}} }) => ({
   position: "relative",
-  backgroundColor: theme?.palette?.white?.main,
+  backgroundColor: white?.main,
   marginLeft: "24px",
   marginRight: "24px",
   marginBottom: "24px",
@@ -64,9 +64,9 @@ export const CardsBox = styled(Box)({
 export const Details = styled(Box)({
   textAlign: "center",
 });
-export const ContactDetailsBox = styled(Box)(({ theme }) => ({
+export const ContactDetailsBox = styled(Box)(({ theme: {palette: {primary}} }) => ({
   padding: "100px 0px 100px 0px",
-  backgroundColor: theme?.palette?.primary?.main,
+  backgroundColor: primary?.main,
   display: "flex",
   alignItems: "center",
   position: "relative",

@@ -34,7 +34,7 @@ export const Heading = styled(Typography)`
   margin-bottom: ${(props) => (props.variant === "h3" ? "24px" : "")};
 `;
 
-export const Discription = styled(Typography)((props) => ({
+export const Description = styled(Typography)((props) => ({
   fontFamily: "Poppins",
   letterSpacing: "0.22px",
   fontSize:
@@ -84,5 +84,5 @@ export const Discription = styled(Typography)((props) => ({
   },
 }));
 export const MainWrapper = styled(Box)`
-  margin-top: 6rem;
+  margin-top: 5rem;
 `;

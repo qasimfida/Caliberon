@@ -18,7 +18,7 @@ import {
   ProgressBarSubHeading,
   ProgressBarHeading,
   MainBox,
-  DiscriptionBox,
+  DescriptionBox,
   CustomizeAccordion,
   ContactDetailsBox,
   ProgressContainer
@@ -80,7 +80,7 @@ const PersonalProfile = () => {
           </Grid>
         </Container>
       </StyledBox>
-      <DiscriptionBox>
+      <DescriptionBox>
         <Container>
           <AboutDesc>
             {state.userName} has a diversified experience of over 25 years
@@ -111,7 +111,7 @@ const PersonalProfile = () => {
             ))}
           </ProgressContainer>
         </Box>
-      </DiscriptionBox>
+      </DescriptionBox>
 
       <Container>
         <CustomizeAccordion>
