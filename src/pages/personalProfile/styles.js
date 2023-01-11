@@ -80,6 +80,10 @@ export const ContactDetailsBox = styled(Box)(
 );
 export const DescriptionBox = styled(Box)({
   padding: '100px 0px 50px 0px',
+  ".MuiBox-root":{
+    marginTop:"30px",
+    textAlign:"center",
+  }
 });
 export const UserImage = styled.img`
   height: 250px;

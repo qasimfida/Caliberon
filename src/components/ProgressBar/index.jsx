@@ -1,26 +1,19 @@
-import React from 'react'
-import Box from '@mui/material/Box'
-import { Typography } from '@mui/material'
-import StyledProgressBar from './styles'
-import { NameProgressBar , ProgressLabel } from './styles'
+import React from 'react';
 
-const ProgresBar = ({ Labelinstead, percentage,size,thickness }) => {
+import { Typography } from '@mui/material';
+import StyledProgress from './styles';
+import { Label, Progress, ProgressWrap } from './styles';
+
+const ProgresBar = ({ label, percentage, size, thickness }) => {
   return (
-    <StyledProgressBar elevation={0}>
-      <ProgressLabel
-        variant="determinate"
-        value={percentage}
-        size={size}
-        thickness={thickness}
-      />
-      <Box>
-        <Typography variant="caption" component="div">
-          {`${percentage}%`}
-        </Typography>
-      </Box>
-      <NameProgressBar>{Labelinstead}</NameProgressBar>
-    </StyledProgressBar>
-  )
-}
+    <StyledProgress>
+      <ProgressWrap>
+        <Progress variant="determinate" value={percentage} size={size} thickness={thickness} />
+        <Typography component="span">{`${percentage}%`}</Typography>
+      </ProgressWrap>
+      <Label>{label}</Label>
+    </StyledProgress>
+  );
+};
 
-export default ProgresBar
+export default ProgresBar;
