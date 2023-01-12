@@ -6,8 +6,20 @@ import ProfileCard from '../../components/profileCard';
 import { Grid } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { teamMembers } from './data';
+import { useNavigate } from 'react-router-dom';
 
-const Team = () => {
+const AllTeams = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    navigate(`/team/${e.title}`, {
+      state: {
+        teamName: e.title,
+        teamData: e.data,
+        data: teamMembers,
+      },
+    });
+  };
   return (
     <>
       <MainSection />
@@ -16,7 +28,7 @@ const Team = () => {
           <div key={`members ${key}`}>
             <TeamMembersWrapper>
               <DepartmentHeading>{items.title}</DepartmentHeading>
-              <Description>
+              <Description onClick={() => handleClick(items)}>
                 {' '}
                 View all <ArrowForwardIcon />
               </Description>
@@ -42,4 +54,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default AllTeams;

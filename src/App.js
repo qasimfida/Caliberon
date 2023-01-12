@@ -10,8 +10,9 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import PersonalProfile from "./pages/personalProfile";
 import Services from "./pages/services";
-import Team from "./pages/team";
 import ServicePage from "./pages/servicePage";
+import AllTeams from "./pages/allTeam";
+import TeamPage from "./pages/teamPage";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/home/contact/:name" element={<PersonalProfile />}></Route>
         <Route path="/services" element={<Services />}></Route>
-        <Route path="/team" element={<Team />}></Route>
         <Route path="/services/:name" element={<ServicePage />}></Route>
+        <Route path="/team" element={<AllTeams />}></Route>
+        <Route path="/team/:name" element={<TeamPage />}></Route>
       </Routes>
       <Footer />
     </div>

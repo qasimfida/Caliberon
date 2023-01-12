@@ -62,16 +62,16 @@ export const teamMembers = [
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
-        name: 'Aleem',
+        name: 'Kaleem',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: MD,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Qasim',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: MD,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
