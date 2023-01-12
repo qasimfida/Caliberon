@@ -109,8 +109,8 @@ export const UserSocialIcons = styled('div')(
     },
   })
 );
-export const CustomizeAccordion = styled(Accordion)({
-  boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 0px 0px rgb(0 0 0 / 12%)',
+export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
+  boxShadow: theme.shadows['black-50'],
   '&.MuiAccordion-root:first-of-type': {
     borderTopLeftRadius: '0 !important',
     borderTopRightRadius: '0 !important',
@@ -119,4 +119,4 @@ export const CustomizeAccordion = styled(Accordion)({
     borderBottomLeftRadius: '0 !important',
     borderBottomRightRadius: '0 !important',
   },
-});
+}));

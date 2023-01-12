@@ -78,7 +78,7 @@ const Services = () => {
           <CardsBox>
             <Grid container spacing={[3]}>
               {services.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
+                <Grid item xs={12} sm={6} md={4} key={`service-${key}`}>
                   <ServicesCard
                     serviceImg={item.img}
                     serviceName={item.name}

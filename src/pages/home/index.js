@@ -9,7 +9,7 @@ import { Container, Grid } from '@mui/material';
 import { services, testimonialsData, users, sponsors } from './data';
 import { Section, Heading, Description, MainWrapper } from '../../components/common';
 import Button from '../../components/button';
-
+import Banner from '../banner';
 import { SeeMore, Item, SponsorsWrapper } from './styles';
 
 const HomePage = () => {
@@ -28,9 +28,23 @@ const HomePage = () => {
     arrows: true,
     autoplay: true,
   };
+  const sliderData = [
+    {
+      title: "You're ready. So are we.",
+      imgLink:
+        'https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+    },
+    {
+      title: "You're ready. So are we.",
+      imgLink:
+        'https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+    },
+  ];
   return (
     <div>
-      <Carousel />
+      <Carousel slidesToShow={1} arrows={false} slidesToScroll={1}>
+        {sliderData.length && sliderData.map((item, index) => <Banner key={index} item={item} />)}
+      </Carousel>
       <Section>
         <Container>
           <Heading>Our Services</Heading>
@@ -40,7 +54,7 @@ const HomePage = () => {
           <MainWrapper>
             <Grid container spacing={[3]}>
               {services.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
+                <Grid item xs={12} sm={6} md={4} key={`services-${key}`}>
                   <ServicesCard
                     serviceImg={item.img}
                     serviceName={item.name}
@@ -68,8 +82,8 @@ const HomePage = () => {
           <MainWrapper>
             <Grid container spacing={[4]}>
               {users.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
-                  <Item>
+                <Grid item xs={12} sm={6} md={4}>
+                  <Item key={`user-${key}`}>
                     <ProfileCard
                       userImg={item.img}
                       userName={item.name}
@@ -95,7 +109,9 @@ const HomePage = () => {
           <MainWrapper>
             <Slider {...settings}>
               {testimonialsData.map((item, key) => (
-                <TestimonialsCard name={item.name} comment={item.comment} />
+                <div key={`testimonial-${key}`}>
+                  <TestimonialsCard name={item.name} comment={item.comment} />
+                </div>
               ))}
             </Slider>
           </MainWrapper>
@@ -105,7 +121,7 @@ const HomePage = () => {
         <Heading>Sponsors</Heading>
         <SponsorsWrapper>
           {sponsors.map((item, key) => (
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="" key={`sponsors-${key}`} />
           ))}
         </SponsorsWrapper>
       </Container>

@@ -32,7 +32,7 @@ export const UserName = styled.h4`
   line-height: 1.2;
   margin: 0;
 `;
-export const ServicesWrapper = styled('div')((props) => ({
+export const ServicesWrapper = styled('div')(({ active, theme }) => ({
   background: '#fff',
   textAlign: 'center',
   display: 'flex',
@@ -41,10 +41,10 @@ export const ServicesWrapper = styled('div')((props) => ({
   alignItems: 'center',
   padding: '0 20px',
   position: 'relative',
-  boxShadow: props.active ? 'rgba(17, 17, 26, 0.1) 0px 0px 16px' : ' ',
+  boxShadow: active ? theme.shadows['black-100'] : ' ',
   transition: '0.3s all ease-in',
   '&:hover': {
-    boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
+    boxShadow: theme.shadows['black-400'],
   },
   '&:hover img': {
     transform: 'scale(1.1)',

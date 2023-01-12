@@ -43,7 +43,7 @@ const ServicePage = () => {
               <ServicesItemWrapper>
                 <Description weight="bold">Our Services</Description>
                 {data.map((item, key) => (
-                  <div key={key}>
+                  <div key={`data-${key}`}>
                     <ServicesItem serviceName={item.servicesName} />
                   </div>
                 ))}

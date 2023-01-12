@@ -35,11 +35,11 @@ export const MenuLinks = styled('a')(
   })
 );
 
-export const Item = styled(Paper)({
+export const Item = styled(Paper)(({ theme }) => ({
   padding: '0 0 24px 0',
-  boxShadow: 'none',
+  boxShadow: theme.shadows['none'],
   borderRadius: 'none',
-});
+}));
 
 export const AddressWrapper = styled('div')(
   ({
@@ -73,7 +73,7 @@ export const Contact = styled.p`
 export const DesignedBy = styled('p')(
   ({
     theme: {
-      palette: { lightGray },
+      palette: { lightGray, gray93 },
     },
   }) => ({
     textAlign: 'center',
@@ -81,7 +81,7 @@ export const DesignedBy = styled('p')(
     lineHeight: '24px',
     textDecoration: 'none',
     color: lightGray?.main,
-    background: '#ededed',
+    background: gray93?.main,
     padding: '25px',
     margin: '0',
   })
