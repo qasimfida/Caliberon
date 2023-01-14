@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { Paper, Box } from '@mui/material';
 
-export const Item = styled(Paper)({
-  boxShadow: 'none',
+export const Item = styled(Paper)(({theme})=> ({
+  boxShadow: theme.shadows['none'],
   borderBottomLeftRadius: 'none',
   borderTopLeftRadius: 'none',
-});
+}));
 
-export const SeeMore = styled('div')`
+export const SeeMore = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;

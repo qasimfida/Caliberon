@@ -59,8 +59,8 @@ const ContactForm = () => {
                   Contact Information
                 </Heading>
                 <ContactDetails>
-                  {contactDetails.map((item) => (
-                    <ContactItem key={item.info}>
+                  {contactDetails.map((item, index) => (
+                    <ContactItem key={`contact-${index}`}>
                       {item.icon}
                       <Description color={'primary'} title="details">
                         {item.info}

@@ -26,12 +26,12 @@ export const UserName = styled.h4`
   line-height: 1.2;
   margin: 0;
 `;
-export const TestimonialCard = styled('div')({
+export const TestimonialCard = styled('div')(({ theme }) => ({
   position: 'relative',
-  boxShadow: '0.5rem 0.5rem black, -0.5rem -0.5rem #ccc',
+  boxShadow: theme.shadows['black'],
   margin: '1.5rem',
   '&:before': {
-      content: `' '`,
+    content: `' '`,
     //   position: 'absolute',
     //   height: 'calc(100% + 40px)',
     //   width: '50%',
@@ -51,7 +51,7 @@ export const TestimonialCard = styled('div')({
     // transform: 'translateZ(42px)',
     // boxSizing: 'content-box',
   },
-});
+}));
 export const TestimonialWrapper = styled('div')(
   ({
     theme: {

@@ -1,13 +1,11 @@
-import React from "react";
-import { Container, Breadcrumbs, Typography, Link } from "@mui/material";
-import { useLocation } from "react-router-dom";
-import { AboutHeading, MainBox, Details } from "./styles";
+import React from 'react';
+import { Container, Breadcrumbs, Typography, Link } from '@mui/material';
+import { useLocation } from 'react-router-dom';
+import { AboutHeading, MainBox, Details } from './styles';
 
-const MainSection = ({serviceName}) => {
+const MainSection = ({ serviceName, teamName }) => {
   const location = useLocation();
-  const name = serviceName
-    ? serviceName
-    : location.pathname.replace("/", "");
+  const name = serviceName ? serviceName : teamName ? teamName : location.pathname.replace('/', '');
   return (
     <MainBox>
       <Container>
@@ -17,10 +15,7 @@ const MainSection = ({serviceName}) => {
             <Link underline="hover" color="inherit" href="/">
               Home
             </Link>
-            <Typography color="text.primary">
-              {" "}
-              {serviceName ? "Services / " + serviceName : name}
-            </Typography>
+            <Typography color="text.primary"> {serviceName ? 'Services / ' + serviceName : name}</Typography>
           </Breadcrumbs>
         </Details>
       </Container>
