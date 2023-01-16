@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.10.4",
     "@fontsource/poppins": "^4.5.10",
     "@mui/icons-material": "^5.10.6",
+    "@mui/lab": "^5.0.0-alpha.115",
     "@mui/material": "^5.10.8",
     "@mui/styles": "^5.10.8",
     "@testing-library/jest-dom": "^5.16.5",
