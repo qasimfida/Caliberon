@@ -28,7 +28,6 @@ let theme = createTheme({
       ],
     },
   },
-
   palette: {
     primary: {
       main: '#f54c0a',

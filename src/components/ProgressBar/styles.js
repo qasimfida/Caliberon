@@ -20,7 +20,9 @@ export const Progress = styled(CircularProgress)`
     z-index: 1;
   }
 `;
-const StyledProgressBar = styled(Box)({});
+const StyledProgressBar = styled(Box)({
+  textAlign:"center"
+});
 
 export const ProgressWrap = styled('div')({
   position: 'relative',

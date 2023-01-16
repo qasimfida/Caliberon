@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Box, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import { Container, Grid, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import {
   UserTitle,
   StyledBox,
@@ -15,14 +15,49 @@ import {
   CustomizeAccordion,
   ContactDetailsBox,
   ProgressContainer,
+  ProgressWrapper,
+  TimeLineWrap,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ProgressBar from '../../components/ProgressBar';
+import TimeLine from '../../components/TimeLine';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
+
+  const timeLineData = [
+    {
+      title: "Experience",
+      date: "2013 - Present",
+      name: "Art Director - Facebook Inc.",
+      content: "Collaborate with creative and development teams on the execution of ideas.",
+      id: "1",
+    },
+    {
+      title: "Education",
+      date: "2012 - Past",
+      name: "Art Director - Facebook Inc.",
+      content: "Collaborate with creative and development teams on the execution of ideas.",
+      id: "2",
+    },
+    {
+      title: "Studies",
+      date: "2011 - Past",
+      name: "Art Director - Facebook Inc.",
+      content: "Collaborate with creative and development teams on the execution of ideas.",
+      id: "3",
+    },
+    {
+      title: "Studies",
+      date: "2011 - Past",
+      name: "Art Director - Facebook Inc.",
+      content: "Collaborate with creative and development teams on the execution of ideas.",
+      id: "3",
+    }
+
+  ]
 
   const progressBarData = [
     {
@@ -78,15 +113,6 @@ const PersonalProfile = () => {
             Depository Shares of the same company at the London stock exchange.
           </AboutDesc>
         </Container>
-        <Box>
-          <ProgressBarSubHeading>TEAM PROGRESS</ProgressBarSubHeading>
-          <ProgressBarHeading>Meet the Co-Founders</ProgressBarHeading>
-          <ProgressContainer elevation={0}>
-            {progressBarData.map((item, id) => (
-              <ProgressBar label={item.name} percentage={item.percentage} key={id} size={140} thickness={5} />
-            ))}
-          </ProgressContainer>
-        </Box>
       </DescriptionBox>
 
       <Container>
@@ -102,6 +128,26 @@ const PersonalProfile = () => {
           </AccordionDetails>
         </CustomizeAccordion>
       </Container>
+      <ProgressWrapper>
+        <ProgressBarSubHeading>TEAM PROGRESS</ProgressBarSubHeading>
+        <ProgressBarHeading>Meet the Co-Founders</ProgressBarHeading>
+        <ProgressContainer>
+          {progressBarData.map((item, id) => (
+            <ProgressBar label={item.name} percentage={item.percentage} key={id} size={140} thickness={5} />
+          ))}
+        </ProgressContainer>
+      </ProgressWrapper>
+      <TimeLineWrap>
+        <container>
+          <Grid container spacing={2}>
+            {timeLineData.map((item, id) => (
+              <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+                <TimeLine key={id} title={item.title} date={item.date} name={item.name} content={item.content} />
+              </Grid>
+            ))}
+          </Grid>
+        </container>
+      </TimeLineWrap>
       <ContactDetailsBox>
         <Container>
           <UserSocialIcons>

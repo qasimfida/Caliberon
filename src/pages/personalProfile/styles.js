@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Typography, Box, Accordion, Paper } from "@mui/material";
+import { Typography, Box, Accordion} from "@mui/material";
 
 export const UserTitle = styled(Typography)(
   ({
@@ -80,9 +80,9 @@ export const ContactDetailsBox = styled(Box)(
 );
 export const DescriptionBox = styled(Box)({
   padding: '100px 0px 50px 0px',
-  ".MuiBox-root":{
-    marginTop:"30px",
-    textAlign:"center",
+  ".MuiBox-root": {
+    marginTop: "30px",
+    textAlign: "center",
   }
 });
 export const UserImage = styled.img`
@@ -127,27 +127,40 @@ export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
 
 // ProcessBar Title
 
-export const ProgressBarSubHeading = styled(Typography)({
-  padding:"0px 55px",
-	fontFamily: "Poppins",
-	fontSize: "20px",
-	color: "#f54c0a",
-	lineHeight: "4",
+export const ProgressWrapper = styled(Box)({
+  textAlign:"center",
+  margin:"40px 0px"
+})
+
+
+ export const ProgressBarSubHeading = styled(Typography)({
+  padding: "0px 55px",
+  fontFamily: "Poppins",
+  fontSize: "20px",
+  color: "#f54c0a",
+  lineHeight: "4",
 });
 
 export const ProgressBarHeading = styled(Typography)({
-  padding:"0px 55px",
-	fontFamily: "Poppins",
-	fontSize: "44px",
-	color: "#000000",
-	fontWeight: "bold",
-	lineHeight: "1",
+  padding: "0px 55px",
+  fontFamily: "Poppins",
+  fontSize: "44px",
+  color: "#000000",
+  fontWeight: "bold",
+  lineHeight: "1",
 });
 
 // ProgressBar Container 
-export const ProgressContainer = styled(Paper)({
-  display:"flex",
-  justifyContent:"space-evenly",
-  alignItems:"center",
-  marginTop:"60px"
+export const ProgressContainer = styled(Box)({
+  display: "flex",
+  justifyContent: "space-evenly",
+  alignItems: "center",
+  marginTop: "60px"
+})
+
+// TimeLine Component
+export const TimeLineWrap = styled(Box)({
+  height:"auto",
+  margin:"16px 0px",
+  border:"1px solid black",
 })
