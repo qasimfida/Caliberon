@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Grid, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import {
   UserTitle,
@@ -8,56 +8,55 @@ import {
   UserData,
   AboutDesc,
   UserSocialIcons,
-  ProgressBarSubHeading,
-  ProgressBarHeading,
   MainBox,
   DescriptionBox,
   CustomizeAccordion,
   ContactDetailsBox,
-  ProgressContainer,
+  ProgressContent,
   ProgressWrapper,
   TimeLineWrap,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ProgressBar from '../../components/ProgressBar';
+import { CircularProgress, LinearProgress } from '../../components/ProgressBar';
 import TimeLine from '../../components/TimeLine';
+import { Heading } from '../../components/common';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
+  const [progressValue, setProgressValue] = useState('');
 
   const timeLineData = [
     {
-      title: "Experience",
-      date: "2013 - Present",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "1",
+      title: 'Experience',
+      date: '2013 - Present',
+      name: 'Art Director - Facebook Inc.',
+      content: 'Collaborate with creative and development teams on the execution of ideas.',
+      id: '1',
     },
     {
-      title: "Education",
-      date: "2012 - Past",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "2",
+      title: 'Education',
+      date: '2012 - Past',
+      name: 'Art Director - Facebook Inc.',
+      content: 'Collaborate with creative and development teams on the execution of ideas.',
+      id: '2',
     },
     {
-      title: "Studies",
-      date: "2011 - Past",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "3",
+      title: 'Studies',
+      date: '2011 - Past',
+      name: 'Art Director - Facebook Inc.',
+      content: 'Collaborate with creative and development teams on the execution of ideas.',
+      id: '3',
     },
     {
-      title: "Studies",
-      date: "2011 - Past",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "3",
-    }
-
-  ]
+      title: 'Studies',
+      date: '2011 - Past',
+      name: 'Art Director - Facebook Inc.',
+      content: 'Collaborate with creative and development teams on the execution of ideas.',
+      id: '3',
+    },
+  ];
 
   const progressBarData = [
     {
@@ -80,7 +79,19 @@ const PersonalProfile = () => {
       percentage: 100,
       id: '4',
     },
+    {
+      name: 'marketing',
+      percentage: 20,
+      id: '4',
+    },
   ];
+  useEffect(() => {
+    const sum = progressBarData.reduce((accumulator, object) => {
+      return accumulator + object.percentage;
+    }, 0);
+    const overAllPercentage = sum / progressBarData.length;
+    setProgressValue(overAllPercentage);
+  }, [progressBarData?.length]);
   return (
     <MainBox>
       <StyledBox>
@@ -127,27 +138,47 @@ const PersonalProfile = () => {
             </Typography>
           </AccordionDetails>
         </CustomizeAccordion>
+        <CustomizeAccordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+            <Typography>Other Skills</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
+              leo lobortis eget.ss
+            </Typography>
+          </AccordionDetails>
+        </CustomizeAccordion>
       </Container>
-      <ProgressWrapper>
-        <ProgressBarSubHeading>TEAM PROGRESS</ProgressBarSubHeading>
-        <ProgressBarHeading>Meet the Co-Founders</ProgressBarHeading>
-        <ProgressContainer>
-          {progressBarData.map((item, id) => (
-            <ProgressBar label={item.name} percentage={item.percentage} key={id} size={140} thickness={5} />
-          ))}
-        </ProgressContainer>
-      </ProgressWrapper>
-      <TimeLineWrap>
-        <container>
-          <Grid container spacing={2}>
-            {timeLineData.map((item, id) => (
-              <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
-                <TimeLine key={id} title={item.title} date={item.date} name={item.name} content={item.content} />
+      <Container>
+        <ProgressWrapper>
+          <Heading>Skills</Heading>
+          <ProgressContent>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+                <CircularProgress label="Over all percentage" percentage={progressValue} size={200} thickness={5} />
               </Grid>
-            ))}
-          </Grid>
-        </container>
-      </TimeLineWrap>
+              <Grid item xs={12} sm={6} md={6} lg={6} xl={8}>
+                {progressBarData.map((item, id) => (
+                  <LinearProgress label={item.name} percentage={item.percentage} thickness={3} />
+                ))}
+              </Grid>
+            </Grid>
+          </ProgressContent>
+        </ProgressWrapper>
+        <TimeLineWrap>
+          <container>
+            <Grid container spacing={2}>
+              {timeLineData.map((item, id) => (
+                <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+                  <TimeLine key={id} title={item.title} date={item.date} name={item.name} content={item.content} />
+                </Grid>
+              ))}
+            </Grid>
+          </container>
+        </TimeLineWrap>
+      </Container>
+
       <ContactDetailsBox>
         <Container>
           <UserSocialIcons>

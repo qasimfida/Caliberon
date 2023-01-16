@@ -1,8 +1,9 @@
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 
-export const Progress = styled(CircularProgress)`
+export const CustomizeCircularProgress = styled(CircularProgress)`
   position: relative;
   display: flex;
   justify-content: center;
@@ -20,8 +21,9 @@ export const Progress = styled(CircularProgress)`
     z-index: 1;
   }
 `;
+export const CustomizeLinearProgress = styled(LinearProgress)``;
 const StyledProgressBar = styled(Box)({
-  textAlign:"center"
+  textAlign: 'center',
 });
 
 export const ProgressWrap = styled('div')({
@@ -32,6 +34,11 @@ export const ProgressWrap = styled('div')({
   '.css-ahj2mt-MuiTypography-root': {
     position: 'absolute',
     fontSize: '20px',
+  },
+});
+export const LinearWrap = styled('div')({
+  '& p': {
+    textAlign: 'left',
   },
 });
 
