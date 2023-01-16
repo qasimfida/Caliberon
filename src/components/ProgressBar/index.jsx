@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import StyledProgress from './styles';
-import { Label, Progress, ProgressWrap } from './styles';
+import { Label, CustomizeCircularProgress, ProgressWrap, CustomizeLinearProgress, LinearWrap } from './styles';
 
-const ProgresBar = ({ label, percentage, size, thickness }) => {
+export const CircularProgress = ({ label, percentage, size, thickness, ...rest  }) => {
   return (
     <StyledProgress>
       <ProgressWrap>
-        <Progress variant="determinate" value={percentage} size={size} thickness={thickness} />
+        <CustomizeCircularProgress variant="determinate" value={percentage} size={size} thickness={thickness} {...rest} />
         <Typography component="span">{`${percentage}%`}</Typography>
       </ProgressWrap>
       <Label>{label}</Label>
@@ -16,4 +16,20 @@ const ProgresBar = ({ label, percentage, size, thickness }) => {
   );
 };
 
-export default ProgresBar;
+export const LinearProgress = ({ label, percentage, ...rest }) => {
+  return (
+    <LinearWrap>
+      <Label>{label}</Label>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ width: '100%', mr: 1 }}>
+        <CustomizeLinearProgress variant="determinate" value={percentage} valueBuffer={percentage} {...rest} />
+      </Box>
+      <Box sx={{ minWidth: 35 }}>
+        <Typography variant="body2" color="text.secondary">{`${Math.round(
+          percentage,
+        )}%`}</Typography>
+      </Box>
+    </Box>
+    </LinearWrap>
+  );
+};

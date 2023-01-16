@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Typography, Box, Accordion} from "@mui/material";
+import styled from '@emotion/styled';
+import { Typography, Box, Accordion } from '@mui/material';
 
 export const UserTitle = styled(Typography)(
   ({
@@ -37,7 +37,8 @@ export const MainBox = styled(Box)(
     position: 'relative',
     paddingBottom: '90px',
     '& .MuiAccordion-root': {
-      paddingBottom: '50px',
+      paddingBottom: '30px',
+      paddingTop: '10px',
       '& .MuiAccordionSummary-root': {
         padding: '0',
       },
@@ -80,10 +81,10 @@ export const ContactDetailsBox = styled(Box)(
 );
 export const DescriptionBox = styled(Box)({
   padding: '100px 0px 50px 0px',
-  ".MuiBox-root": {
-    marginTop: "30px",
-    textAlign: "center",
-  }
+  '.MuiBox-root': {
+    marginTop: '30px',
+    textAlign: 'center',
+  },
 });
 export const UserImage = styled.img`
   height: 250px;
@@ -114,7 +115,7 @@ export const UserSocialIcons = styled('div')(
   })
 );
 export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
-  boxShadow: theme.shadows['black-50'],
+  boxShadow: theme.shadows[3],
   '&.MuiAccordion-root:first-of-type': {
     borderTopLeftRadius: '0 !important',
     borderTopRightRadius: '0 !important',
@@ -128,38 +129,17 @@ export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
 // ProcessBar Title
 
 export const ProgressWrapper = styled(Box)({
-  textAlign:"center",
-  margin:"40px 0px"
-})
-
-
- export const ProgressBarSubHeading = styled(Typography)({
-  padding: "0px 55px",
-  fontFamily: "Poppins",
-  fontSize: "20px",
-  color: "#f54c0a",
-  lineHeight: "4",
+  textAlign: 'center',
+  margin: '5rem 0px',
 });
 
-export const ProgressBarHeading = styled(Typography)({
-  padding: "0px 55px",
-  fontFamily: "Poppins",
-  fontSize: "44px",
-  color: "#000000",
-  fontWeight: "bold",
-  lineHeight: "1",
+// ProgressBar Container
+export const ProgressContent = styled(Box)({
+  marginTop: '60px',
 });
-
-// ProgressBar Container 
-export const ProgressContainer = styled(Box)({
-  display: "flex",
-  justifyContent: "space-evenly",
-  alignItems: "center",
-  marginTop: "60px"
-})
 
 // TimeLine Component
 export const TimeLineWrap = styled(Box)({
   height:"auto",
-  margin:"22px 0px",
+  marginBottom:"5rem",
 })

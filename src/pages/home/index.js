@@ -19,6 +19,7 @@ const HomePage = () => {
     navigate('/services');
   };
   const settings = {
+    dots: true,
     className: 'center',
     centerMode: true,
     infinite: true,

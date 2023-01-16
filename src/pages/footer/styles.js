@@ -37,7 +37,7 @@ export const MenuLinks = styled('a')(
 
 export const Item = styled(Paper)(({ theme }) => ({
   padding: '0 0 24px 0',
-  boxShadow: theme.shadows['none'],
+  boxShadow: theme.shadows[0],
   borderRadius: 'none',
 }));
 

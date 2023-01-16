@@ -37,7 +37,7 @@ export const ProfileWrapper = styled('div')(
       shadows,
     },
   }) => ({
-    boxShadow: shadows['gray-200'],
+    boxShadow: shadows[2],
     overflow: 'hidden',
     cursor: 'grabbing',
     background: white?.main,

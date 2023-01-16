@@ -4,7 +4,7 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import React from 'react'
-import StyledTimeLine, { Content, Name, Title, Date } from "./styles"
+import {StyledTimeLine, Content, Name, Title, Date } from "./styles"
 import { TimelineConnector, TimelineDot } from '@mui/lab';
 const TimeLineComponent = () => {
 
