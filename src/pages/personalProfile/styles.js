@@ -161,5 +161,5 @@ export const ProgressContainer = styled(Box)({
 // TimeLine Component
 export const TimeLineWrap = styled(Box)({
   height:"auto",
-  margin:"16px 0px",
+  margin:"22px 0px",
 })

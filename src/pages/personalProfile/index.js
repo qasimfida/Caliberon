@@ -108,9 +108,9 @@ const PersonalProfile = () => {
         </ProgressContainer>
       </ProgressWrapper>
       <TimeLineWrap>
-        <container>
-          <TimeLine/>
-        </container>
+        <Container>
+          <TimeLine />
+        </Container>
       </TimeLineWrap>
       <ContactDetailsBox>
         <Container>
