@@ -41,10 +41,10 @@ export const ServicesWrapper = styled('div')(({ active, theme }) => ({
   alignItems: 'center',
   padding: '0 20px',
   position: 'relative',
-  boxShadow: active ? theme.shadows['black-100'] : ' ',
+  boxShadow: active ? theme.shadows[4] : ' ',
   transition: '0.3s all ease-in',
   '&:hover': {
-    boxShadow: theme.shadows['black-400'],
+    boxShadow: theme.shadows[5],
   },
   '&:hover img': {
     transform: 'scale(1.1)',

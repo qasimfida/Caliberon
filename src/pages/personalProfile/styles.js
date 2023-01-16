@@ -110,7 +110,7 @@ export const UserSocialIcons = styled('div')(
   })
 );
 export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
-  boxShadow: theme.shadows['black-50'],
+  boxShadow: theme.shadows[3],
   '&.MuiAccordion-root:first-of-type': {
     borderTopLeftRadius: '0 !important',
     borderTopRightRadius: '0 !important',

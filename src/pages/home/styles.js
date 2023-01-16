@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Paper, Box } from '@mui/material';
 
 export const Item = styled(Paper)(({theme})=> ({
-  boxShadow: theme.shadows['none'],
+  boxShadow: theme.shadows[0],
   borderBottomLeftRadius: 'none',
   borderTopLeftRadius: 'none',
 }));
