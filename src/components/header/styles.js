@@ -8,7 +8,7 @@ export const LogoWrapper = styled.div`
 `;
 export const ToolbarBox = styled(Toolbar)(
   ({
-    theme: {
+    theme:{
       palette: { primary, white, darkGray },
     },
   }) => ({

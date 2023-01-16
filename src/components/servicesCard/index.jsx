@@ -10,7 +10,7 @@ import {
   DetailsWrapper,
   ServicesContentWrapper,
   DetailsSection,
-} from "./styles";
+} from './styles'
 
 const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
         <ArrowForwardIcon />
       </DetailsSection>
     </ServicesWrapper>
-  );
-};
+  )
+}
 
-export default ServicesCard;
+export default ServicesCard

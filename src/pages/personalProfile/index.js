@@ -1,11 +1,5 @@
-import React from "react";
-import {
-  Container,
-  Grid,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-} from "@mui/material";
+import React from 'react';
+import { Container, Grid, Box, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import {
   UserTitle,
   StyledBox,
@@ -14,24 +8,44 @@ import {
   UserData,
   AboutDesc,
   UserSocialIcons,
+  ProgressBarSubHeading,
+  ProgressBarHeading,
   MainBox,
   DescriptionBox,
   CustomizeAccordion,
   ContactDetailsBox,
-} from "./styles";
-import { useLocation } from "react-router-dom";
-import {
-  Instagram,
-  LinkedIn,
-  Twitter,
-  Facebook,
-  Phone,
-  Mail,
-} from "@mui/icons-material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+  ProgressContainer,
+} from './styles';
+import { useLocation } from 'react-router-dom';
+import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from '@mui/icons-material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ProgressBar from '../../components/ProgressBar';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
+
+  const progressBarData = [
+    {
+      name: 'Wordpress',
+      percentage: 80,
+      id: '1',
+    },
+    {
+      name: 'Frontend',
+      percentage: 50,
+      id: '2',
+    },
+    {
+      name: 'UI/UX',
+      percentage: 70,
+      id: '3',
+    },
+    {
+      name: 'Book Keeping',
+      percentage: 100,
+      id: '4',
+    },
+  ];
   return (
     <MainBox>
       <StyledBox>
@@ -55,35 +69,35 @@ const PersonalProfile = () => {
       <DescriptionBox>
         <Container>
           <AboutDesc>
-            {state.userName} has a diversified experience of over 25 years
-            within and outside profession in Pakistan and East Africa. He is a
-            key member of audit and assurance practice of Islamabad and heads
-            the Clients & Market and Human Resource functions of Islamabad
-            practice and is the lead engagement partner of key Islamabad audit
+            {state.userName} has a diversified experience of over 25 years within and outside profession in Pakistan and
+            East Africa. He is a key member of audit and assurance practice of Islamabad and heads the Clients & Market
+            and Human Resource functions of Islamabad practice and is the lead engagement partner of key Islamabad audit
             clients.
-            <br /> <br /> {state.userName} led team to carry out listing of
-            Exchangeable Bonds of the largest oil & gas company in Pakistan at
-            London and Singapore stock exchanges and was a key member of listing
-            the Global Depository Shares of the same company at the London stock
-            exchange.
+            <br /> <br /> {state.userName} led team to carry out listing of Exchangeable Bonds of the largest oil & gas
+            company in Pakistan at London and Singapore stock exchanges and was a key member of listing the Global
+            Depository Shares of the same company at the London stock exchange.
           </AboutDesc>
         </Container>
+        <Box>
+          <ProgressBarSubHeading>TEAM PROGRESS</ProgressBarSubHeading>
+          <ProgressBarHeading>Meet the Co-Founders</ProgressBarHeading>
+          <ProgressContainer elevation={0}>
+            {progressBarData.map((item, id) => (
+              <ProgressBar label={item.name} percentage={item.percentage} key={id} size={140} thickness={5} />
+            ))}
+          </ProgressContainer>
+        </Box>
       </DescriptionBox>
 
       <Container>
         <CustomizeAccordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
             <Typography>Area of Experties</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.ss
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
+              leo lobortis eget.ss
             </Typography>
           </AccordionDetails>
         </CustomizeAccordion>
