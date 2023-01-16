@@ -27,37 +27,7 @@ import TimeLine from '../../components/TimeLine';
 const PersonalProfile = () => {
   const { state } = useLocation();
 
-  const timeLineData = [
-    {
-      title: "Experience",
-      date: "2013 - Present",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "1",
-    },
-    {
-      title: "Education",
-      date: "2012 - Past",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "2",
-    },
-    {
-      title: "Studies",
-      date: "2011 - Past",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "3",
-    },
-    {
-      title: "Studies",
-      date: "2011 - Past",
-      name: "Art Director - Facebook Inc.",
-      content: "Collaborate with creative and development teams on the execution of ideas.",
-      id: "3",
-    }
 
-  ]
 
   const progressBarData = [
     {
@@ -139,13 +109,7 @@ const PersonalProfile = () => {
       </ProgressWrapper>
       <TimeLineWrap>
         <container>
-          <Grid container spacing={2}>
-            {timeLineData.map((item, id) => (
-              <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
-                <TimeLine key={id} title={item.title} date={item.date} name={item.name} content={item.content} />
-              </Grid>
-            ))}
-          </Grid>
+          <TimeLine/>
         </container>
       </TimeLineWrap>
       <ContactDetailsBox>
