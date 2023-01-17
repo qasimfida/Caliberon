@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Typography, Box, Accordion } from '@mui/material';
+import { fontSize } from '@mui/system';
 
 export const UserTitle = styled(Typography)(
   ({
@@ -126,8 +127,18 @@ export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
   },
 }));
 
-// ProcessBar Title
+// Accordion Content
+export const AccordionTitle = styled("h2")({
+  padding: "0px 25px",
+  fontSize: "20px"
+})
 
+// Accordion Content
+export const AccordionContent = styled("p")({
+  padding: "0px 8px",
+})
+
+// ProcessBar Title
 export const ProgressWrapper = styled(Box)({
   textAlign: 'center',
   margin: '5rem 0px',
@@ -143,3 +154,4 @@ export const TimeLineWrap = styled(Box)({
   height: "auto",
   marginBottom: "5rem",
 })
+

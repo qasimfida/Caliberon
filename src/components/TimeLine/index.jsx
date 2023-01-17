@@ -6,7 +6,6 @@ import { StyledTimeLine, Content, Name, Title, Date, StyledSeparator, StyledCont
 import { TimelineConnector, TimelineDot } from '@mui/lab';
 
 const TimeLineComponent = () => {
-
   const timeLineData = [
     {
       title: "Experience",

@@ -15,6 +15,8 @@ import {
   ProgressContent,
   ProgressWrapper,
   TimeLineWrap,
+  AccordionTitle,
+  AccordionContent,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from '@mui/icons-material';
@@ -25,7 +27,7 @@ import { Heading } from '../../components/common';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
-  const [progressValue, setProgressValue] = useState('');
+  const [progressValue, setProgressValue] = useState();
 
   const progressBarData = [
     {
@@ -98,24 +100,24 @@ const PersonalProfile = () => {
       <Container>
         <CustomizeAccordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-            <Typography>Area of Experties</Typography>
+            <AccordionTitle>Area of Experties</AccordionTitle>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <AccordionContent>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
               leo lobortis eget.ss
-            </Typography>
+            </AccordionContent>
           </AccordionDetails>
         </CustomizeAccordion>
         <CustomizeAccordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-            <Typography>Other Skills</Typography>
+            <AccordionTitle>Other Skills</AccordionTitle>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <AccordionContent>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
               leo lobortis eget.ss
-            </Typography>
+            </AccordionContent>
           </AccordionDetails>
         </CustomizeAccordion>
       </Container>
@@ -129,7 +131,7 @@ const PersonalProfile = () => {
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={6} xl={8}>
                 {progressBarData.map((item, id) => (
-                  <LinearProgress label={item.name} percentage={item.percentage} thickness={3} />
+                  <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
                 ))}
               </Grid>
             </Grid>
