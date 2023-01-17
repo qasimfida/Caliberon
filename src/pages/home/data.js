@@ -3,10 +3,10 @@ import Business from "../../assests/business.png";
 import Marketing from "../../assests/marketing.png";
 import Fayyaz from "./../../assests/user.jpeg";
 import MD from "./../../assests/md.jpg";
-import Client1 from "../../assests/client1.png";
-import Client2 from "../../assests/client2.png";
-import Client3 from "../../assests/client3.png";
-import Client4 from "../../assests/client4.png";
+import Client1 from "../../assests/Sponsors1.png";
+import Client2 from "../../assests/Sponsors1.png";
+import Client3 from "../../assests/Sponsors1.png";
+import Client4 from "../../assests/Sponsors1.png";
 
 export const services = [
   {

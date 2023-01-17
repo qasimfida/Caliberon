@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Paper, Box } from '@mui/material';
 
-export const Item = styled(Paper)(({theme})=> ({
+export const Item = styled(Paper)(({ theme }) => ({
   boxShadow: theme.shadows[0],
   borderBottomLeftRadius: 'none',
   borderTopLeftRadius: 'none',
@@ -19,8 +19,6 @@ export const SponsorsWrapper = styled(Box)(
       palette: { primary, gradient },
     },
   }) => ({
-    backgroundColor: primary?.main,
-    backgroundImage: gradient,
     margin: '4rem 0',
     display: 'flex',
     justifyContent: 'space-between',

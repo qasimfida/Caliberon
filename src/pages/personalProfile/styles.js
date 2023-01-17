@@ -140,6 +140,6 @@ export const ProgressContent = styled(Box)({
 
 // TimeLine Component
 export const TimeLineWrap = styled(Box)({
-  height:"auto",
-  marginBottom:"5rem",
+  height: "auto",
+  marginBottom: "5rem",
 })

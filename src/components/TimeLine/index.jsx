@@ -1,10 +1,8 @@
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import React from 'react'
-import {StyledTimeLine, Content, Name, Title, Date } from "./styles"
+import { StyledTimeLine, Content, Name, Title, Date, StyledSeparator, StyledContent } from "./styles"
 import { TimelineConnector, TimelineDot } from '@mui/lab';
 const TimeLineComponent = () => {
 
@@ -15,6 +13,7 @@ const TimeLineComponent = () => {
       name: "Art Director - Facebook Inc.",
       content: "Collaborate with creative and development teams on the execution of ideas.",
       id: "1",
+      main: "staticColor"
     },
     {
       title: "Education",
@@ -22,6 +21,7 @@ const TimeLineComponent = () => {
       name: "Art Director - Facebook Inc.",
       content: "Collaborate with creative and development teams on the execution of ideas.",
       id: "2",
+
     },
     {
       title: "Studies",
@@ -35,19 +35,19 @@ const TimeLineComponent = () => {
   return (
     <StyledTimeLine>
       <Timeline position="alternate">
-          {timeLineData.map((item, id)=>(  
-        <TimelineItem key={id}>
-          <TimelineSeparator>
-            <TimelineDot color="warning" />
-            <TimelineConnector />
-          </TimelineSeparator>
-            <TimelineContent>
-            <Title>{item.title}</Title>
-            <Date>{item.date}</Date>
-            <Name>{item.name}</Name>
-            <Content>{item.content}</Content>
-          </TimelineContent>
-        </TimelineItem>
+        {timeLineData.map((item, id) => (
+          <TimelineItem key={id}>
+            <StyledSeparator>
+              <TimelineDot color={`${item.main === 'staticColor' ? "warning" : "grey"}`} />
+              <TimelineConnector />
+            </StyledSeparator>
+            <StyledContent>
+              <Title>{item.title}</Title>
+              <Date>{item.date}</Date>
+              <Name>{item.name}</Name>
+              <Content>{item.content}</Content>
+            </StyledContent>
+          </TimelineItem>
         ))}
       </Timeline>
     </StyledTimeLine>
