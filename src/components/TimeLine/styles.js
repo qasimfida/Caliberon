@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { styled } from '@mui/styles';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineContent from '@mui/lab/TimelineContent';
@@ -10,14 +10,14 @@ export const StyledTimeLine = styled(Box)({
 // Title
 export const Title = styled('h6')({
   fontSize: '22px',
-  margin: "0px",
-  marginBottom: '15px'
+  margin: '0px',
+  marginBottom: '15px',
 });
 
 // StyledContent
 export const StyledContent = styled(TimelineContent)({
-  paddingTop: "0px",
-})
+  paddingTop: '0px',
+});
 // Name
 export const Name = styled('h6')({
   fontSize: '14px',
@@ -34,13 +34,13 @@ export const Content = styled('h6')({
 
 // Time line Separator
 export const StyledSeparator = styled(TimelineSeparator)(({ theme }) => ({
-  "& .MuiTimelineDot-root": {
+  '& .MuiTimelineDot-root': {
     boxShadow: theme?.shadows[0],
-  }
-}))
+  },
+}));
 
 // Date
-export const Date = styled('span')(
+export const Date = styled('p')(
   ({
     theme: {
       palette: { primary },
@@ -49,4 +49,3 @@ export const Date = styled('span')(
     color: primary?.main,
   })
 );
-
