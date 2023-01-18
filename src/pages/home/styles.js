@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { Paper, Box } from '@mui/material';
 
-export const Item = styled(Paper)(({ theme }) => ({
-  boxShadow: theme.shadows[0],
+export const Item = styled(Paper)({
+  boxShadow: 'none',
   borderBottomLeftRadius: 'none',
   borderTopLeftRadius: 'none',
-}));
+});
 
 export const SeeMore = styled(Box)`
   display: flex;

@@ -35,11 +35,11 @@ export const MenuLinks = styled('a')(
   })
 );
 
-export const Item = styled(Paper)(({ theme }) => ({
+export const Item = styled(Paper)({
   padding: '0 0 24px 0',
-  boxShadow: theme.shadows[0],
+  boxShadow: 'none',
   borderRadius: 'none',
-}));
+});
 
 export const AddressWrapper = styled('div')(
   ({

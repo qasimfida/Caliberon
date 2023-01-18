@@ -49,7 +49,7 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading>Our Services</Heading>
-          <Description align="center">
+          <Description align="center" padding="0 10rem">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Description>
           <MainWrapper>
@@ -76,7 +76,7 @@ const HomePage = () => {
       <Section variant="primary">
         <Container>
           <Heading color="primary">Our Team</Heading>
-          <Description color="primary" align="center">
+          <Description color="primary" align="center" padding="0 10rem">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Zahid
           </Description>
@@ -106,7 +106,7 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading>Testimonials</Heading>
-          <Description align="center">Some testimonials from our customers</Description>
+          <Description align="center" padding="0 10rem">Some testimonials from our customers</Description>
           <MainWrapper>
             <Slider {...settings}>
               {testimonialsData.map((item, key) => (

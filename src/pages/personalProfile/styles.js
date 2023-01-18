@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Typography, Box, Accordion } from '@mui/material';
-import { fontSize } from '@mui/system';
 
 export const UserTitle = styled(Typography)(
   ({
@@ -115,8 +114,8 @@ export const UserSocialIcons = styled('div')(
     },
   })
 );
-export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
-  boxShadow: theme.shadows[3],
+export const CustomizeAccordion = styled(Accordion)({
+  boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 0px 0px rgb(0 0 0 / 12%)',
   '&.MuiAccordion-root:first-of-type': {
     borderTopLeftRadius: '0 !important',
     borderTopRightRadius: '0 !important',
@@ -125,18 +124,18 @@ export const CustomizeAccordion = styled(Accordion)(({ theme }) => ({
     borderBottomLeftRadius: '0 !important',
     borderBottomRightRadius: '0 !important',
   },
-}));
+});
 
 // Accordion Content
-export const AccordionTitle = styled("h2")({
-  padding: "0px 25px",
-  fontSize: "20px"
-})
+export const AccordionTitle = styled('h2')({
+  padding: '0px 25px',
+  fontSize: '20px',
+});
 
 // Accordion Content
-export const AccordionContent = styled("p")({
-  padding: "0px 8px",
-})
+export const AccordionContent = styled('p')({
+  padding: '0px 8px',
+});
 
 // ProcessBar Title
 export const ProgressWrapper = styled(Box)({
@@ -151,7 +150,6 @@ export const ProgressContent = styled(Box)({
 
 // TimeLine Component
 export const TimeLineWrap = styled(Box)({
-  height: "auto",
-  marginBottom: "5rem",
-})
-
+  height: 'auto',
+  marginBottom: '5rem',
+});

@@ -34,10 +34,9 @@ export const ProfileWrapper = styled('div')(
   ({
     theme: {
       palette: { white },
-      shadows,
     },
   }) => ({
-    boxShadow: shadows[2],
+    boxShadow: '0px 0px 6px 3px rgba(82, 67, 67, 0.33)',
     overflow: 'hidden',
     cursor: 'grabbing',
     background: white?.main,

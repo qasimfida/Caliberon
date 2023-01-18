@@ -32,7 +32,7 @@ export const UserName = styled.h4`
   line-height: 1.2;
   margin: 0;
 `;
-export const ServicesWrapper = styled('div')(({ active, theme }) => ({
+export const ServicesWrapper = styled('div')(({ active }) => ({
   background: '#fff',
   textAlign: 'center',
   display: 'flex',
@@ -41,10 +41,10 @@ export const ServicesWrapper = styled('div')(({ active, theme }) => ({
   alignItems: 'center',
   padding: '0 20px',
   position: 'relative',
-  boxShadow: active ? theme.shadows[4] : ' ',
+  boxShadow: active ? 'rgba(17, 17, 26, 0.1) 0px 0px 16px' : ' ',
   transition: '0.3s all ease-in',
   '&:hover': {
-    boxShadow: theme.shadows[5],
+    boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
   },
   '&:hover img': {
     transform: 'scale(1.1)',

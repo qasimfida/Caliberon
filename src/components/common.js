@@ -34,7 +34,7 @@ export const Description = styled(Typography)((props) => ({
     props.variant === 'span' ? '24px' : props.title === 'subheading' ? '3rem' : props.title === 'more' ? '' : '40px',
 
   textAlign: props.align === 'center' ? 'center' : props.align === 'right' ? 'right' : 'left',
-  padding: props.title === 'details' ? '1rem' : '0',
+  padding: props.title === 'details' ? '1rem' : props.padding ? props.padding : '0',
   margin: props.title === 'details' ? '0' : '',
   display: props.title === 'more' ? 'flex' : '',
   justifyContent: props.title === 'more' ? 'center' : '',
@@ -47,12 +47,17 @@ export const Description = styled(Typography)((props) => ({
   '& svg': {
     marginLeft: '0.6rem',
   },
+  '@media (max-width: 800px)': {
+    padding: props.padding ? '0 3rem' : '',
+  },
+  '@media (max-width: 500px)': {
+    padding: props.padding ? '0' : '',
+  },
 }));
 export const MainWrapper = styled(Box)({
   marginTop: '5rem',
   '& .slick-prev:before, .slick-next:before': {
-    color:' #f54c0a',
-    fontSize: '24px'
-  }
-})
-;
+    color: ' #f54c0a',
+    fontSize: '24px',
+  },
+});

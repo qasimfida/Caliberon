@@ -33,11 +33,11 @@ export const Content = styled('h6')({
 });
 
 // Time line Separator
-export const StyledSeparator = styled(TimelineSeparator)(({ theme }) => ({
+export const StyledSeparator = styled(TimelineSeparator)({
   '& .MuiTimelineDot-root': {
-    boxShadow: theme?.shadows[0],
+    boxShadow: 'none',
   },
-}));
+});
 
 // Date
 export const Date = styled('p')(
