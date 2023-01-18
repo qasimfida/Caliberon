@@ -1,137 +1,61 @@
-import Slider from "../../components/slider";
-import { useNavigate } from "react-router-dom";
-import Contact from "../../components/contactForm";
-import ProfileCard from "../../components/profileCard";
-import Ideate from "../../assests/ideate.png";
-import Business from "../../assests/business.png";
-import Marketing from "../../assests/marketing.png";
-import ServicesCard from "../../components/servicesCard";
-import TestimonialsCard from "../../components/testimonialsCard";
-import { Container, Grid } from "@mui/material";
-import Fayyaz from "./../../assests/user.jpeg";
-import MD from "./../../assests/md.jpg";
-import {
-  Section,
-  Heading,
-  Discription,
-  MainWrapper,
-} from "../../components/common";
-import Button from "../../components/button";
-import Client1 from "../../assests/client1.png";
-import Client2 from "../../assests/client2.png";
-import Client3 from "../../assests/client3.png";
-import Client4 from "../../assests/client4.png";
-import { SeeMore, Item, SponsorsWrapper } from "./styles";
+import Carousel from '../../components/slider';
+import { useNavigate } from 'react-router-dom';
+import Contact from '../../components/contactForm';
+import ProfileCard from '../../components/profileCard';
+import Slider from 'react-slick';
+import ServicesCard from '../../components/servicesCard';
+import TestimonialsCard from '../../components/testimonialsCard';
+import { Container, Grid } from '@mui/material';
+import { services, testimonialsData, users, sponsors } from './data';
+import { Section, Heading, Description, MainWrapper } from '../../components/common';
+import Button from '../../components/button';
+import Banner from '../banner';
+import { SeeMore, Item, SponsorsWrapper } from './styles';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const services = [
-    {
-      name: "Ideate",
-      img: Ideate,
-      serviceDetails:
-        "We help you develop creative ideas so that your business can grow more rapidly",
-    },
-    {
-      name: "Business Growth",
-      img: Business,
-      active: true,
-      serviceDetails:
-        "We also provide services by providing input for your business growth",
-    },
-    {
-      name: "Degital Marketing",
-      img: Marketing,
-      serviceDetails:
-        "We also help you market your products through an online marketplace",
-    },
-  ];
-  const testimonialsData = [
-    {
-      name: "Ronald Richards",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    },
-    {
-      name: "Guy Hawkins",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    },
-    {
-      name: "Kristin Watsons",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    },
-    {
-      name: "Robert Fox",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    },
-    {
-      name: "Savannah Nguyen",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    },
-    {
-      name: "Courtney Henry",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    },
-  ];
-  const users = [
-    {
-      name: "Mian Dad",
-      role: "Bookkeeper",
-      img: MD,
-      userDetails:
-        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
-    },
-    {
-      name: "Fayyaz",
-      role: "Web Developer",
-      img: Fayyaz,
-      userDetails:
-        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
-    },
-    {
-      name: "Fayyaz",
-      role: "Web Developer",
-      img: Fayyaz,
-      userDetails:
-        "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
-    },
-  ];
-  const sponsors = [
-    {
-      img: Client1,
-    },
-    {
-      img: Client2,
-    },
-    {
-      img: Client3,
-    },
-    {
-      img: Client4,
-    },
-  ];
+
   const ClickServices = () => {
-    navigate("/services");
+    navigate('/services');
   };
+  const settings = {
+    dots: true,
+    className: 'center',
+    centerMode: true,
+    infinite: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    speed: 500,
+    arrows: true,
+    autoplay: true,
+  };
+  const sliderData = [
+    {
+      title: "You're ready. So are we.",
+      imgLink:
+        'https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+    },
+    {
+      title: "You're ready. So are we.",
+      imgLink:
+        'https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+    },
+  ];
   return (
     <div>
-      <Slider />
+      <Carousel slidesToShow={1} arrows={false} slidesToScroll={1}>
+        {sliderData.length && sliderData.map((item, index) => <Banner key={index} item={item} />)}
+      </Carousel>
       <Section>
         <Container>
           <Heading>Our Services</Heading>
-          <Discription align="center">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </Discription>
+          <Description align="center" padding="0 10rem">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </Description>
           <MainWrapper>
             <Grid container spacing={[3]}>
               {services.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
+                <Grid item xs={12} sm={6} md={4} key={`services-${key}`}>
                   <ServicesCard
                     serviceImg={item.img}
                     serviceName={item.name}
@@ -152,15 +76,15 @@ const HomePage = () => {
       <Section variant="primary">
         <Container>
           <Heading color="primary">Our Team</Heading>
-          <Discription color="primary" align="center">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Zahid
-          </Discription>
+          <Description color="primary" align="center" padding="0 10rem">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Zahid
+          </Description>
           <MainWrapper>
             <Grid container spacing={[4]}>
               {users.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
-                  <Item>
+                <Grid item xs={12} sm={6} md={4}>
+                  <Item key={`user-${key}`}>
                     <ProfileCard
                       userImg={item.img}
                       userName={item.name}
@@ -182,17 +106,15 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading>Testimonials</Heading>
-          <Discription align="center">
-            Some testimonials from our customers
-          </Discription>
+          <Description align="center" padding="0 10rem">Some testimonials from our customers</Description>
           <MainWrapper>
-            <Grid container spacing={[8]}>
+            <Slider {...settings}>
               {testimonialsData.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={key}>
+                <div key={`testimonial-${key}`}>
                   <TestimonialsCard name={item.name} comment={item.comment} />
-                </Grid>
+                </div>
               ))}
-            </Grid>
+            </Slider>
           </MainWrapper>
         </Container>
       </Section>
@@ -200,7 +122,7 @@ const HomePage = () => {
         <Heading>Sponsors</Heading>
         <SponsorsWrapper>
           {sponsors.map((item, key) => (
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="" key={`sponsors-${key}`} />
           ))}
         </SponsorsWrapper>
       </Container>
@@ -209,4 +131,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomePage

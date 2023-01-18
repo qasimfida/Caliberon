@@ -1,20 +1,25 @@
-import React from "react";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ServicesWrapper, UserName } from "./styles";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { ServicesWrapper, UserName } from './styles';
+import { useNavigate } from 'react-router-dom';
 
-const ServicesItem = ({ serviceName, key }) => {
+const ServicesItem = ({ serviceName, teamName, teamData, data }) => {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(`/services/${serviceName}`, {
-      state: {
+  let name = serviceName ? 'services' : 'team';
+  let stateData = serviceName
+    ? {
         serviceName: serviceName,
-      },
+      }
+    : { teamName: teamName, teamData: teamData, data: data };
+
+  const handleClick = () => {
+    navigate(`/${name}/${serviceName ? serviceName : teamName}`, {
+      state: stateData,
     });
   };
   return (
-    <ServicesWrapper key={key} onClick={handleClick}>
-      <UserName>{serviceName}</UserName>
+    <ServicesWrapper onClick={handleClick}>
+      <UserName>{serviceName ? serviceName : teamName}</UserName>
       <ArrowForwardIcon />
     </ServicesWrapper>
   );

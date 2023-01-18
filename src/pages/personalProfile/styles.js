@@ -1,55 +1,90 @@
-import styled from "@emotion/styled";
-import { Typography, Box, Accordion } from "@mui/material";
+import styled from '@emotion/styled';
+import { Typography, Box, Accordion } from '@mui/material';
 
-export const UserTitle = styled(Typography)(({ theme }) => ({
-  fontFamily: "Poppins",
-  fontSize: "44px",
-  color: theme?.palette?.white?.main,
-  fontWeight: "bold",
-}));
-
-export const AboutDesc = styled(Typography)({
-  fontFamily: "Poppins",
-  letterSpacing: "0.5px",
-  fontSize: (props) => (props.fontSize === "36px" ? "36px" : "24px"),
-  color: (props) => (props.color === "#ffffff" ? "#ffffff" : "#333333"),
-});
-
-export const MainBox = styled(Box)(({ theme }) => ({
-  backgroundColor: theme?.palette?.white?.main,
-  position: "relative",
-  paddingBottom: "90px",
-  "& .MuiAccordion-root": {
-    paddingBottom: "50px",
-    "& .MuiAccordionSummary-root": {
-      padding: "0",
+export const UserTitle = styled(Typography)(
+  ({
+    theme: {
+      palette: { white },
     },
-    "& .MuiAccordionSummary-expandIconWrapper ": {
-      color: theme?.palette?.primary?.main,
-      "& svg": {
-        fontSize: "2rem",
+  }) => ({
+    fontFamily: 'Poppins',
+    fontSize: '44px',
+    color: white?.main,
+    fontWeight: 'bold',
+  })
+);
+
+export const AboutDesc = styled(Typography)(
+  ({
+    theme: {
+      palette: { white, darkGray },
+    },
+  }) => ({
+    fontFamily: 'Poppins',
+    letterSpacing: '0.5px',
+    fontSize: (props) => (props.fontSize === '36px' ? '36px' : '24px'),
+    color: (props) => (props.color === white.main ? white.main : darkGray),
+  })
+);
+
+export const MainBox = styled(Box)(
+  ({
+    theme: {
+      palette: { white, primary },
+    },
+  }) => ({
+    backgroundColor: white?.main,
+    position: 'relative',
+    paddingBottom: '90px',
+    '& .MuiAccordion-root': {
+      paddingBottom: '30px',
+      paddingTop: '10px',
+      '& .MuiAccordionSummary-root': {
+        padding: '0',
+      },
+      '& .MuiAccordionSummary-expandIconWrapper ': {
+        color: primary?.main,
+        '& svg': {
+          fontSize: '2rem',
+        },
+      },
+      '& .MuiAccordionSummary-content p': {
+        fontWeight: 'bold',
+        fontSize: '20px',
       },
     },
-    "& .MuiAccordionSummary-content p": {
-      fontWeight: "bold",
-      fontSize: "20px",
+  })
+);
+export const StyledBox = styled(Box)(
+  ({
+    theme: {
+      palette: { primary },
     },
+  }) => ({
+    padding: '100px 0px 100px 0px',
+    backgroundColor: primary?.main,
+    display: 'flex',
+    position: 'relative',
+  })
+);
+export const ContactDetailsBox = styled(Box)(
+  ({
+    theme: {
+      palette: { primary },
+    },
+  }) => ({
+    padding: '100px 0px 100px 0px',
+    backgroundColor: primary?.main,
+    display: 'flex',
+    position: 'relative',
+  })
+);
+export const DescriptionBox = styled(Box)({
+  padding: '100px 0px 50px 0px',
+  '.MuiBox-root': {
+    marginTop: '30px',
+    textAlign: 'center',
   },
-}));
-export const StyledBox = styled(Box)(({ theme }) => ({
-  padding: "100px 0px 100px 0px",
-  backgroundColor: theme?.palette?.primary?.main,
-  display: "flex",
-  position: "relative",
-}));
-export const ContactDetailsBox = styled(Box)(({ theme }) => ({
-  padding: "100px 0px 100px 0px",
-  backgroundColor: theme?.palette?.primary?.main,
-  display: "flex",
-  position: "relative",
-}));
-export const DiscriptionBox = styled(Box)({
-  padding: "100px 0px 50px 0px",
 });
 export const UserImage = styled.img`
   height: 250px;
@@ -64,24 +99,57 @@ export const UserContent = styled.div`
 export const UserData = styled.div`
   margin-left: 2rem;
 `;
-export const UserSocialIcons = styled("div")(({ theme }) => ({
-  display: "flex",
-  justifyContent: "space-between",
-  "& svg": {
-    cursor: "pointer",
-    color: theme?.palette?.white?.main,
-    fontSize: "34px",
-  },
-}));
+export const UserSocialIcons = styled('div')(
+  ({
+    theme: {
+      palette: { white },
+    },
+  }) => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    '& svg': {
+      cursor: 'pointer',
+      color: white?.main,
+      fontSize: '34px',
+    },
+  })
+);
 export const CustomizeAccordion = styled(Accordion)({
-  boxShadow:
-    "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 0px 0px rgb(0 0 0 / 12%)",
-  "&.MuiAccordion-root:first-of-type": {
-    borderTopLeftRadius: "0 !important",
-    borderTopRightRadius: "0 !important",
+  boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 0px 0px rgb(0 0 0 / 12%)',
+  '&.MuiAccordion-root:first-of-type': {
+    borderTopLeftRadius: '0 !important',
+    borderTopRightRadius: '0 !important',
   },
-  "&.MuiAccordion-root:last-of-type": {
-    borderBottomLeftRadius: "0 !important",
-    borderBottomRightRadius: "0 !important",
+  '&.MuiAccordion-root:last-of-type': {
+    borderBottomLeftRadius: '0 !important',
+    borderBottomRightRadius: '0 !important',
   },
+});
+
+// Accordion Content
+export const AccordionTitle = styled('h2')({
+  padding: '0px 25px',
+  fontSize: '20px',
+});
+
+// Accordion Content
+export const AccordionContent = styled('p')({
+  padding: '0px 8px',
+});
+
+// ProcessBar Title
+export const ProgressWrapper = styled(Box)({
+  textAlign: 'center',
+  margin: '5rem 0px',
+});
+
+// ProgressBar Container
+export const ProgressContent = styled(Box)({
+  marginTop: '60px',
+});
+
+// TimeLine Component
+export const TimeLineWrap = styled(Box)({
+  height: 'auto',
+  marginBottom: '5rem',
 });

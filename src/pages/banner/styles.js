@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
-import Button from "../../components/button";
 
-export const StyledTypo = styled(Typography)(({ theme }) => ({
-  color: theme?.palette?.white?.main,
+export const StyledTypo = styled(Typography)(({  theme: {
+  palette: { white },
+}, }) => ({
+  color: white?.main,
   fontSize: "4.375rem",
   lineHeight: "80px",
   width: "45%",
