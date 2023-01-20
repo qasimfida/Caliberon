@@ -71,7 +71,7 @@ export const SocialIcons = styled(Box)({
   width: "100%",
   display: "flex",
   alignItems: "center",
-  justifyContent: "start",
+  justifyContent: "flex-start",
   zIndex: '111111'
 })
 
@@ -82,7 +82,7 @@ export const IconCircle = styled(Box)(({ theme: {
   cursor: "pointer",
   width: "17px",
   height: "17px",
-  margin: "5px",
+  marginRight: "12px",
   border: "1px solid #bfbfbf",
   borderRadius: "50%",
   display: "flex",
