@@ -28,7 +28,7 @@ export const UserName = styled.h4`
 `;
 export const TestimonialCard = styled('div')(({ theme }) => ({
   position: 'relative',
-  boxShadow: theme.shadows[1],
+  boxShadow: "0.5rem 0.5rem black, -0.5rem -0.5rem #ccc",
   margin: '1.5rem',
   '&:before': {
     content: `' '`,

@@ -32,3 +32,32 @@ export const SponsorsWrapper = styled(Box)(
     },
   })
 );
+
+
+// CustomizeSlide
+export const CustomizeSlide = styled(Box)(({theme: {palette: {primary}}})=>({
+  ".slick-next":{    
+    padding: "1rem",
+    right:"30px",
+    backgroundColor:"none",
+    borderRadius:"50%",
+    border:"1px solid #fff",
+    transition:".3s ease-in",
+    "&:hover":{
+      color:primary?.main,
+      borderColor:primary?.main,
+    },
+  },
+  ".slick-prev":{
+    padding: "1rem",
+    left: "30px",
+    border: "1px solid #fff",
+    borderRadius:"50%",
+    zIndex:" 1",
+    transition:".2s ease",
+    "&:hover":{
+      color:primary?.main,
+      borderColor:primary?.main,
+    },
+  }
+})); 

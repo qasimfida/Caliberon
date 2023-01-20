@@ -10,7 +10,11 @@ import { services, testimonialsData, users, sponsors } from './data';
 import { Section, Heading, Description, MainWrapper } from '../../components/common';
 import Button from '../../components/button';
 import Banner from '../banner';
-import { SeeMore, Item, SponsorsWrapper } from './styles';
+import BannerNew from "../../assests/Background2.jpg"
+import BannerNeww from "../../assests/New-Banner.jpg"
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import { SeeMore, Item, SponsorsWrapper,CustomizeSlide } from './styles';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -28,24 +32,31 @@ const HomePage = () => {
     speed: 500,
     arrows: true,
     autoplay: true,
+    nextArrow: <ArrowForwardIosRoundedIcon />,
+    prevArrow: <ArrowBackIosRoundedIcon />
+
   };
   const sliderData = [
     {
-      title: "You're ready. So are we.",
-      imgLink:
-        'https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      title: "Hello Calibreon, You're ready ",
+      slideContent:"Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.",
+      imgLink:BannerNew
+       ,
     },
     {
-      title: "You're ready. So are we.",
+      title: "Bussiness Private Limited Company.",
+      slideContent:"Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.",
       imgLink:
-        'https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      BannerNeww,
     },
   ];
   return (
     <div>
-      <Carousel slidesToShow={1} arrows={false} slidesToScroll={1}>
+      <CustomizeSlide>
+        <Carousel slidesToShow={1}  slidesToScroll={1}>
         {sliderData.length && sliderData.map((item, index) => <Banner key={index} item={item} />)}
       </Carousel>
+      </CustomizeSlide>
       <Section>
         <Container>
           <Heading>Our Services</Heading>

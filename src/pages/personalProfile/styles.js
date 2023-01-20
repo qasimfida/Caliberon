@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Typography, Box, Accordion } from '@mui/material';
-import { fontSize } from '@mui/system';
 
 export const UserTitle = styled(Typography)(
   ({
