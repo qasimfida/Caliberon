@@ -40,7 +40,7 @@ const Header = () => {
     navigate('/contact');
   };
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#fff', height: '92px', justifyContent: 'center' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#fff', height: '92px', justifyContent: 'flex-end' }}>
       <Container>
         <ToolbarBox disableGutters>
           <LogoWrapper>

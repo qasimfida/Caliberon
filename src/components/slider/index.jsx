@@ -9,6 +9,8 @@ const Carousel = ({ children, slidesToShow, slidesToScroll, ...rest }) => {
     slidesToShow: parseInt(`${slidesToShow}`),
     slidesToScroll: slidesToScroll,
     autoplay: true,
+    arrows: true,
+    dots: true,
      ...rest,
   };
   return <Slider {...settings}>{children}</Slider>;

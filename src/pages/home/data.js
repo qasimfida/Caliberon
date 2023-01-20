@@ -65,21 +65,21 @@ export const users = [
   {
     name: "Mian Dad",
     role: "Bookkeeper",
-    img: MD,
+    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     userDetails:
       "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
   },
   {
     name: "Fayyaz",
     role: "Web Developer",
-    img: Fayyaz,
+    img: 'https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     userDetails:
       "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
   },
   {
     name: "Fayyaz",
     role: "Web Developer",
-    img: Fayyaz,
+    img: "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     userDetails:
       "Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum",
   },
