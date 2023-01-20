@@ -1,12 +1,7 @@
 body {
   margin: 0px;
+  font-family: 'Poppins', sans-serif;
 }
-.slick-prev:before {
-  color: red;
-  font-size: 30px;
-}
-
-.slick-next:before {
-  color: red;
-  font-size: 30px;
+h1, h2, h3, h4, h5, h6, p, span, a, li, button {
+  font-family: 'Poppins', sans-serif;
 }

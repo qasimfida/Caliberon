@@ -25,8 +25,24 @@ let theme = createTheme({
             },
           },
         },
+        {
+          props: { variant: 'text' },
+          style: {
+            color: '#444',
+            '&:hover': {
+              background: 'transparent',
+              color: '#f54c0a',
+            },
+          },
+        },
       ],
     },
+  },
+  typography: {
+    fontFamily: [
+      'Poppins',
+      'sans-serif'
+    ].join(','),
   },
   palette: {
     primary: {
@@ -56,6 +72,9 @@ let theme = createTheme({
     gray93: {
       main: '#ededed',
     },
+    darkBlack: {
+      main: '#02050b',
+    }
   },
 });
 export default theme;

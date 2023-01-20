@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { AppBar, MenuItem, Menu, Box, IconButton, Typography } from '@mui/material';
+import { MenuItem, Menu, Box, IconButton, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import { useNavigate, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import Button from '../button';
-import { LogoWrapper, ToolbarBox } from './styles';
+import { Navbar, LogoWrapper, ToolbarBox } from './styles';
 import Calibreon from './../../assests/ci.png';
 
 const pages = [
@@ -40,9 +40,9 @@ const Header = () => {
     navigate('/contact');
   };
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#fff', height: '92px', justifyContent: 'flex-end' }}>
+    <Navbar sx={{ backgroundColor: '#fff', height: '76px', justifyContent: 'center' }}>
       <Container>
-        <ToolbarBox disableGutters>
+        <ToolbarBox>
           <LogoWrapper>
             <img src={Calibreon} alt="Calibreon" />
           </LogoWrapper>
@@ -92,7 +92,7 @@ const Header = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: 'none', md: 'flex', justifyContent: 'center' },
+              display: { xs: 'none', md: 'flex', justifyContent: 'flex-end' },
             }}
           >
             {pages.map((item) => (
@@ -100,20 +100,20 @@ const Header = () => {
                 key={`page-${item.path}`}
                 variant="text"
                 onClick={() => onClickLink(item.path)}
-                className={`btn ${item.path === active ? 'active' : ''}`}
+                className={`btn ${item.path === active ? 'active' : 'homeBtns'}`}
               >
                 {item.title}
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, ml:2 }}>
             <Button variant="contained" onClick={onClickContact}>
               Contact Us
             </Button>
           </Box>
         </ToolbarBox>
       </Container>
-    </AppBar>
+    </Navbar>
   );
 };
 export default Header;

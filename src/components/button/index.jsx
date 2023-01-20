@@ -9,6 +9,7 @@ const Button = ({ sx, variant, children, onClick, className, ...rest }) => {
 			sx={{ sx }}
 			onClick={onClick}
 			className={className}
+			disableRipple
 		>
 			{children}
 		</StyledButton>
