@@ -1,30 +1,26 @@
 import React from "react";
-import Rating from "@mui/material/Rating";
 import {
-  TestimonialWrapper,
-  UserName,
   TestimonialDetails,
-  DetailsWrapper,
   TestimonialContentWrapper,
-  RattingWrapper,
   TestimonialCard,
+  TestimonialAuthor,
+  AuthorImg,
+  AuthorName,
+  AuthorDetails
 } from "./styles";
+import authorImg from "../../assests/Testimonial-image1.jpg"
 
-const TestimonialsCard = ({ name, comment }) => {
+const TestimonialsCard = ({ name, comment,authorDetails}) => {
   return (
     <TestimonialCard>
-      <TestimonialWrapper>
-
         <TestimonialContentWrapper>
-          <UserName>{name}</UserName>
-          <DetailsWrapper>
             <TestimonialDetails>{comment}</TestimonialDetails>
-          </DetailsWrapper>
         </TestimonialContentWrapper>
-        <RattingWrapper>
-          <Rating name="read-only" defaultValue={5} size="large" readOnly />
-        </RattingWrapper>
-      </TestimonialWrapper>
+      <TestimonialAuthor>
+            <AuthorImg><img src={authorImg} alt="authorImg" /></AuthorImg>
+            <AuthorName>{name}</AuthorName>
+            <AuthorDetails>{authorDetails}</AuthorDetails>
+      </TestimonialAuthor>
     </TestimonialCard>
   );
 };

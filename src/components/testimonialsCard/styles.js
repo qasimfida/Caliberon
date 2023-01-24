@@ -1,66 +1,55 @@
 import styled from '@emotion/styled';
+import { Box } from '@mui/system';
 
-export const DetailsWrapper = styled.div`
-  margin-top: 10px;
-`;
+// TestimonialCard
+export const TestimonialCard = styled(Box)({
 
-export const TestimonialDetails = styled('p')(
-  ({
-    theme: {
-      palette: { lightGray },
-    },
-  }) => ({
-    fontFamily: 'Poppins',
-    fontWeight: '300',
-    fontStyle: 'normal',
-    fontSize: '16px',
-    marginTop: '11px 0 0 0',
-    color: lightGray?.main,
-  })
-);
+})
 
-export const UserName = styled.h4`
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  margin: 0;
-`;
-export const TestimonialCard = styled('div')({
-  position: 'relative',
-  boxShadow: "0.5rem 0.5rem black, -0.5rem -0.5rem #ccc",
-  margin: '1.5rem',
-});
-export const TestimonialWrapper = styled('div')(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    background: white?.main,
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '70px 32px 24px',
-    margin: '20px 0',
-    position: 'relative',
-    zIndex: 1,
-  })
-);
+// TestimonialDetails
+export const TestimonialDetails = styled('p')({
+  fontWeight: '300',
+  fontSize: '18px',
+  color: "#c8c8c8",
+  lineHeight: "2",
+  letterSpacing: "2px",
+})
+
 
 export const TestimonialContentWrapper = styled('div')({
-  position: 'relative',
+  padding: "0px 30px",
+  // border: "1px solid #eee",
+  margin: "0 10rem",
+  marginTop: "3rem",
 });
-export const RattingWrapper = styled('div')(
-  ({
-    theme: {
-      palette: { primary },
-    },
-  }) => ({
-    position: 'relative',
-    '& .MuiRating-root': {
-      color: primary?.main,
-    },
-  })
-);
+
+
+// TestimonialAuthor
+export const TestimonialAuthor = styled(Box)({
+  paddingTop: "20px",
+})
+// AuthorImg
+export const AuthorImg = styled(Box)({
+  width: "70px",
+  height: "70px",
+  margin: "0 auto 20px",
+  borderRadius: " 50%",
+  overflow: "hidden",
+  "img": {
+    width: "100%",
+    height: "auto",
+
+  }
+})
+// AuthorName
+export const AuthorName = styled(Box)(({ theme: { palette: { primary } } }) => ({
+  color: primary?.main,
+  letterSpacing: "2px",
+  textTransform: "uppercase",
+}))
+// AuthorDetails
+export const AuthorDetails = styled(Box)({
+  lineHeight: "2",
+  fontSize: "13px",
+  letterSpacing: "1px",
+})

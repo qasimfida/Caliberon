@@ -16,6 +16,25 @@ import Services from "./pages/services";
 import ServicePage from "./pages/servicePage";
 import AllTeams from "./pages/allTeam";
 import TeamPage from "./pages/teamPage";
+import styled from "@emotion/styled";
+
+
+// Scroll icon styles
+const styles = styled("span")(({ theme: { palette: { primary } } }) => ({
+  scrollContainer: {
+    padding: "1rem",
+    backgroundColor: "none",
+    transition: ".3s ease-in",
+    fontSize: "15px",
+    border: "1px solid #ffffff80",
+    borderRadius: "50%",
+    color: "#ffffff80",
+    "&:hover": {
+      color: primary?.main,
+      borderColor: primary?.main,
+    },
+  }
+}))
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -36,6 +55,9 @@ function ScrollTop(props) {
     target: window ? window() : undefined,
     disableHysteresis: true,
     threshold: 100,
+    ".MuiSvgIcon-root .MuiSvgIcon-fontSizeMedium .css-i4bv87-MuiSvgIcon-root": {
+      display: "none",
+    },
   });
 
   const handleClick = (event) => {
@@ -79,8 +101,8 @@ function App(props) {
         <Route path="/team/:name" element={<TeamPage />}></Route>
       </Routes>
       <ScrollTop {...props}>
-        <Fab size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
+        <Fab size="small" sx={{}} aria-label="scroll back to top">
+          <KeyboardArrowUpIcon  />
         </Fab>
       </ScrollTop>
       <Footer />

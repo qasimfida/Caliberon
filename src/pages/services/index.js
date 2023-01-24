@@ -1,12 +1,12 @@
-import React from "react";
-import { Container, Grid } from "@mui/material";
-import Ideate from "../../assests/ideate.png";
-import Design from "../../assests/design.png";
-import Web from "../../assests/web.png";
-import App from "../../assests/app.png";
-import Business from "../../assests/business.png";
-import Marketing from "../../assests/marketing.png";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Container, Grid } from '@mui/material';
+import Ideate from '../../assests/ideate.png';
+import Design from '../../assests/design.png';
+import Web from '../../assests/web.png';
+import App from '../../assests/app.png';
+import Business from '../../assests/business.png';
+import Marketing from '../../assests/marketing.png';
+import { useNavigate } from 'react-router-dom';
 import {
   AboutHeading,
   AboutDesc,
@@ -17,58 +17,57 @@ import {
   CardsBox,
   ContactDetailsBox,
   Details,
-} from "./styles";
-import ServicesCard from "../../components/servicesCard";
-import Viewed from "../../components/viewItems";
-import Button from "../../components/button";
-import MainSection from "../../components/layout/mainSection";
-import { MainWrapper } from "../../components/common";
+} from './styles';
+import ServicesCard from '../../components/ServicesCard';
+import Viewed from '../../components/viewItems';
+import Button from '../../components/button';
+import MainSection from '../../components/layout/mainSection';
+import { MainWrapper } from '../../components/common';
 
 const Services = () => {
   const navigate = useNavigate();
 
   const services = [
     {
-      name: "Ideate",
+      name: 'Ideate',
       img: Ideate,
-      serviceDetails:
-        "We help you develop creative ideas so that your business can grow more rapidly",
+      serviceDetails: 'We help you develop creative ideas so that your business can grow more rapidly',
     },
     {
-      name: "Design",
+      name: 'Design',
       img: Design,
       active: true,
-      serviceDetails:
-        "We provide services with the best designs than our designer team for your business",
+      serviceDetails: 'We provide services with the best designs than our designer team for your business',
     },
     {
-      name: "Web Development",
+      name: 'Web Development',
       img: Web,
-      serviceDetails:
-        "We help develop company websites to be more professional and attractive",
+      serviceDetails: 'We help develop company websites to be more professional and attractive',
     },
     {
-      name: "App Development",
+      name: 'App Development',
       img: App,
-      serviceDetails:
-        "We help develop company mobile apps to be more professional and attractive",
+      serviceDetails: 'We help develop company mobile apps to be more professional and attractive',
     },
     {
-      name: "Business Growth",
+      name: 'Business Growth',
       img: Business,
       active: true,
-      serviceDetails:
-        "We also provide services by providing input for your business growth",
+      serviceDetails: 'We also provide services by providing input for your business growth',
     },
     {
-      name: "Degital Marketing",
+      name: 'Degital Marketing',
       img: Marketing,
-      serviceDetails:
-        "We also help you market your products through an online marketplace",
+      serviceDetails: 'We also help you market your products through an online marketplace',
+    },
+    {
+      name: 'Degital Marketing',
+      img: Marketing,
+      serviceDetails: 'We also help you market your products through an online marketplace',
     },
   ];
   const onClickContact = () => {
-    navigate("/contact");
+    navigate('/contact');
   };
   return (
     <MainBox>
@@ -96,9 +95,8 @@ const Services = () => {
                   <GuidContent>
                     <h3>Forensics</h3>
                     <p>
-                      Assisting clients in achieving the highest levels of
-                      business integrity through the prevention, detection, and
-                      investigation of fraud and misconduct.
+                      Assisting clients in achieving the highest levels of business integrity through the prevention,
+                      detection, and investigation of fraud and misconduct.
                     </p>
                   </GuidContent>
                 </GuidBox>

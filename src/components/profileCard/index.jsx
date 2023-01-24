@@ -1,7 +1,7 @@
-import React from 'react'
-import Facebook from '../svgs/Facebook'
-import Linkedin from '../svgs/Linkedin'
-import Mail from '../svgs/Mail'
+import React from 'react';
+import Facebook from '../svgs/Facebook';
+import Linkedin from '../svgs/Linkedin';
+import Mail from '../svgs/Mail';
 import {
   Image,
   ImageWrapper,
@@ -12,11 +12,11 @@ import {
   DetailsWrapper,
   ProfileContentWrapper,
   SocialIcons,
-} from './styles'
-import { useNavigate } from 'react-router-dom'
+} from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = ({ userImg, userName, userRole, userDetails }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
     navigate(`/home/contact/${userName}`, {
@@ -26,8 +26,8 @@ const Profile = ({ userImg, userName, userRole, userDetails }) => {
         userRole: userRole,
         userDetails: userDetails,
       },
-    })
-  }
+    });
+  };
   return (
     <ProfileWrapper onClick={handleClick}>
       <ImageWrapper>
@@ -40,13 +40,13 @@ const Profile = ({ userImg, userName, userRole, userDetails }) => {
           <UserDetails>{userDetails}</UserDetails>
         </DetailsWrapper>
         <SocialIcons>
-          <Facebook height="30px" color="#f54c0a" />
-          <Linkedin height="30px" color="#f54c0a" />
-          <Mail height="30px" color="#f54c0a" />
+          <Facebook height="26px" color="#fff" />
+          <Linkedin height="26px" color="#fff" />
+          <Mail height="26px" color="#fff" />
         </SocialIcons>
       </ProfileContentWrapper>
     </ProfileWrapper>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

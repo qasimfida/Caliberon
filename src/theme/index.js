@@ -15,8 +15,8 @@ let theme = createTheme({
         {
           props: { variant: 'outlined' },
           style: {
-            color: '#000',
-            backgroundColor: '#fff',
+            color: '#fff',
+            // backgroundColor: '#fff',
             textTransform: 'none',
             borderColor: '#fff',
             '&:hover': {
@@ -39,10 +39,7 @@ let theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [
-      'Poppins',
-      'sans-serif'
-    ].join(','),
+    fontFamily: ['Poppins', 'sans-serif'].join(','),
   },
   palette: {
     primary: {
@@ -73,8 +70,15 @@ let theme = createTheme({
       main: '#ededed',
     },
     darkBlack: {
-      main: '#02050b',
-    }
+      main: '#0c0f16',
+      100: '#11141b',
+    },
+    very_black: {
+      main: '#11141b',
+    },
+    dark_black: {
+      main: '#0c0f16',
+    },
   },
 });
 export default theme;

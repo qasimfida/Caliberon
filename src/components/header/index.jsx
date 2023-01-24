@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import Button from '../button';
 import { Navbar, LogoWrapper, ToolbarBox } from './styles';
-import Calibreon from './../../assests/ci.png';
+import Calibreon from './../../assests/logo-main.png';
 
 const pages = [
   { title: 'Home', path: '/' },
@@ -106,7 +106,7 @@ const Header = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0, ml:2 }}>
+          <Box sx={{ flexGrow: 0, ml: 2 }}>
             <Button variant="contained" onClick={onClickContact}>
               Contact Us
             </Button>

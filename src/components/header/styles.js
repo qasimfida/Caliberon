@@ -4,7 +4,7 @@ import { Toolbar, AppBar } from '@mui/material';
 export const Navbar = styled(AppBar)({
   position: "fixed",
   top: "0",
-  width: "100%"
+  width: "100%",
 })
 
 export const LogoWrapper = styled.div`

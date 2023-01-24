@@ -17,7 +17,8 @@ export const ServicesDetails = styled('p')(
     fontFamily: 'Poppins',
     fontWeight: '300',
     fontStyle: 'normal',
-    fontSize: '16px',
+    fontSize: '14px',
+    padding: '0 20px',
     marginTop: '11px 0 0 0',
     color: lightGray?.main,
     display: 'flex',
@@ -27,32 +28,33 @@ export const ServicesDetails = styled('p')(
 
 export const UserName = styled.h4`
   font-family: Poppins;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1rem;
   line-height: 1.2;
-  margin: 0;
+  margin: 12px 0 0 0;
 `;
 export const ServicesWrapper = styled('div')(({ active }) => ({
   background: '#fff',
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
-  minHeight: '20rem',
+  minHeight: 'auto',
   alignItems: 'center',
   padding: '0 20px',
   position: 'relative',
   boxShadow: active ? 'rgba(17, 17, 26, 0.1) 0px 0px 16px' : ' ',
   transition: '0.3s all ease-in',
-  '&:hover': {
-    boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
-  },
-  '&:hover img': {
-    transform: 'scale(1.1)',
-  },
+  border: '1px solid #e5e5e5',
+  // '&:hover': {
+  //   boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
+  // },
+  // '&:hover img': {
+  //   transform: 'scale(1.1)',
+  // },
 }));
 
 export const Image = styled('img')({
-  height: '100px',
+  height: '50px',
   maxWidth: '100%',
   transitionDuration: '0.3s',
 });

@@ -2,7 +2,7 @@ import { Container } from '@mui/system';
 import React from 'react';
 import MainSection from '../../components/layout/mainSection';
 import { DepartmentHeading, Item, TeamMembersWrapper, Description } from './styles';
-import ProfileCard from '../../components/profileCard';
+import ProfileCard from '../../components/ProfileCard';
 import { Grid } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { teamMembers } from './data';

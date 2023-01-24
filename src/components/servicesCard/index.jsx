@@ -1,6 +1,5 @@
-import React from "react";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Image,
   ImageWrapper,
@@ -9,8 +8,7 @@ import {
   ServicesDetails,
   DetailsWrapper,
   ServicesContentWrapper,
-  DetailsSection,
-} from './styles'
+} from './styles';
 
 const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
   const navigate = useNavigate();
@@ -34,12 +32,8 @@ const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
           <ServicesDetails>{serviceDetails}</ServicesDetails>
         </DetailsWrapper>
       </ServicesContentWrapper>
-      <DetailsSection>
-        <ServicesDetails text="detail"> Read more</ServicesDetails>
-        <ArrowForwardIcon />
-      </DetailsSection>
     </ServicesWrapper>
-  )
-}
+  );
+};
 
-export default ServicesCard
+export default ServicesCard;

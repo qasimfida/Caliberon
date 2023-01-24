@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c9a96c4b.css",
+    "main.js": "/static/js/main.d4a931ea.js",
+    "static/media/Background2.jpg": "/static/media/Background2.7c1c8d14f19f65fa97f7.jpg",
+    "static/media/team.jpg": "/static/media/team.72e8d17b616d810f8fdf.jpg",
+    "static/media/user.jpeg": "/static/media/user.6e05f49f6b617a4e6264.jpeg",
+    "static/media/md.jpg": "/static/media/md.01c6e6f200b263624d6a.jpg",
+    "static/media/New-Banner.jpg": "/static/media/New-Banner.56d7a4e724030b1d8ceb.jpg",
+    "static/media/poppins-all-400-normal.woff": "/static/media/poppins-all-400-normal.6fbfdac99c274b77fe96.woff",
+    "static/media/about-us-img-02.jpg": "/static/media/about-us-img-02.478cc4011847f227f3fd.jpg",
+    "static/media/about-us-img-03.jpg": "/static/media/about-us-img-03.ab3569d82ff81a4f3808.jpg",
+    "static/media/about-us-img-01.jpg": "/static/media/about-us-img-01.37e15bfba6a144f33f0e.jpg",
+    "static/media/poppins-devanagari-400-normal.woff2": "/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
+    "static/media/ideate.png": "/static/media/ideate.08137094718355d54dd3.png",
+    "static/media/Sponsors1.png": "/static/media/Sponsors1.f6d33617e892916778d6.png",
+    "static/media/web.png": "/static/media/web.1e77da129b668301ee2a.png",
+    "static/media/ci.png": "/static/media/ci.ddf40c9212c00bd3aca1.png",
+    "static/media/marketing.png": "/static/media/marketing.bf676e9bb7e31a4038e4.png",
+    "static/media/app.png": "/static/media/app.82d012372393cb459d40.png",
+    "static/media/business.png": "/static/media/business.0068c8d2b5fcd6a46d08.png",
+    "static/media/design.png": "/static/media/design.abcccbc63b9fa68e8468.png",
+    "static/media/guide.jpg": "/static/media/guide.262d2a1263be134589c6.jpg",
+    "static/media/poppins-latin-400-normal.woff2": "/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.c9a96c4b.css.map": "/static/css/main.c9a96c4b.css.map",
+    "main.d4a931ea.js.map": "/static/js/main.d4a931ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9a96c4b.css",
+    "static/js/main.d4a931ea.js"
+  ]
+}

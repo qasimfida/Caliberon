@@ -1,72 +1,102 @@
-import Carousel from '../../components/slider';
+import Carousel from '../../components/Slider';
 import { useNavigate } from 'react-router-dom';
 import Contact from '../../components/contactForm';
-import ProfileCard from '../../components/profileCard';
-import Slider from 'react-slick';
-import ServicesCard from '../../components/servicesCard';
+import ProfileCard from '../../components/ProfileCard';
+import ServicesCard from '../../components/ServicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
 import { Container, Grid } from '@mui/material';
-import { services, testimonialsData, users, sponsors } from './data';
-import { Section, Heading, Description, MainWrapper } from '../../components/common';
-import Button from '../../components/button';
+import { services, testimonialsData, users } from './data';
+import { MainWrapper } from '../../components/common';
+import Section from '../../components/Section';
 import Banner from '../banner';
-import BannerNew from "../../assests/Background2.jpg"
-import BannerNeww from "../../assests/New-Banner.jpg"
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import { SeeMore, Item, SponsorsWrapper,CustomizeSlide } from './styles';
+import BannerNew from '../../assests/Background2.jpg';
+import BannerNeww from '../../assests/New-Banner.jpg';
+import { SeeMore, Item, SponsorsWrapper, CustomizeSlide, SlideWrapper, CustomButton } from './styles';
+import Heading from '../../components/Heading';
+import Sponsor from '../../components/Sponsor';
+// sponsor images
+import sponsor2 from '../../assests/sponsor2.png';
+import sponsor3 from '../../assests/sponsor3.png';
+import sponsor4 from '../../assests/sponsor4.png';
+import sponsor5 from '../../assests/sponsor5.png';
+import sponsor6 from '../../assests/sponsor6.png';
+import sponsor7 from '../../assests/sponsor7.png';
+import sponsor8 from '../../assests/sponsor8.png';
 
 const HomePage = () => {
   const navigate = useNavigate();
-
   const ClickServices = () => {
     navigate('/services');
   };
-  const settings = {
-    dots: true,
-    className: 'center',
-    centerMode: true,
-    infinite: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    speed: 500,
-    arrows: true,
-    autoplay: true,
-    nextArrow: <ArrowForwardIosRoundedIcon />,
-    prevArrow: <ArrowBackIosRoundedIcon />
 
-  };
   const sliderData = [
     {
-      title: "Hello Calibreon, You're ready ",
-      slideContent:"Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.",
-      imgLink:BannerNew
-       ,
+      title: 'Hello Calibreon, Are You Ready ',
+      slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.',
+      imgLink: BannerNew,
     },
     {
-      title: "Bussiness Private Limited Company.",
-      slideContent:"Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.",
-      imgLink:
-      BannerNeww,
+      title: 'Bussiness Private Limited Company.',
+      slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.',
+      imgLink: BannerNeww,
+    },
+  ];
+  const sponsors = [
+    {
+      url: 'https://www.facebook.com',
+      label: 'www.facebook.com',
+      image: sponsor2,
+    },
+    {
+      url: 'https://www.northspex.com',
+      label: 'www.northspex.com',
+      image: sponsor3,
+    },
+    {
+      url: 'https://www.instagram.com',
+      label: 'www.instagram.com',
+      image: sponsor4,
+    },
+    {
+      url: 'https://www.twitter.com',
+      label: 'www.twitter.com',
+      image: sponsor5,
+    },
+    {
+      url: 'https://www.google.com',
+      label: 'www.google.com',
+      image: sponsor6,
+    },
+    {
+      url: 'https://www.sound.com',
+      label: 'www.sound.com',
+      image: sponsor7,
+    },
+    {
+      url: 'https://www.spotify.com',
+      label: 'www.spotify.com',
+      image: sponsor8,
+    },
+    {
+      url: 'https://www.facebook.com',
+      label: 'www.facebook.com',
+      image: sponsor2,
     },
   ];
   return (
     <div>
       <CustomizeSlide>
-        <Carousel slidesToShow={1}  slidesToScroll={1}>
-        {sliderData.length && sliderData.map((item, index) => <Banner key={index} item={item} />)}
-      </Carousel>
+        <Carousel slidesToShow={1} slidesToScroll={1} fade>
+          {sliderData.length && sliderData.map((item, index) => <Banner key={index} item={item} />)}
+        </Carousel>
       </CustomizeSlide>
       <Section>
         <Container>
-          <Heading>Our Services</Heading>
-          <Description align="center" padding="0 10rem">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Description>
+          <Heading title={'Services.'} subTitle={'we offer'} dark />
           <MainWrapper>
             <Grid container spacing={[3]}>
               {services.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={`services-${key}`}>
+                <Grid item xs={12} sm={6} md={3} key={`services-${key}`}>
                   <ServicesCard
                     serviceImg={item.img}
                     serviceName={item.name}
@@ -77,20 +107,34 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <Button variant="contained" onClick={ClickServices}>
-                See more
-              </Button>
+              <CustomButton variant="contained" onClick={ClickServices}>
+                for more
+              </CustomButton>
             </SeeMore>
           </MainWrapper>
         </Container>
       </Section>
-      <Section variant="primary">
+
+      <Section variant="very_black">
+        <SlideWrapper>
+          <Container>
+            <Heading title={'testimonial.'} subTitle={'what people says ?'} />
+            <Carousel dots>
+              {testimonialsData.map((item, id) => (
+                <TestimonialsCard
+                  key={id}
+                  name={item.authorName}
+                  authorDetails={item.authorDetails}
+                  comment={item.comment}
+                />
+              ))}
+            </Carousel>
+          </Container>
+        </SlideWrapper>
+      </Section>
+      <Section>
         <Container>
-          <Heading color="primary">Our Team</Heading>
-          <Description color="primary" align="center" padding="0 10rem">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Zahid
-          </Description>
+          <Heading title={'Team.'} subTitle={'our employees'} dark />
           <MainWrapper>
             <Grid container spacing={[4]}>
               {users.map((item, key) => (
@@ -107,39 +151,34 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <Button variant="outlined" onClick={ClickServices}>
+              <CustomButton variant="contained" onClick={ClickServices}>
                 See more
-              </Button>
+              </CustomButton>
             </SeeMore>
           </MainWrapper>
         </Container>
       </Section>
-      <Section>
-        <Container>
-          <Heading>Testimonials</Heading>
-          <Description align="center" padding="0 10rem">Some testimonials from our customers</Description>
-          <MainWrapper>
-            <Slider {...settings}>
-              {testimonialsData.map((item, key) => (
-                <div key={`testimonial-${key}`}>
-                  <TestimonialsCard name={item.name} comment={item.comment} />
-                </div>
-              ))}
-            </Slider>
-          </MainWrapper>
-        </Container>
-      </Section>
-      <Container>
-        <Heading>Sponsors</Heading>
+      <Section variant="dark_black">
         <SponsorsWrapper>
-          {sponsors.map((item, key) => (
-            <img src={item.img} alt="" key={`sponsors-${key}`} />
-          ))}
+          <Container>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Heading className="sponsor_heading" alignLeft title={'clients.'} subTitle={'our team'} />
+              </Grid>
+              <Grid container item xs={12} md={8} spacing={4}>
+                {sponsors.map((sponsor, id) => (
+                  <Grid item xs={6} sm={3} key={id}>
+                    <Sponsor {...sponsor} />
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+          </Container>
         </SponsorsWrapper>
-      </Container>
+      </Section>
       <Contact />
     </div>
   );
 };
 
-export default HomePage
+export default HomePage;

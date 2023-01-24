@@ -55,7 +55,7 @@ export const Description = styled(Typography)((props) => ({
   },
 }));
 export const MainWrapper = styled(Box)({
-  marginTop: '5rem',
+  marginTop: '70px',
   '& .slick-prev:before, .slick-next:before': {
     color: ' #f54c0a',
     fontSize: '24px',
