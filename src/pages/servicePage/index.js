@@ -30,16 +30,29 @@ const ServicePage = () => {
       <MainWrapper>
         <Container>
           <Grid container spacing={[8]}>
-            <Grid item xs={12} sm={6} md={7}>
+            <Grid item xs={12} sm={6} md={8}>
               <Heading variant="h3">Business Growth Management</Heading>
               <Description>
                 Continually myocardinate holistic mindshare with client-based web services. Assertively e-enable
-                catalysts for change before tested markets. Phosfluorescently maintain wireless scenarios after
-                intermandated applications. Conveniently predominate revolutionary quality vectors through future-proof
-                manufactured products. Enthusiastically transform distinctive collaboration.
+                catalysts for change before tested markets. intermandated applications. Conveniently predominate
+                revolutionary quality vectors through future-proof manufactured products. Enthusiastically transform
+                distinctive collaboration
+                <br /><br/>
+                Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently predominate
+                revolutionary quality vectors through future-proof manufactured products. Enthusiastically transform
+                distinctive collaboration.
               </Description>
+              <ServicesImageWrapper>
+                <img src={Image} alt="" />
+                <Description>
+                  Myocardinate holistic mindshare with client-based web services. Assertively e-enable
+                  catalysts for change before tested markets revolutionary. <br/> Phosfluorescently maintain wireless scenarios after
+                  intermandated applications. Conveniently predominate revolutionary quality vectors through
+                  future-proof manufactured products. Enthusiastically transform distinctive collaboration.
+                </Description>
+              </ServicesImageWrapper>
             </Grid>
-            <Grid item xs={12} sm={6} md={5}>
+            <Grid item xs={12} sm={6} md={4}>
               <ServicesItemWrapper>
                 <Description weight="bold">Our Services</Description>
                 {data.map((item, key) => (
@@ -50,15 +63,6 @@ const ServicePage = () => {
               </ServicesItemWrapper>
             </Grid>
           </Grid>
-          <ServicesImageWrapper>
-            <img src={Image} alt="" />
-            <Description>
-              Continually myocardinate holistic mindshare with client-based web services. Assertively e-enable catalysts
-              for change before tested markets. Phosfluorescently maintain wireless scenarios after intermandated
-              applications. Conveniently predominate revolutionary quality vectors through future-proof manufactured
-              products. Enthusiastically transform distinctive collaboration.
-            </Description>
-          </ServicesImageWrapper>
         </Container>
       </MainWrapper>
       <MainWrapper>

@@ -1,15 +1,48 @@
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
-export const StyledTypo = styled(Typography)(({  theme: {
+
+
+// BannerWrapper
+export const BannerMainWrapper = styled(Box)(({ theme: { palette: { darkBlack } } }) => ({
+  position: "relative",
+  display: 'flex',
+  alignItems: 'center',
+  "&:before": {
+    content: `' '`,
+    backgroundColor: darkBlack?.main,
+    opacity: '.6',
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    top: "0",
+    left: "0",
+    zIndex: "1",
+  }
+}));
+export const BannerWrapper = styled(Box)({
+  position: "relative",
+  height: "100%",
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  zIndex: "11111"
+})
+export const StyledTypo = styled(Typography)(({ theme: {
   palette: { white },
 }, }) => ({
   color: white?.main,
-  fontSize: "4.375rem",
+  fontSize: "50px",
+  letterSpacing: '2px',
   lineHeight: "80px",
-  width: "45%",
-  fontWeight: "800",
+  width: "50%",
+  fontWeight: "700",
+  fontFamily: 'Poppins',
   paddingTop: "65px",
+
 }));
 
 export const ButtonWrapper = styled("div")({
@@ -18,3 +51,48 @@ export const ButtonWrapper = styled("div")({
     marginRight: "10px",
   },
 });
+
+// Slide content
+export const SlideContent = styled(Box)({
+  fontFamily: "Poppins",
+  marginTop: "16px",
+  fontSize: "15px",
+  width: "45%",
+  lineHeight: '31px',
+  letterSpacing: "1px",
+  color: "#eee",
+
+})
+
+// SocialIcons
+export const SocialIcons = styled(Box)({
+  position: 'absolute',
+  bottom: '24px',
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  zIndex: '111111'
+})
+
+// IconCircle
+export const IconCircle = styled(Box)(({ theme: {
+  palette: { primary },
+} }) => ({
+  cursor: "pointer",
+  width: "17px",
+  height: "17px",
+  marginRight: "12px",
+  border: "1px solid #bfbfbf",
+  borderRadius: "50%",
+  display: "flex",
+  padding: "4px",
+  alignItems: "center",
+  color: "#bfbfbf",
+  justifyContent: "center",
+  transition: ".2s ease-in",
+  "&:hover": {
+    color: primary?.main,
+    borderColor: primary?.main
+  }
+}))

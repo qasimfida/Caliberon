@@ -90,7 +90,8 @@ export const UserImage = styled.img`
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  border: 3px solid #fffff;
+  border: 3px solid #ffffff;
+  object-fit: cover;
 `;
 export const UserContent = styled.div`
   display: flex;
