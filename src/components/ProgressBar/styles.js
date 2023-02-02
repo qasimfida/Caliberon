@@ -21,6 +21,10 @@ export const CustomizeCircularProgress = styled(CircularProgress)`
     z-index: 1;
   }
 `;
+export const Percent = styled('span')({
+  position: 'absolute',
+  fontWeight: '500',
+});
 export const CustomizeLinearProgress = styled(LinearProgress)``;
 const StyledProgressBar = styled(Box)({
   textAlign: 'center',
@@ -42,9 +46,25 @@ export const LinearWrap = styled('div')({
   },
 });
 
-export const Label = styled('p')({
-  fontSize: '16px',
-  fontWeight: 'bolder',
+export const Label = styled('h3')({
+  textAlign: 'start',
+  margin: '0',
+  fontSize: '1.2rem',
+  paddingTop: '22px',
+  fontWeight: '400',
+  lineHeight: '1.5',
+  marginBottom: '15px',
+  letterSpacing: '2px',
+});
+export const Title = styled('h2')({
+  textAlign: 'center',
+  margin: '0',
+  fontSize: '1.2rem',
+  paddingTop: '22px',
+  fontWeight: '400',
+  lineHeight: '1.5',
+  marginBottom: '15px',
+  letterSpacing: '2px',
 });
 
 export default StyledProgressBar;

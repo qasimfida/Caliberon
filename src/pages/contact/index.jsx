@@ -1,7 +1,7 @@
-import React from "react";
-import MainSection from "../../components/layout/mainSection";
-import ContactForm from "../../components/contactForm";
-import { Wrapper, Title, Para, MapSection } from "./styles";
+import React from 'react';
+import MainSection from '../../components/layout/mainSection';
+import ContactForm from '../../components/contactForm';
+import { Wrapper, Title, Para, MapSection } from './styles';
 
 const Contact = () => {
   return (
@@ -9,11 +9,10 @@ const Contact = () => {
       <MainSection />
       <MapSection>
         <Wrapper>
-          <Title>Get in Touch</Title>{" "}
+          <Title>Get in Touch</Title>
           <Para>
-            Send your requirements for a website, we will research your
-            specification and competitors, create a prototype of the website for
-            free and sed a result to you! It will be something amazing!
+            Send your requirements for a website, we will research your specification and competitors, create a
+            prototype of the website for free and sed a result to you! It will be something amazing!
           </Para>
         </Wrapper>
         <iframe

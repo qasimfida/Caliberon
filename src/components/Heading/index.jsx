@@ -1,6 +1,6 @@
 import Wrapper, { SubTitle, Title } from './styles';
 
-const CommonHeading = ({ title, subTitle, alignLeft, dark, ...rest }) => {
+const Heading = ({ title, subTitle, alignLeft, dark, ...rest }) => {
   return (
     <Wrapper alignLeft={alignLeft} {...rest}>
       <SubTitle>{subTitle}</SubTitle>
@@ -9,4 +9,4 @@ const CommonHeading = ({ title, subTitle, alignLeft, dark, ...rest }) => {
   );
 };
 
-export default CommonHeading;
+export default Heading;

@@ -11,8 +11,6 @@ import { useLocation } from 'react-router-dom';
 
 const TeamPage = () => {
   const { state } = useLocation();
-
-  console.log(state);
   return (
     <MainBox>
       <MainSection teamName={state.teamName} />

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Paper, Box, Button } from '@mui/material';
+import { Paper, Box } from '@mui/material';
 
 export const Item = styled(Paper)({
   boxShadow: 'none',
@@ -11,7 +11,7 @@ export const SeeMore = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 60px;
 `;
 export const SponsorsWrapper = styled(Box)(
   ({
@@ -65,14 +65,6 @@ export const CustomizeSlide = styled(Box)(
     },
   })
 );
-
-export const CustomButton = styled(Button)({
-  padding: '11px 25px',
-  letterSpacing: '2px',
-  textTransform: 'uppercase',
-  borderRadius: 'unset',
-  marginTop: '20px',
-});
 
 export const SlideWrapper = styled(Box)(
   ({
@@ -138,5 +130,10 @@ export const SlideWrapper = styled(Box)(
     },
   })
 );
+
+// blogs wrapper styles
+export const BlogsWrapper = styled(Box)({
+  marginTop: '70px',
+});
 
 export const SponsorWrapper = styled(Box)({});

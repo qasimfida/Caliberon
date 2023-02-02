@@ -8,13 +8,17 @@ import {
   SlideContent,
   BannerWrapper,
   SocialIcons,
-  IconCircle,
   CustomButton,
+  IconBorder,
+  WrapperDownIcon,
+  BorderRadius,
 } from './styles';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+// social icons
+import Facebook from '../../components/Svgs/Facebook';
+import LinkedIn from '../../components/Svgs/Linkedin';
+import Twitter from '../../components/Svgs/Twitter';
+import Mail from '../../components/Svgs/Mail';
+import DotIcon from '@mui/icons-material/FiberManualRecord';
 
 const Banner = ({ key, item }) => {
   const navigate = useNavigate();
@@ -26,9 +30,6 @@ const Banner = ({ key, item }) => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-  };
-  const onClickAboutus = () => {
-    navigate('/about');
   };
   const onClickServices = () => {
     navigate('/services');
@@ -42,24 +43,29 @@ const Banner = ({ key, item }) => {
             <Typography variant="body1"> {item.slideContent}</Typography>
           </SlideContent>
           <ButtonWrapper>
-            <CustomButton variant="outlined" sx={{ mr: 10 }} onClick={onClickServices}>
+            {/* <CustomButton variant="outlined" onClick={onClickServices}>
               Explore More
-            </CustomButton>
+            </CustomButton> */}
           </ButtonWrapper>
+          <WrapperDownIcon>
+            <BorderRadius>
+              <DotIcon fontSize="small" />
+            </BorderRadius>
+          </WrapperDownIcon>
         </BannerWrapper>
         <SocialIcons>
-          <IconCircle>
-            <FacebookRoundedIcon fontSize="small" />
-          </IconCircle>
-          <IconCircle>
-            <TwitterIcon fontSize="small" />
-          </IconCircle>
-          <IconCircle>
-            <InstagramIcon fontSize="small" />
-          </IconCircle>
-          <IconCircle>
-            <LocationOnOutlinedIcon fontSize="small" />
-          </IconCircle>
+          <IconBorder>
+            <Facebook className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <LinkedIn className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <Twitter className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <Mail className="socialIcon" color="#fff" />
+          </IconBorder>
         </SocialIcons>
       </Container>
     </BannerMainWrapper>

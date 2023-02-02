@@ -32,7 +32,7 @@ export const Title = styled('h3')(({ dark, theme: { palette } }) => ({
   letterSpacing: '6px',
   fontWeight: '700',
   color: dark ? palette.black.main : palette.white.main,
-  padding: '10px 0px',
+  padding: '10px 0 0',
   display: 'inline-block',
 }));
 

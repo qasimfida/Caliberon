@@ -1,7 +1,7 @@
 import React from 'react';
-import Facebook from '../svgs/Facebook';
-import Linkedin from '../svgs/Linkedin';
-import Mail from '../svgs/Mail';
+import Facebook from '../Svgs/Facebook';
+import LinkedIn from '../Svgs/Linkedin';
+import Mail from '../Svgs/Mail';
 import {
   Image,
   ImageWrapper,
@@ -11,7 +11,8 @@ import {
   UserDetails,
   DetailsWrapper,
   ProfileContentWrapper,
-  SocialIcons,
+  IconsWrapper,
+  IconBorder,
 } from './styles';
 import { useNavigate } from 'react-router-dom';
 
@@ -39,11 +40,17 @@ const Profile = ({ userImg, userName, userRole, userDetails }) => {
         <DetailsWrapper>
           <UserDetails>{userDetails}</UserDetails>
         </DetailsWrapper>
-        <SocialIcons>
-          <Facebook height="26px" color="#fff" />
-          <Linkedin height="26px" color="#fff" />
-          <Mail height="26px" color="#fff" />
-        </SocialIcons>
+        <IconsWrapper>
+          <IconBorder>
+            <Facebook className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <LinkedIn className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <Mail className="socialIcon" color="#fff" />
+          </IconBorder>
+        </IconsWrapper>
       </ProfileContentWrapper>
     </ProfileWrapper>
   );

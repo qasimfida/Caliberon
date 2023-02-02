@@ -5,23 +5,27 @@ import ProfileCard from '../../components/ProfileCard';
 import ServicesCard from '../../components/ServicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
 import { Container, Grid } from '@mui/material';
-import { services, testimonialsData, users } from './data';
+import { services, testimonialsData, users, blogDatas, aboutUsData } from './data';
 import { MainWrapper } from '../../components/common';
 import Section from '../../components/Section';
 import Banner from '../banner';
-import BannerNew from '../../assests/Background2.jpg';
-import BannerNeww from '../../assests/New-Banner.jpg';
-import { SeeMore, Item, SponsorsWrapper, CustomizeSlide, SlideWrapper, CustomButton } from './styles';
+import BannerNew from '../../assets/images/Background2.jpg';
+import BannerNeww from '../../assets/images/New-Banner.jpg';
+import { SeeMore, Item, SponsorsWrapper, CustomizeSlide, SlideWrapper, BlogsWrapper } from './styles';
+import Button from '../../components/Button';
 import Heading from '../../components/Heading';
 import Sponsor from '../../components/Sponsor';
 // sponsor images
-import sponsor2 from '../../assests/sponsor2.png';
-import sponsor3 from '../../assests/sponsor3.png';
-import sponsor4 from '../../assests/sponsor4.png';
-import sponsor5 from '../../assests/sponsor5.png';
-import sponsor6 from '../../assests/sponsor6.png';
-import sponsor7 from '../../assests/sponsor7.png';
-import sponsor8 from '../../assests/sponsor8.png';
+import sponsor2 from '../../assets/images/sponsor2.png';
+import sponsor3 from '../../assets/images/sponsor3.png';
+import sponsor4 from '../../assets/images/sponsor4.png';
+import sponsor5 from '../../assets/images/sponsor5.png';
+import sponsor6 from '../../assets/images/sponsor6.png';
+import sponsor7 from '../../assets/images/sponsor7.png';
+import sponsor8 from '../../assets/images/sponsor8.png';
+import NewsLetter from '../../components/NewsLetter';
+import OurBlogs from '../../components/OurBlogs';
+import AboutUs from '../../components/AboutUs';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -107,30 +111,22 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <CustomButton variant="contained" onClick={ClickServices}>
+              <Button size="sm" variant="contained" onClick={ClickServices}>
                 for more
-              </CustomButton>
+              </Button>
             </SeeMore>
           </MainWrapper>
         </Container>
       </Section>
-
       <Section variant="very_black">
-        <SlideWrapper>
-          <Container>
-            <Heading title={'testimonial.'} subTitle={'what people says ?'} />
-            <Carousel dots>
-              {testimonialsData.map((item, id) => (
-                <TestimonialsCard
-                  key={id}
-                  name={item.authorName}
-                  authorDetails={item.authorDetails}
-                  comment={item.comment}
-                />
-              ))}
-            </Carousel>
-          </Container>
-        </SlideWrapper>
+        <Container>
+          <Heading className="sponsor_heading" title={'About Us.'} subTitle={'our company'} />
+          <Grid container>
+            <Grid item xs={12} md={12}>
+              <AboutUs {...aboutUsData} />
+            </Grid>
+          </Grid>
+        </Container>
       </Section>
       <Section>
         <Container>
@@ -151,14 +147,54 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <CustomButton variant="contained" onClick={ClickServices}>
+              <Button variant="contained" onClick={ClickServices}>
                 See more
-              </CustomButton>
+              </Button>
             </SeeMore>
           </MainWrapper>
         </Container>
       </Section>
-      <Section variant="dark_black">
+      <Section variant="very_black">
+        <SlideWrapper>
+          <Container>
+            <Heading title={'testimonial.'} subTitle={'what people says ?'} />
+            <Carousel dots>
+              {testimonialsData.map((item, id) => (
+                <TestimonialsCard
+                  key={id}
+                  name={item.authorName}
+                  authorDetails={item.authorDetails}
+                  comment={item.comment}
+                />
+              ))}
+            </Carousel>
+          </Container>
+        </SlideWrapper>
+      </Section>
+      <Section>
+        <Container>
+          <Heading title={'our blogs.'} subTitle={'latest news'} dark />
+          <BlogsWrapper>
+            <Grid container spacing={4}>
+              {blogDatas.map((item, id) => (
+                <Grid item xs={4} md={4}>
+                  <OurBlogs
+                    key={id}
+                    profile={item.img}
+                    title={item.title}
+                    subTitle={item.subTitle}
+                    details={item.details}
+                    date={item.date}
+                    month={item.month}
+                    btnValue={item.button}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </BlogsWrapper>
+        </Container>
+      </Section>
+      <Section variant="very_black">
         <SponsorsWrapper>
           <Container>
             <Grid container spacing={5}>
@@ -175,6 +211,18 @@ const HomePage = () => {
             </Grid>
           </Container>
         </SponsorsWrapper>
+      </Section>
+      <Section>
+        <Container>
+          <Grid container alignItems="center">
+            <Grid item xs={12} md={6}>
+              <Heading alignLeft title={'join us'} subTitle={'news letter.'} dark />
+            </Grid>
+            <Grid container item xs={12} md={6}>
+              <NewsLetter />
+            </Grid>
+          </Grid>
+        </Container>
       </Section>
       <Contact />
     </div>

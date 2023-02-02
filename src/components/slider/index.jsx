@@ -14,6 +14,7 @@ const Carousel = ({ children, slidesToShow = 1, fade = false, slidesToScroll = 1
     autoplaySpeed: 2000,
     slidesToShow: parseInt(`${slidesToShow}`),
     slidesToScroll: slidesToScroll,
+    autoplay: true,
     nextArrow: <ArrowForwardIosRoundedIcon color="secondary" fontSize="small" />,
     prevArrow: <ArrowBackIosRoundedIcon color="secondary" fontSize="small" />,
     ...rest,

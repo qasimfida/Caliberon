@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Box } from '@mui/material';
 
 export const ImageWrapper = styled.div`
   img {
@@ -15,23 +16,29 @@ export const DetailsWrapper = styled.div`
   margin-top: 10px;
 `;
 
-export const UserDetails = styled('p')({
-  margin: '0',
-  color: '#d5d5d5',
-  fontWeight: '400',
-  fontSize: '1rem',
-  marginTop: '11px 0 0 0',
-});
+export const UserDetails = styled('p')(
+  ({
+    theme: {
+      palette: { primary, darkBlack, very_black },
+    },
+  }) => ({
+    margin: '0',
+    color: '#d5d5d5',
+    fontWeight: '200',
+    letterSpacing: '1.3px',
+    fontSize: '1rem',
+    marginTop: '12px 0 0 0',
+  })
+);
 export const UserName = styled('h4')(
   ({
     theme: {
-      palette: { primary, darkBlack },
+      palette: { primary, darkBlack, very_black },
     },
   }) => ({
-    background: primary?.main,
     margin: '0',
-    color: darkBlack?.[100],
-    fontWeight: '500',
+    color: primary.main,
+    fontWeight: '600',
     fontSize: '1.3rem',
   })
 );
@@ -39,16 +46,14 @@ export const UserName = styled('h4')(
 export const ProfileWrapper = styled('div')(
   ({
     theme: {
-      palette: { primary, white, darkBlack },
+      palette: { primary, very_black, darkBlack },
     },
   }) => ({
-    boxShadow: '0px 0px 6px 3px rgba(82, 67, 67, 0.33)',
+    boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
+    background: very_black?.main,
     overflow: 'hidden',
     cursor: 'grabbing',
-    background: primary?.main,
-    // background: darkBlack?.[100],
-    color: white?.main,
-    borderRadius: '10px',
+    borderRadius: '5px',
   })
 );
 export const UserRole = styled('h4')(
@@ -59,9 +64,8 @@ export const UserRole = styled('h4')(
   }) => ({
     fontFamily: 'Poppins',
     textTransform: 'uppercase',
-    fontSize: '1rem',
-    fontWeight: '600',
-    letterSpacing: '1px ',
+    fontSize: '.875rem',
+    fontWeight: '400',
     color: white?.main,
     margin: '0 0 5px 0',
     letterSpacing: '1px',
@@ -74,7 +78,7 @@ export const Image = styled('img')({
   width: '100%',
 });
 export const ProfileContentWrapper = styled.div`
-  padding: 14px 20px 20px 20px;
+  padding: 20px;
 `;
 
 export const SocialIcons = styled.div`
@@ -82,3 +86,44 @@ export const SocialIcons = styled.div`
   margin-top: 20px;
   column-gap: 20px;
 `;
+export const IconsWrapper = styled(Box)(
+  ({
+    theme: {
+      palette: { white },
+    },
+  }) => ({
+    marginTop: '2rem',
+    display: 'flex',
+    paddingRight: '3rem',
+    '& svgs': {
+      marginRight: '2rem',
+      color: white?.main,
+      cursor: 'pointer',
+    },
+  })
+);
+export const IconBorder = styled(Box)(
+  ({
+    theme: {
+      palette: { darkGray },
+    },
+  }) => ({
+    height: '22px',
+    width: '22px',
+    border: `1px solid ${darkGray?.main}`,
+    display: 'flex',
+    justifyContent: 'center',
+    outline: 'none',
+    alignItems: 'center',
+    margin: '1px 6px',
+    padding: '8px',
+    zIndex: '0',
+    cursor: 'pointer',
+    borderRadius: '50%',
+    transition: '.5s all ease',
+    '&:hover': {
+      transform: 'scale(1)',
+      background: '#4d4d4d',
+    },
+  })
+);

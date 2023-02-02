@@ -1,5 +1,5 @@
-import Fayyaz from './../../assests/user.jpeg';
-import MD from './../../assests/md.jpg';
+import ImgA from './../../assets/images/about1.jpg';
+import ImgB from './../../assets/images/about2.jpg';
 
 export const teamMembers = [
   {
@@ -8,7 +8,7 @@ export const teamMembers = [
       {
         name: 'Mian Dad',
         role: 'Bookkeeper',
-        img: MD,
+        img: ImgB,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -16,28 +16,28 @@ export const teamMembers = [
       {
         name: 'Fayyaz',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: ImgA,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: ImgA,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Qasim',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: ImgA,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: ImgA,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -49,7 +49,7 @@ export const teamMembers = [
       {
         name: 'Mian Dad',
         role: 'Bookkeeper',
-        img: MD,
+        img: ImgB,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -57,28 +57,28 @@ export const teamMembers = [
       {
         name: 'Fayyaz',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: ImgA,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Kaleem',
         role: 'Web Developer',
-        img: MD,
+        img: ImgB,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Qasim',
         role: 'Web Developer',
-        img: MD,
+        img: ImgB,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: Fayyaz,
+        img: ImgA,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },

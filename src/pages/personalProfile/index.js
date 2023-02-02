@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import { Container, Grid, AccordionSummary, AccordionDetails } from '@mui/material';
 import {
   UserTitle,
   StyledBox,
@@ -13,17 +13,19 @@ import {
   CustomizeAccordion,
   ContactDetailsBox,
   ProgressContent,
-  ProgressWrapper,
   TimeLineWrap,
   AccordionTitle,
   AccordionContent,
+  Heading,
+  UserRole,
+  HeadingA,
+  MainWrapper,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { CircularProgress, LinearProgress } from '../../components/ProgressBar';
 import TimeLine from '../../components/TimeLine';
-import { Heading } from '../../components/common';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
@@ -51,7 +53,7 @@ const PersonalProfile = () => {
       id: '4',
     },
     {
-      name: 'marketing',
+      name: 'Marketing',
       percentage: 20,
       id: '4',
     },
@@ -68,24 +70,25 @@ const PersonalProfile = () => {
       <StyledBox>
         <Container>
           <Grid container spacing={[4]} alignItems="center">
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={12} md={8}>
               <UserContent>
                 <UserImage src={state.userImg} alt="user" />
                 <UserData>
                   <UserTitle>{state.userName}</UserTitle>
-                  <AboutDesc color="#ffffff" fontSize="36px">
+                  <UserRole color="#ffffff" fontSize="36px">
                     {state.userRole}
-                  </AboutDesc>
+                  </UserRole>
                 </UserData>
               </UserContent>
             </Grid>
-            <Grid item xs={12} sm={4} md={4}></Grid>
+            <Grid item xs={12} sm={12} md={4}></Grid>
           </Grid>
         </Container>
       </StyledBox>
       <DescriptionBox>
         <Container>
           <AboutDesc>
+            <HeadingA>Intoduction</HeadingA>
             {state.userName} has a diversified experience of over 25 years within and outside profession in Pakistan and
             East Africa. He is a key member of audit and assurance practice of Islamabad and heads the Clients & Market
             and Human Resource functions of Islamabad practice and is the lead engagement partner of key Islamabad audit
@@ -96,51 +99,49 @@ const PersonalProfile = () => {
           </AboutDesc>
         </Container>
       </DescriptionBox>
-
       <Container>
-        <CustomizeAccordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-            <AccordionTitle>Area of Experties</AccordionTitle>
-          </AccordionSummary>
-          <AccordionDetails>
-            <AccordionContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
-              leo lobortis eget.ss
-            </AccordionContent>
-          </AccordionDetails>
-        </CustomizeAccordion>
-        <CustomizeAccordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-            <AccordionTitle>Other Skills</AccordionTitle>
-          </AccordionSummary>
-          <AccordionDetails>
-            <AccordionContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
-              leo lobortis eget.ss
-            </AccordionContent>
-          </AccordionDetails>
-        </CustomizeAccordion>
-      </Container>
-      <Container>
-        <ProgressWrapper>
-          <Heading>Skills</Heading>
-          <ProgressContent>
-            <Grid container spacing={2} alignItems="center">
-              <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
-                <CircularProgress label="Over all percentage" percentage={progressValue} size={200} thickness={5} />
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6} xl={8}>
-                {progressBarData.map((item, id) => (
-                  <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
-                ))}
-              </Grid>
+        <Heading>Skills</Heading>
+        <ProgressContent>
+          <Grid container alignItems="center">
+            <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
+              <CircularProgress title="OVER ALL PERCENTAGE" percentage={progressValue} size={200} thickness={5} />
             </Grid>
-          </ProgressContent>
-        </ProgressWrapper>
-        <TimeLineWrap>
-          <TimeLine />
-        </TimeLineWrap>
+            <Grid item xs={12} sm={6} md={7} lg={6} xl={8}>
+              {progressBarData.map((item, id) => (
+                <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
+              ))}
+            </Grid>
+          </Grid>
+        </ProgressContent>
       </Container>
+      <MainWrapper>
+        <Container>
+          <CustomizeAccordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+              <AccordionTitle>Area of Experties</AccordionTitle>
+            </AccordionSummary>
+            <AccordionDetails>
+              <AccordionContent>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                blandit leo lobortis eget.ss
+              </AccordionContent>
+            </AccordionDetails>
+          </CustomizeAccordion>
+          <CustomizeAccordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+              <AccordionTitle>Area Of Need</AccordionTitle>
+            </AccordionSummary>
+            <AccordionDetails>
+              <AccordionContent>
+                Consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </AccordionContent>
+            </AccordionDetails>
+          </CustomizeAccordion>
+        </Container>
+      </MainWrapper>
+      <TimeLineWrap>
+        <TimeLine />
+      </TimeLineWrap>
       <ContactDetailsBox>
         <Container>
           <UserSocialIcons>

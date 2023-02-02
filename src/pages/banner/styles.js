@@ -79,8 +79,40 @@ export const CustomButton = styled(Button)(
   })
 );
 
+export const WrapperDownIcon = styled(Box)(
+  ({
+    theme: {
+      palette: { darkGray },
+    },
+  }) => ({
+    width: '100%',
+    marginTop: '3rem',
+    cursor: 'pointer',
+    color: '#fff',
+  })
+);
+export const BorderRadius = styled(Box)({
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  width: '35px',
+  height: '55px',
+  margin: '0 auto 20px',
+  boxSizing: 'border-box',
+  border: '1px solid #fff',
+  borderRadius: '23px',
+  '&:hover svg': {
+    top: '30px',
+  },
+  svg: {
+    transition: '.4s all ease',
+    position: 'absolute',
+    top: '6px',
+  },
+});
 // Slide content
 export const SlideContent = styled(Box)({
+  textAlign: 'center',
   fontFamily: 'Poppins',
   marginTop: '16px',
   fontSize: '15px',
@@ -90,39 +122,52 @@ export const SlideContent = styled(Box)({
   color: '#eee',
 });
 
-// SocialIcons
-export const SocialIcons = styled(Box)({
-  position: 'absolute',
-  bottom: '24px',
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  zIndex: '111111',
-});
-
-// IconCircle
-export const IconCircle = styled(Box)(
+// icon wrapper
+export const SocialIcons = styled(Box)(
   ({
     theme: {
-      palette: { primary },
+      palette: { white },
     },
   }) => ({
-    cursor: 'pointer',
-    width: '17px',
-    height: '17px',
-    marginRight: '12px',
-    border: '1px solid #bfbfbf',
-    borderRadius: '50%',
+    marginTop: '3rem',
+    paddingRight: '3rem',
+    position: 'absolute',
+    bottom: '24px',
+    width: '100%',
     display: 'flex',
-    padding: '4px',
     alignItems: 'center',
-    color: '#bfbfbf',
+    justifyContent: 'flex-start',
+    zIndex: '111111',
+
+    '& svgs': {
+      marginRight: '2rem',
+      color: white?.main,
+      cursor: 'pointer',
+    },
+  })
+);
+
+export const IconBorder = styled(Box)(
+  ({
+    theme: {
+      palette: { darkGray },
+    },
+  }) => ({
+    height: '22px',
+    width: '22px',
+    border: `1px solid ${darkGray?.main}`,
+    display: 'flex',
     justifyContent: 'center',
-    transition: '.2s ease-in',
+    outline: 'none',
+    alignItems: 'center',
+    margin: '1px 6px',
+    padding: '8px',
+    cursor: 'pointer',
+    borderRadius: '50%',
+    transition: '.5s all ease',
     '&:hover': {
-      color: primary?.main,
-      borderColor: primary?.main,
+      transform: 'scale(1)',
+      background: '#4d4d4d',
     },
   })
 );

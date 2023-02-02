@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
-import Ideate from '../../assests/ideate.png';
-import Design from '../../assests/design.png';
-import Web from '../../assests/web.png';
-import App from '../../assests/app.png';
-import Business from '../../assests/business.png';
-import Marketing from '../../assests/marketing.png';
+import Ideate from '../../assets/images/ideate.png';
+import Design from '../../assets/images/design.png';
+import Web from '../../assets/images/web.png';
+import App from '../../assets/images/app.png';
+import Business from '../../assets/images/business.png';
+import Marketing from '../../assets/images/marketing.png';
 import { useNavigate } from 'react-router-dom';
 import {
   AboutHeading,
@@ -20,7 +20,7 @@ import {
 } from './styles';
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
-import Button from '../../components/button';
+import Button from '../../components/Button';
 import MainSection from '../../components/layout/mainSection';
 import { MainWrapper } from '../../components/common';
 

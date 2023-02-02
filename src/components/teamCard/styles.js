@@ -18,7 +18,8 @@ export const UserDetails = styled('p')(
     },
   }) => ({
     fontFamily: 'Poppins',
-    fontWeight: '300',
+    fontWeight: '200',
+    letterSpacing: '1.3px',
     fontStyle: 'normal',
     fontSize: '16px',
     margin: '0',

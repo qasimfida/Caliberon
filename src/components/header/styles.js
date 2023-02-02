@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
 import { Toolbar, AppBar } from '@mui/material';
+import { Box } from '@mui/system';
 
 export const Navbar = styled(AppBar)({
-  position: "fixed",
-  top: "0",
-  width: "100%",
-})
+  position: 'fixed',
+  top: '0',
+  width: '100%',
+});
 
 export const LogoWrapper = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
   & img {
     height: 55px;
   }
@@ -21,9 +22,7 @@ export const ToolbarBox = styled(Toolbar)(
     },
   }) => ({
     position: 'relative',
-    // transition: '0.3s all ease',
     '& .MuiBox-root .btn.MuiButtonBase-root.MuiButton-root': {
-      // transition: '0.3s all ease',
       margin: '0 10px',
     },
 
@@ -40,3 +39,9 @@ export const ToolbarBox = styled(Toolbar)(
     },
   })
 );
+
+// btn wrapper styles
+
+export const ButtonWrapper = styled(Box)({
+  // border: '1px solid black',
+});

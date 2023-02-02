@@ -4,9 +4,9 @@ import { Container } from '@mui/system';
 import { useNavigate, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
-import Button from '../button';
-import { Navbar, LogoWrapper, ToolbarBox } from './styles';
-import Calibreon from './../../assests/logo-main.png';
+import Button from '../Button';
+import { Navbar, LogoWrapper, ToolbarBox, ButtonWrapper } from './styles';
+import Calibreon from './../../assets/images/logo-main.png';
 
 const pages = [
   { title: 'Home', path: '/' },
@@ -106,11 +106,11 @@ const Header = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0, ml: 2 }}>
-            <Button variant="contained" onClick={onClickContact}>
+          <ButtonWrapper>
+            <Button size="lg" variant="contained" onClick={onClickContact}>
               Contact Us
             </Button>
-          </Box>
+          </ButtonWrapper>
         </ToolbarBox>
       </Container>
     </Navbar>

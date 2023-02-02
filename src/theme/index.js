@@ -31,6 +31,35 @@ let theme = createTheme({
             color: '#444',
             '&:hover': {
               background: 'transparent',
+              color: '#f15c27',
+            },
+          },
+        },
+        {
+          props: { variant: 'dark' },
+          style: {
+            backgroundColor: '#323232',
+            color: '#fff',
+            padding: '15px 32px',
+            letterSpacing: '1.3px',
+            '&:hover': {
+              background: '#11141b',
+            },
+          },
+        },
+        {
+          props: { variant: 'dark-version' },
+          style: {
+            backgroundColor: 'transparent',
+            padding: '5px 12px',
+            color: '#fff',
+            textTransform: 'uppercase',
+            letterSpacing: '4px',
+            fontSize: '13px',
+            fontWeight: '200',
+            paddingLeft: '10px !important',
+            transition: '.4s all ease',
+            '&:hover': {
               color: '#f54c0a',
             },
           },
@@ -43,7 +72,7 @@ let theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#f54c0a',
+      main: '#f15c27',
     },
     secondary: {
       main: '#edf2ff',
@@ -53,6 +82,7 @@ let theme = createTheme({
     },
     lightGray: {
       main: '#748494',
+      100: '#363636',
     },
     darkGray: {
       main: '#444',
@@ -71,13 +101,15 @@ let theme = createTheme({
     },
     darkBlack: {
       main: '#0c0f16',
-      100: '#11141b',
     },
     very_black: {
       main: '#11141b',
     },
     dark_black: {
       main: '#0c0f16',
+    },
+    hover_color: {
+      main: '#4d4d4d',
     },
   },
 });

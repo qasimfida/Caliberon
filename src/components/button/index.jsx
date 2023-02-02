@@ -1,19 +1,12 @@
-import React from "react";
-import { StyledButton } from "./styles";
+import React from 'react';
+import { StyledButton } from './styles';
 
-const Button = ({ sx, variant, children, onClick, className, ...rest }) => {
-	return (
-		<StyledButton
-			{...rest}
-			variant={variant}
-			sx={{ sx }}
-			onClick={onClick}
-			className={className}
-			disableRipple
-		>
-			{children}
-		</StyledButton>
-	);
+const Button = ({ sx, children, onClick, size = 'md', ...rest }) => {
+  return (
+    <StyledButton sx={{ sx }} size={size} onClick={onClick} {...rest} disableRipple>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;

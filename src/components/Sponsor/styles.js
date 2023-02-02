@@ -2,27 +2,33 @@ import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 import Link from '@mui/material/Link';
 
-export const Wrapper = styled(Box)({
-  position: 'relative',
-  overflow: 'hidden',
-  cursor: 'pointer',
-  border: '1px solid #ffffff80',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
-  height: '160px',
-  borderRadius: '10px',
-  overflow: 'hidden',
-  '&:hover .sponsor_url': {
+export const Wrapper = styled(Box)(
+  ({
+    theme: {
+      palette: { lightGray, dark_black },
+    },
+  }) => ({
+    position: 'relative',
+    cursor: 'pointer',
+    border: `1px solid ${lightGray[100]} `,
+    background: dark_black?.main,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     width: '100%',
-    padding: '0 16px',
-  },
-  '&:hover .sponsor_img': {
-    opacity: '0',
-    transform: 'scale(0.2)',
-  },
-});
+    height: '160px',
+    borderRadius: '10px',
+    overflow: 'hidden',
+    '&:hover .sponsor_url': {
+      width: '100%',
+      padding: '0 16px',
+    },
+    '&:hover .sponsor_img': {
+      opacity: '0',
+      transform: 'scale(0.2)',
+    },
+  })
+);
 
 // Sponsor url
 export const Label = styled(Link)({

@@ -2,16 +2,30 @@ import React from 'react';
 
 import { Typography, Box } from '@mui/material';
 import StyledProgress from './styles';
-import { Label, CustomizeCircularProgress, ProgressWrap, CustomizeLinearProgress, LinearWrap } from './styles';
+import {
+  Label,
+  CustomizeCircularProgress,
+  ProgressWrap,
+  CustomizeLinearProgress,
+  LinearWrap,
+  Percent,
+  Title,
+} from './styles';
 
-export const CircularProgress = ({ label, percentage, size, thickness, ...rest  }) => {
+export const CircularProgress = ({ title, percentage, size, thickness, ...rest }) => {
   return (
     <StyledProgress>
       <ProgressWrap>
-        <CustomizeCircularProgress variant="determinate" value={percentage} size={size} thickness={thickness} {...rest} />
-        <Typography component="span">{`${percentage}%`}</Typography>
+        <CustomizeCircularProgress
+          variant="determinate"
+          value={percentage}
+          size={size}
+          thickness={thickness}
+          {...rest}
+        />
+        <Percent component="span">{`${percentage}%`}</Percent>
       </ProgressWrap>
-      <Label>{label}</Label>
+      <Title>{title}</Title>
     </StyledProgress>
   );
 };
@@ -21,15 +35,13 @@ export const LinearProgress = ({ label, percentage, ...rest }) => {
     <LinearWrap>
       <Label>{label}</Label>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <Box sx={{ width: '100%', mr: 1 }}>
-        <CustomizeLinearProgress variant="determinate" value={percentage} valueBuffer={percentage} {...rest} />
+        <Box sx={{ width: '100%', mr: 1 }}>
+          <CustomizeLinearProgress variant="determinate" value={percentage} valueBuffer={percentage} {...rest} />
+        </Box>
+        <Box sx={{ minWidth: 35 }}>
+          <Typography variant="body2" color="text.secondary">{`${Math.round(percentage)}%`}</Typography>
+        </Box>
       </Box>
-      <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" color="text.secondary">{`${Math.round(
-          percentage,
-        )}%`}</Typography>
-      </Box>
-    </Box>
     </LinearWrap>
   );
 };

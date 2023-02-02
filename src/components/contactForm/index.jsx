@@ -3,96 +3,109 @@ import { Container, Grid } from '@mui/material';
 import {
   ContactWrapper,
   FormWrapper,
-  ContactMessage,
-  ContactText,
   InputWrapper,
   StyledInput,
   StyledTextArea,
-  ButtonWrapper,
   ContactDetails,
   ContactItem,
   IconsWrapper,
+  Title,
+  SubTitle,
+  Text,
+  ContactButton,
+  IconBorder,
 } from './styles';
-import Button from '../../components/button';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import CallIcon from '@mui/icons-material/Call';
 import SendIcon from '@mui/icons-material/Send';
-import { Instagram, LinkedIn, Twitter, Facebook } from '@mui/icons-material';
-import { Section, Heading, Description, MainWrapper } from '../../components/common';
+import { MainWrapper } from '../../components/common';
 import { useLocation } from 'react-router-dom';
+import Heading from '../Heading';
+import Section from '../Section';
+// social icons
+import Facebook from '../../components/Svgs/Facebook';
+import LinkedIn from '../Svgs/Linkedin';
+import Twitter from '../Svgs/Twitter';
+import Mail from '../Svgs/Mail';
 
 const ContactForm = () => {
   const location = useLocation();
   const contactDetails = [
     {
-      icon: <LocationOnIcon />,
-      info: 'Near Heli Chowk Zulfiqarabad Gilgit',
+      label: 'contact@calibreoninternational.com',
     },
     {
-      icon: <CallIcon />,
-      info: '(647) 749-7224',
+      label: '(647) 749-7224',
     },
+  ];
+  const visit = [
     {
-      icon: <EmailIcon />,
-      info: 'contact@calibreoninternational.com',
+      label: 'Near Heli Chowk Zulfiqarabad Gilgit',
     },
   ];
   return (
-    <Section variant={'primary'}>
+    <Section variant={'dark_black'}>
       <Container>
         {location.pathname === '/contact' ? null : (
           <>
-            <Heading variant="h2" color={'primary'} align="center">
-              Get in Touch
-            </Heading>
-            <Description color={'primary'} title="subheading" align="center">
-              We are here to help you
-            </Description>
+            <Heading
+              variant="h2"
+              color={'primary'}
+              align="center"
+              subTitle="Get in touch"
+              title="contact us."
+            ></Heading>
           </>
         )}
         <MainWrapper>
-          <Grid container spacing={2}>
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={6}>
+              <FormWrapper>
+                <Title variant="h4">Get in touch.</Title>
+                <InputWrapper>
+                  <StyledInput placeholder="Name" className="colorChanged" />
+                  <StyledInput placeholder="Email Adress" />
+                  <StyledTextArea aria-label="Hello" placeholder="Message" minRows={5} />
+                </InputWrapper>
+                <ContactButton variant="outlined">
+                  Send Message <SendIcon className="ml-2" fontSize="small" />
+                </ContactButton>
+              </FormWrapper>
+            </Grid>
             <Grid item xs={12} md={6}>
               <ContactWrapper>
-                <Heading color={'primary'} variant="h4">
-                  Contact Information
-                </Heading>
+                <Title variant="h4">Contact Info.</Title>
                 <ContactDetails>
-                  {contactDetails.map((item, index) => (
+                  <SubTitle>Let's talk</SubTitle>
+                  {contactDetails.map(({ label }, index) => (
                     <ContactItem key={`contact-${index}`}>
-                      {item.icon}
-                      <Description color={'primary'} title="details">
-                        {item.info}
-                      </Description>
+                      <Text color={'primary'} title="details">
+                        {label}
+                      </Text>
+                    </ContactItem>
+                  ))}
+                  <SubTitle>Meet us</SubTitle>
+                  {visit.map(({ label }, index) => (
+                    <ContactItem key={`contact-${index}`}>
+                      <Text color={'primary'} title="details">
+                        {label}
+                      </Text>
                     </ContactItem>
                   ))}
                 </ContactDetails>
                 <IconsWrapper>
-                  <Facebook />
-                  <LinkedIn />
-                  <Twitter />
-                  <Instagram />
+                  <IconBorder>
+                    <Facebook className="social-icon" color="#fff" />
+                  </IconBorder>
+                  <IconBorder>
+                    <LinkedIn className="social-icon" color="#fff" />
+                  </IconBorder>
+                  <IconBorder>
+                    <Twitter className="social-icon" color="#fff" />
+                  </IconBorder>
+                  <IconBorder>
+                    <Mail className="socialIcon" color="#fff" />
+                  </IconBorder>
                 </IconsWrapper>
               </ContactWrapper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <FormWrapper>
-                <ContactMessage variant="h5">We'd love to hear from you</ContactMessage>
-                <ContactText variant="p">
-                  Please fill out the form below and we will get in touch with you shortly.
-                </ContactText>
-                <InputWrapper>
-                  <StyledInput placeholder="Name" />
-                  <StyledInput placeholder="Email Adress" />
-                  <StyledTextArea aria-label="Hello" placeholder="Message" minRows={5} />
-                </InputWrapper>
-                <ButtonWrapper>
-                  <Button variant="contained">
-                    Send Message <SendIcon />
-                  </Button>
-                </ButtonWrapper>
-              </FormWrapper>
             </Grid>
           </Grid>
         </MainWrapper>

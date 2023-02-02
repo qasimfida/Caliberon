@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   TestimonialDetails,
   TestimonialContentWrapper,
@@ -6,20 +6,22 @@ import {
   TestimonialAuthor,
   AuthorImg,
   AuthorName,
-  AuthorDetails
-} from "./styles";
-import authorImg from "../../assests/Testimonial-image1.jpg"
+  AuthorDetails,
+} from './styles';
+import authorImg from '../../assets/images/Testimonial-image1.jpg';
 
-const TestimonialsCard = ({ name, comment,authorDetails}) => {
+const TestimonialsCard = ({ name, comment, authorDetails }) => {
   return (
     <TestimonialCard>
-        <TestimonialContentWrapper>
-            <TestimonialDetails>{comment}</TestimonialDetails>
-        </TestimonialContentWrapper>
+      <TestimonialContentWrapper>
+        <TestimonialDetails>{comment}</TestimonialDetails>
+      </TestimonialContentWrapper>
       <TestimonialAuthor>
-            <AuthorImg><img src={authorImg} alt="authorImg" /></AuthorImg>
-            <AuthorName>{name}</AuthorName>
-            <AuthorDetails>{authorDetails}</AuthorDetails>
+        <AuthorImg>
+          <img src={authorImg} alt="authorImg" />
+        </AuthorImg>
+        <AuthorName>{name}</AuthorName>
+        <AuthorDetails>{authorDetails}</AuthorDetails>
       </TestimonialAuthor>
     </TestimonialCard>
   );

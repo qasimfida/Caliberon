@@ -1,40 +1,21 @@
-import "./App.css";
-import React from 'react'
-import { Routes, Route } from "react-router-dom";
-import Header from "./components/header";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/header';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { Box, Toolbar, useScrollTrigger, Fab, Fade } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Footer from "./pages/footer";
-import "@fontsource/poppins";
-import HomePage from "./pages/home";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import PersonalProfile from "./pages/personalProfile";
-import Services from "./pages/services";
-import ServicePage from "./pages/servicePage";
-import AllTeams from "./pages/allTeam";
-import TeamPage from "./pages/teamPage";
-import styled from "@emotion/styled";
-
-
-// Scroll icon styles
-const styles = styled("span")(({ theme: { palette: { primary } } }) => ({
-  scrollContainer: {
-    padding: "1rem",
-    backgroundColor: "none",
-    transition: ".3s ease-in",
-    fontSize: "15px",
-    border: "1px solid #ffffff80",
-    borderRadius: "50%",
-    color: "#ffffff80",
-    "&:hover": {
-      color: primary?.main,
-      borderColor: primary?.main,
-    },
-  }
-}))
+import Footer from './pages/footer';
+import '@fontsource/poppins';
+import HomePage from './pages/home';
+import About from './pages/about';
+import Contact from './pages/contact';
+import PersonalProfile from './pages/personalProfile';
+import Services from './pages/services';
+import ServicePage from './pages/servicePage';
+import AllTeams from './pages/allTeam';
+import TeamPage from './pages/teamPage';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -55,15 +36,13 @@ function ScrollTop(props) {
     target: window ? window() : undefined,
     disableHysteresis: true,
     threshold: 100,
-    ".MuiSvgIcon-root .MuiSvgIcon-fontSizeMedium .css-i4bv87-MuiSvgIcon-root": {
-      display: "none",
+    '.MuiSvgIcon-root .MuiSvgIcon-fontSizeMedium .css-i4bv87-MuiSvgIcon-root': {
+      display: 'none',
     },
   });
 
   const handleClick = (event) => {
-    const anchor = (
-      (event.target).ownerDocument || document
-    ).querySelector('#back-to-top-anchor');
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
 
     if (anchor) {
       anchor.scrollIntoView({
@@ -73,11 +52,7 @@ function ScrollTop(props) {
   };
   return (
     <Fade in={trigger}>
-      <Box
-        onClick={handleClick}
-        role="presentation"
-        sx={{ position: 'fixed', bottom: 16, right: 16 }}
-      >
+      <Box onClick={handleClick} role="presentation" sx={{ position: 'fixed', bottom: 16, right: 46 }}>
         {children}
       </Box>
     </Fade>
@@ -102,7 +77,7 @@ function App(props) {
       </Routes>
       <ScrollTop {...props}>
         <Fab size="small" sx={{}} aria-label="scroll back to top">
-          <KeyboardArrowUpIcon  />
+          <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
       <Footer />
