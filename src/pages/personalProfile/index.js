@@ -88,7 +88,7 @@ const PersonalProfile = () => {
       <DescriptionBox>
         <Container>
           <AboutDesc>
-            <HeadingA>Intoduction</HeadingA>
+            <Heading>Intoduction</Heading>
             {state.userName} has a diversified experience of over 25 years within and outside profession in Pakistan and
             East Africa. He is a key member of audit and assurance practice of Islamabad and heads the Clients & Market
             and Human Resource functions of Islamabad practice and is the lead engagement partner of key Islamabad audit
@@ -103,17 +103,21 @@ const PersonalProfile = () => {
         <Heading>Skills</Heading>
         <ProgressContent>
           <Grid container alignItems="center">
-            <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
-              <CircularProgress title="OVER ALL PERCENTAGE" percentage={progressValue} size={200} thickness={5} />
-            </Grid>
             <Grid item xs={12} sm={6} md={7} lg={6} xl={8}>
               {progressBarData.map((item, id) => (
                 <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
               ))}
             </Grid>
+            <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
+              <CircularProgress title="OVER ALL PERCENTAGE" percentage={progressValue} size={200} thickness={5} />
+            </Grid>
           </Grid>
         </ProgressContent>
       </Container>
+
+      <TimeLineWrap>
+        <TimeLine />
+      </TimeLineWrap>
       <MainWrapper>
         <Container>
           <CustomizeAccordion>
@@ -139,9 +143,6 @@ const PersonalProfile = () => {
           </CustomizeAccordion>
         </Container>
       </MainWrapper>
-      <TimeLineWrap>
-        <TimeLine />
-      </TimeLineWrap>
       <ContactDetailsBox>
         <Container>
           <UserSocialIcons>

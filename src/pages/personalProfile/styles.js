@@ -129,9 +129,8 @@ export const HeadingA = styled('h4')({
   letterSpacing: '2px',
 });
 export const Heading = styled('h4')({
-  textAlign: 'center',
   margin: '0',
-  textTransform: 'uppercase',
+  textTransform: 'capitalize',
   fontSize: '2rem',
   fontWeight: '600',
   lineHeight: '1.5',
@@ -157,10 +156,9 @@ export const MainWrapper = styled(Box)({
   margin: '4rem 0',
 });
 export const CustomizeAccordion = styled(Accordion)({
-  border: 'none',
   outline: 'none',
   position: 'unset',
-  boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+  boxShadow: 'none',
   svg: {
     fontSize: '2.5rem',
     paddingRight: '2rem',
