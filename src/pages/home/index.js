@@ -94,7 +94,7 @@ const HomePage = () => {
           {sliderData.length && sliderData.map((item, index) => <Banner key={index} item={item} />)}
         </Carousel>
       </CustomizeSlide>
-      <Section>
+      <Section id="target-element">
         <Container>
           <Heading title={'Services.'} subTitle={'we offer'} dark />
           <MainWrapper>

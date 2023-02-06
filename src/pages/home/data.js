@@ -22,42 +22,42 @@ export const services = [
   {
     name: 'Ideate',
     img: Ideate,
-    serviceDetails: 'We help you develop creative ideas',
+    serviceDetails: 'We help you develop creative ideas,We can grow.',
   },
   {
     name: 'Business Growth',
     img: Business,
-    serviceDetails: 'We can grow your business',
+    serviceDetails: 'We can grow your business,We help you.',
   },
   {
     name: 'Digital Marketing',
     img: Marketing,
-    serviceDetails: 'market your products online',
+    serviceDetails: 'market your products online,We can grow your.',
   },
   {
     name: 'Project Creation',
     img: RealState,
-    serviceDetails: 'market your products online',
+    serviceDetails: 'market your products online,We help you develop',
   },
   {
     name: 'Marketing Strategy',
     img: Strategy,
-    serviceDetails: 'market your products online',
+    serviceDetails: 'We help you develop creative ideas,We can grow.',
   },
   {
     name: 'Social Activity',
     img: Social,
-    serviceDetails: 'market your products online',
+    serviceDetails: 'We can grow your business,We help you.',
   },
   {
     name: 'Cloud Service',
     img: Cloud,
-    serviceDetails: 'market your products online',
+    serviceDetails: 'market your products online,We can grow your.',
   },
   {
     name: 'Collaboration',
     img: Collabration,
-    serviceDetails: 'market your products online',
+    serviceDetails: 'market your products online,We help you develop.',
   },
 ];
 export const testimonialsData = [

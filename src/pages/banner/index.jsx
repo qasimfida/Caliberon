@@ -4,11 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import {
   BannerMainWrapper,
   StyledTypo,
-  ButtonWrapper,
   SlideContent,
   BannerWrapper,
   SocialIcons,
-  CustomButton,
   IconBorder,
   WrapperDownIcon,
   BorderRadius,
@@ -34,6 +32,13 @@ const Banner = ({ key, item }) => {
   const onClickServices = () => {
     navigate('/services');
   };
+
+  // scroll down animation
+  const handleClick = (event) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(event.currentTarget.getAttribute('href'));
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <BannerMainWrapper style={backgroundImg} key={`slide-${key}`}>
       <Container>
@@ -42,13 +47,8 @@ const Banner = ({ key, item }) => {
           <SlideContent>
             <Typography variant="body1"> {item.slideContent}</Typography>
           </SlideContent>
-          <ButtonWrapper>
-            {/* <CustomButton variant="outlined" onClick={onClickServices}>
-              Explore More
-            </CustomButton> */}
-          </ButtonWrapper>
           <WrapperDownIcon>
-            <BorderRadius>
+            <BorderRadius href="#target-element" onClick={handleClick}>
               <DotIcon fontSize="small" />
             </BorderRadius>
           </WrapperDownIcon>

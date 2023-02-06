@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 // BannerWrapper
@@ -52,33 +52,6 @@ export const StyledTypo = styled(Typography)(
   })
 );
 
-export const ButtonWrapper = styled('div')({
-  marginTop: '50px',
-  '& :first-of-type': {
-    marginRight: '10px',
-  },
-});
-// Custom button styles
-export const CustomButton = styled(Button)(
-  ({
-    theme: {
-      palette: { primary },
-    },
-  }) => ({
-    padding: '13px 23px',
-    fontWeight: '500',
-    fontSize: '14px',
-    letterSpacing: '1px',
-    textTransform: 'uppercase',
-    borderRadius: 'unset',
-    transition: '.5s all ease',
-    '&:hover': {
-      background: '#fff',
-      color: primary?.main,
-    },
-  })
-);
-
 export const WrapperDownIcon = styled(Box)(
   ({
     theme: {
@@ -91,7 +64,8 @@ export const WrapperDownIcon = styled(Box)(
     color: '#fff',
   })
 );
-export const BorderRadius = styled(Box)({
+
+export const BorderRadius = styled('a')({
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
@@ -101,13 +75,21 @@ export const BorderRadius = styled(Box)({
   boxSizing: 'border-box',
   border: '1px solid #fff',
   borderRadius: '23px',
-  '&:hover svg': {
-    top: '30px',
-  },
   svg: {
     transition: '.4s all ease',
     position: 'absolute',
     top: '6px',
+    color: '#fff',
+    '@keyframes topToBottom': {
+      '0%': {
+        transform: 'translateY(0%)',
+      },
+      '100%': {
+        transform: 'translateY(100%)',
+        opacity: '0',
+      },
+    },
+    animation: 'topToBottom 1.5s infinite ease',
   },
 });
 // Slide content
