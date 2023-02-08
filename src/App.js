@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Box, Toolbar, useScrollTrigger, Fab, Fade } from '@mui/material';
+import { Box, useScrollTrigger, Fab, Fade } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Footer from './pages/footer';
 import '@fontsource/poppins';
@@ -36,9 +36,6 @@ function ScrollTop(props) {
     target: window ? window() : undefined,
     disableHysteresis: true,
     threshold: 100,
-    '.MuiSvgIcon-root .MuiSvgIcon-fontSizeMedium .css-i4bv87-MuiSvgIcon-root': {
-      display: 'none',
-    },
   });
 
   const handleClick = (event) => {
@@ -60,11 +57,10 @@ function ScrollTop(props) {
 }
 function App(props) {
   return (
-    <div className="App">
+    <div className="App" useOnScroll id="back-to-top-anchor">
       <ElevationScroll {...props}>
         <Header />
       </ElevationScroll>
-      <Toolbar id="back-to-top-anchor" />
       <Routes>
         <Route exact path="/" element={<HomePage />}></Route>
         <Route path="/about" element={<About />}></Route>

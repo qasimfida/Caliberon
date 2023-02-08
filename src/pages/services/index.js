@@ -21,7 +21,7 @@ import {
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
 import Button from '../../components/Button';
-import MainSection from '../../components/layout/mainSection';
+import MainSection from '../../components/Layout';
 import { MainWrapper } from '../../components/common';
 
 const Services = () => {

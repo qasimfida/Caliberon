@@ -35,13 +35,13 @@ const HomePage = () => {
 
   const sliderData = [
     {
-      title: 'Hello Calibreon, Are You Ready ',
+      title: 'Bussiness Private Limited Company.',
       slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.',
       imgLink: BannerNew,
     },
     {
       title: 'Bussiness Private Limited Company.',
-      slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.',
+      slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus .',
       imgLink: BannerNeww,
     },
   ];

@@ -9,14 +9,14 @@ import {
   SocialIcons,
   IconBorder,
   WrapperDownIcon,
-  BorderRadius,
+  ScrollButton,
+  Dot,
 } from './styles';
 // social icons
 import Facebook from '../../components/Svgs/Facebook';
 import LinkedIn from '../../components/Svgs/Linkedin';
 import Twitter from '../../components/Svgs/Twitter';
 import Mail from '../../components/Svgs/Mail';
-import DotIcon from '@mui/icons-material/FiberManualRecord';
 
 const Banner = ({ key, item }) => {
   const navigate = useNavigate();
@@ -48,9 +48,9 @@ const Banner = ({ key, item }) => {
             <Typography variant="body1"> {item.slideContent}</Typography>
           </SlideContent>
           <WrapperDownIcon>
-            <BorderRadius href="#target-element" onClick={handleClick}>
-              <DotIcon fontSize="small" />
-            </BorderRadius>
+            <ScrollButton href="#target-element" onClick={handleClick}>
+              <Dot></Dot>
+            </ScrollButton>
           </WrapperDownIcon>
         </BannerWrapper>
         <SocialIcons>

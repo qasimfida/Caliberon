@@ -65,7 +65,7 @@ export const WrapperDownIcon = styled(Box)(
   })
 );
 
-export const BorderRadius = styled('a')({
+export const ScrollButton = styled('a')({
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
@@ -75,22 +75,43 @@ export const BorderRadius = styled('a')({
   boxSizing: 'border-box',
   border: '1px solid #fff',
   borderRadius: '23px',
-  svg: {
-    transition: '.4s all ease',
-    position: 'absolute',
-    top: '6px',
-    color: '#fff',
-    '@keyframes topToBottom': {
-      '0%': {
-        transform: 'translateY(0%)',
-      },
-      '100%': {
-        transform: 'translateY(100%)',
-        opacity: '0',
-      },
+  overflow: 'hidden',
+  '&:hover svg': {},
+  svg: {},
+});
+
+export const Dot = styled('span')({
+  width: '13px',
+  height: '13px',
+  background: '#fff',
+  borderRadius: '50%',
+  position: 'relative',
+  top: '6px',
+  color: '#fff',
+  transition: '.9s ease',
+  '@keyframes topToBottom': {
+    '0%': {
+      top: '6px',
+      opacity: '0',
     },
-    animation: 'topToBottom 1.5s infinite ease',
+    '10%': {
+      top: '6px',
+      opacity: '0',
+    },
+    '30%': {
+      top: '6px',
+      opacity: '1',
+    },
+    '70%': {
+      top: 'calc(100% - 19px )',
+      opacity: '1',
+    },
+    '100%': {
+      top: 'calc(100% - 19px )',
+      opacity: '0',
+    },
   },
+  animation: 'topToBottom 2s linear infinite',
 });
 // Slide content
 export const SlideContent = styled(Box)({

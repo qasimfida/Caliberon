@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MainBox, ServicesItemWrapper, Item } from './styles';
-import MainSection from '../../components/layout/mainSection';
+import MainSection from '../../components/Layout';
 import { Description, MainWrapper } from '../../components/common';
 import { Container, Grid } from '@mui/material';
 import ServicesItem from '../../components/serviceItems';

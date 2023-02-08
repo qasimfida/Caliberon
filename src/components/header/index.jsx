@@ -3,10 +3,11 @@ import { MenuItem, Menu, Box, IconButton, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import { useNavigate, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
 import Button from '../Button';
-import { Navbar, LogoWrapper, ToolbarBox, ButtonWrapper } from './styles';
-import Calibreon from './../../assets/images/logo-main.png';
+import { Navbar, LogoWrapper, ToolbarBox, LinksWrapper } from './styles';
+import logoDark from './../../assets/images/logo-main.png';
+import logoLight from './../../assets/images/logo-light.png';
+import useOnScroll from '../../hooks/useOnScroll';
 
 const pages = [
   { title: 'Home', path: '/' },
@@ -39,12 +40,14 @@ const Header = () => {
   const onClickContact = () => {
     navigate('/contact');
   };
+  const scrollPosition = useOnScroll();
+  let hasAffix = scrollPosition < 100;
   return (
-    <Navbar sx={{ backgroundColor: '#fff', height: '76px', justifyContent: 'center' }}>
-      <Container>
-        <ToolbarBox>
+    <Navbar id="header" transparent={hasAffix}>
+      <Container className="h-100">
+        <ToolbarBox className="h-100" transparent={hasAffix}>
           <LogoWrapper>
-            <img src={Calibreon} alt="Calibreon" />
+            {hasAffix ? <img src={logoLight} alt="white logo " /> : <img src={logoDark} alt="black logo" />}
           </LogoWrapper>
           <Box
             sx={{
@@ -87,30 +90,29 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-
-          <Box
+          <LinksWrapper
             sx={{
-              flexGrow: 1,
-              display: { xs: 'none', md: 'flex', justifyContent: 'flex-end' },
+              display: {
+                xs: 'none',
+                md: 'flex',
+              },
             }}
+            className="nav-links h-100"
           >
             {pages.map((item) => (
               <Button
                 key={`page-${item.path}`}
                 variant="text"
                 onClick={() => onClickLink(item.path)}
-                className={`btn ${item.path === active ? 'active' : 'homeBtns'}`}
+                className={`btn h-100 ${item.path === active ? 'active' : 'nav-buttons'}`}
               >
                 {item.title}
               </Button>
             ))}
-          </Box>
-          <ButtonWrapper>
-            <Button size="lg" variant="contained" onClick={onClickContact}>
-              Contact Us
-            </Button>
-          </ButtonWrapper>
+          </LinksWrapper>
+          <Button size="lg" variant="contained" onClick={onClickContact}>
+            Contact Us
+          </Button>
         </ToolbarBox>
       </Container>
     </Navbar>

@@ -1,5 +1,5 @@
 import React from 'react';
-import MainSection from '../../components/layout/mainSection';
+import MainSection from '../../components/Layout';
 import ContactForm from '../../components/contactForm';
 import { Wrapper, Title, Para, MapSection } from './styles';
 
