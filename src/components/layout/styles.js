@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Typography, Box } from '@mui/material';
+import cover from '../../assets/images/cover.jpg';
 
 export const AboutHeading = styled(Typography)(
   ({
@@ -16,6 +17,7 @@ export const AboutHeading = styled(Typography)(
     margin: '20px 0',
     textAlign: 'center',
     textTransform: 'capitalize',
+    zIndex: '222',
     '&:before': {
       content: `' '`,
       position: 'absolute',
@@ -31,21 +33,28 @@ export const AboutHeading = styled(Typography)(
   })
 );
 
-export const MainBox = styled(Box)(
-  ({
-    theme: {
-      palette: { primary, gradient },
-    },
-  }) => ({
-    paddingTop: '105px',
-    paddingBottom: '70px',
-    backgroundColor: primary?.main,
-    backgroundImage: gradient,
-    display: 'flex',
-    alignItems: 'center',
-    position: 'relative',
-  })
-);
+export const MainBox = styled(Box)(({}) => ({
+  paddingTop: '150px',
+  paddingBottom: '70px',
+  background: `url(${cover})`,
+  objectFit: 'cover',
+  backgroundSize: 'cover',
+  backgroundPosition: 'bottom right',
+  display: 'flex',
+  alignItems: 'center',
+  position: 'relative',
+  '&:before': {
+    content: `''`,
+    backgroundColor: '#0c0f16',
+    opacity: '.6',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: ' 0',
+    left: '0',
+    zIndex: '1',
+  },
+}));
 
 export const Details = styled(Box)(
   ({
@@ -58,6 +67,7 @@ export const Details = styled(Box)(
       justifyContent: 'center',
     },
     '& li': {
+      zIndex: '222',
       color: mediumGray.main,
       '& a': {
         fontSize: '16px',

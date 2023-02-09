@@ -7,13 +7,12 @@ import Button from '../Button';
 import { Navbar, LogoWrapper, ToolbarBox, LinksWrapper } from './styles';
 import logoDark from './../../assets/images/logo-main.png';
 import logoLight from './../../assets/images/logo-light.png';
-import useOnScroll from '../../hooks/useOnScroll';
-
+import useOnScroll from '../../customHooks/useOnScroll';
 const pages = [
-  { title: 'Home', path: '/' },
-  { title: 'About Us', path: '/about' },
-  { title: 'Our Services', path: '/services' },
-  { title: 'Team', path: '/team' },
+  { title: 'Home', path: '/', id: 'home' },
+  { title: 'About Us', path: '/about', id: 'about' },
+  { title: 'Our Services', path: '/services', id: 'service' },
+  { title: 'Team', path: '/team', id: 'team' },
 ];
 
 const Header = () => {
@@ -26,16 +25,13 @@ const Header = () => {
     setActive(location.pathname);
   }, [location.pathname]);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const toggleNav = (event) => {
+    setAnchorElNav(event?.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
   const onClickLink = (e) => {
+    toggleNav(null);
     navigate(e);
-    setAnchorElNav(null);
   };
   const onClickContact = () => {
     navigate('/contact');
@@ -60,7 +56,7 @@ const Header = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={toggleNav}
               color="inherit"
             >
               <MenuIcon />
@@ -78,7 +74,7 @@ const Header = () => {
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={() => toggleNav()}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
@@ -105,6 +101,7 @@ const Header = () => {
                 variant="text"
                 onClick={() => onClickLink(item.path)}
                 className={`btn h-100 ${item.path === active ? 'active' : 'nav-buttons'}`}
+                id={item.id}
               >
                 {item.title}
               </Button>

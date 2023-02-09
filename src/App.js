@@ -1,10 +1,10 @@
 import './App.css';
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/header';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Box, useScrollTrigger, Fab, Fade } from '@mui/material';
+import { Box, Fab, Fade } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Footer from './pages/footer';
 import '@fontsource/poppins';
@@ -16,37 +16,10 @@ import Services from './pages/services';
 import ServicePage from './pages/servicePage';
 import AllTeams from './pages/allTeam';
 import TeamPage from './pages/teamPage';
-
-function ElevationScroll(props) {
-  const { children, window } = props;
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-    target: window ? window() : undefined,
-  });
-
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-  });
-}
+import useOnScroll from './customHooks/useOnScroll';
 
 function ScrollTop(props) {
-  const { children, window } = props;
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-    disableHysteresis: true,
-    threshold: 100,
-  });
-
-  const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
-
-    if (anchor) {
-      anchor.scrollIntoView({
-        block: 'center',
-      });
-    }
-  };
+  const { children, handleClick, trigger } = props;
   return (
     <Fade in={trigger}>
       <Box onClick={handleClick} role="presentation" sx={{ position: 'fixed', bottom: 16, right: 46 }}>
@@ -56,11 +29,22 @@ function ScrollTop(props) {
   );
 }
 function App(props) {
+  const [state, setState] = useState(false);
+  const location = useLocation();
+
+  const handleClick = () => {
+    setState(!state);
+  };
+
+  // icon scroll top
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location, state]);
+
+  const scrollPosition = useOnScroll();
   return (
-    <div className="App" useOnScroll id="back-to-top-anchor">
-      <ElevationScroll {...props}>
-        <Header />
-      </ElevationScroll>
+    <div className="App">
+      <Header />
       <Routes>
         <Route exact path="/" element={<HomePage />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -71,7 +55,7 @@ function App(props) {
         <Route path="/team" element={<AllTeams />}></Route>
         <Route path="/team/:name" element={<TeamPage />}></Route>
       </Routes>
-      <ScrollTop {...props}>
+      <ScrollTop trigger={scrollPosition > 700} handleClick={handleClick}>
         <Fab size="small" sx={{}} aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>

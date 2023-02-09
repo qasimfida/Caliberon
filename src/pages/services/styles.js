@@ -1,25 +1,6 @@
 import styled from '@emotion/styled';
-import { Typography, Box } from '@mui/material';
 import BgImg from '../../assets/images/guide.jpg';
-
-export const AboutHeading = styled(Typography)`
-  font-family: Poppins;
-  font-size: ${(props) => (props.variant === 'h3' ? '40px' : '70px')};
-  color: #fff;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: ${(props) => (props.variant === 'h3' ? '24px' : '')};
-`;
-
-export const AboutDesc = styled(Typography)`
-  font-family: Poppins;
-  letter-spacing: 0.22px;
-  font-size: 22px;
-  color: #fff;
-  line-height: ${(props) => (props.variant === 'span' ? '2.5' : '1.5')};
-  margin-top: 40px;
-  margin-bottom: ${(props) => (props.variant === 'span' ? '24px' : '40px')};
-`;
+import { Box } from '@mui/material';
 
 export const StyledBox = styled(Box)(
   ({
@@ -79,19 +60,3 @@ export const CardsBox = styled(Box)({
   position: 'relative',
   padding: '24px 0',
 });
-export const Details = styled(Box)({
-  textAlign: 'center',
-});
-export const ContactDetailsBox = styled(Box)(
-  ({
-    theme: {
-      palette: { primary },
-    },
-  }) => ({
-    padding: '100px 0px 100px 0px',
-    backgroundColor: primary?.main,
-    display: 'flex',
-    alignItems: 'center',
-    position: 'relative',
-  })
-);

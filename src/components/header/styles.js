@@ -49,6 +49,7 @@ export const ToolbarBox = styled(Toolbar)(
     },
     '.btn.MuiButtonBase-root.MuiButton-root.active': {
       borderBottom: transparent ? `2px solid transparent` : `2px solid ${primary.main}`,
+      color: primary?.main,
       borderRadius: '0',
     },
     '.btn.MuiButtonBase-root.MuiButton-root.nav-buttons': {

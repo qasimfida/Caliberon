@@ -20,9 +20,9 @@ import {
 } from './styles';
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
-import Button from '../../components/Button';
 import MainSection from '../../components/Layout';
 import { MainWrapper } from '../../components/common';
+import ContactBanner from '../../components/ContactBanner';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -108,17 +108,7 @@ const Services = () => {
           </MainWrapper>
         </ServicesBox>
       </Container>
-      <ContactDetailsBox>
-        <Container>
-          <Details>
-            <AboutDesc variant="span">Are you Ready to </AboutDesc>
-            <AboutHeading variant="h3">Start with us</AboutHeading>
-            <Button variant="outlined" onClick={onClickContact}>
-              Contact Us
-            </Button>
-          </Details>
-        </Container>
-      </ContactDetailsBox>
+      <ContactBanner onClick={onClickContact} />
     </MainBox>
   );
 };

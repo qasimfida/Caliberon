@@ -1,7 +1,7 @@
 import React from 'react';
-import Mission from '../../components/mission';
-import MainSection from '../../components/layout/mainSection';
-import Contact from '../../components/contactForm';
+import MainSection from '../../components/Layout';
+import Mission from '../../components/Mission';
+import Contact from '../contact';
 
 import { MainBox } from './styles';
 
@@ -10,7 +10,7 @@ const About = () => {
     <MainBox>
       <MainSection />
       <Mission />
-      <Contact />
+      {/* <Contact /> */}
     </MainBox>
   );
 };
