@@ -29,9 +29,6 @@ const Banner = ({ key, item }) => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
   };
-  const onClickServices = () => {
-    navigate('/services');
-  };
 
   // scroll down animation
   const handleClick = (event) => {

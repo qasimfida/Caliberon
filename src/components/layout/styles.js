@@ -33,7 +33,7 @@ export const AboutHeading = styled(Typography)(
   })
 );
 
-export const MainBox = styled(Box)(({}) => ({
+export const MainBox = styled(Box)({
   paddingTop: '150px',
   paddingBottom: '70px',
   background: `url(${cover})`,
@@ -54,7 +54,7 @@ export const MainBox = styled(Box)(({}) => ({
     left: '0',
     zIndex: '1',
   },
-}));
+});
 
 export const Details = styled(Box)(
   ({

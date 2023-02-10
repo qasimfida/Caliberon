@@ -7,17 +7,7 @@ import App from '../../assets/images/app.png';
 import Business from '../../assets/images/business.png';
 import Marketing from '../../assets/images/marketing.png';
 import { useNavigate } from 'react-router-dom';
-import {
-  AboutHeading,
-  AboutDesc,
-  MainBox,
-  ServicesBox,
-  GuidBox,
-  GuidContent,
-  CardsBox,
-  ContactDetailsBox,
-  Details,
-} from './styles';
+import { MainBox, ServicesBox, GuidBox, GuidContent, CardsBox } from './styles';
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
 import MainSection from '../../components/Layout';

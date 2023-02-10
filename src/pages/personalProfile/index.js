@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Container, Grid, AccordionSummary, AccordionDetails } from '@mui/material';
 import {
   UserTitle,
@@ -18,7 +18,6 @@ import {
   AccordionContent,
   Heading,
   UserRole,
-  HeadingA,
   MainWrapper,
 } from './styles';
 import { useLocation } from 'react-router-dom';
@@ -31,40 +30,45 @@ const PersonalProfile = () => {
   const { state } = useLocation();
   const [progressValue, setProgressValue] = useState();
 
-  const progressBarData = [
-    {
-      name: 'Wordpress',
-      percentage: 80,
-      id: '1',
-    },
-    {
-      name: 'Frontend',
-      percentage: 50,
-      id: '2',
-    },
-    {
-      name: 'UI/UX',
-      percentage: 70,
-      id: '3',
-    },
-    {
-      name: 'Book Keeping',
-      percentage: 100,
-      id: '4',
-    },
-    {
-      name: 'Marketing',
-      percentage: 20,
-      id: '4',
-    },
-  ];
+  const progressBarData = useMemo(
+    () => [
+      {
+        name: 'Wordpress',
+        percentage: 80,
+        id: '1',
+      },
+      {
+        name: 'Frontend',
+        percentage: 50,
+        id: '2',
+      },
+      {
+        name: 'UI/UX',
+        percentage: 70,
+        id: '3',
+      },
+      {
+        name: 'Book Keeping',
+        percentage: 100,
+        id: '4',
+      },
+      {
+        name: 'Marketing',
+        percentage: 20,
+        id: '4',
+      },
+    ],
+    []
+  );
   useEffect(() => {
-    const sum = progressBarData.reduce((accumulator, object) => {
-      return accumulator + object.percentage;
-    }, 0);
-    const overAllPercentage = sum / progressBarData.length;
-    setProgressValue(overAllPercentage);
-  }, [progressBarData?.length]);
+    if (progressBarData.length) {
+      const sum = progressBarData.reduce((accumulator, object) => {
+        return accumulator + object.percentage;
+      }, 0);
+      const overAllPercentage = sum / progressBarData.length;
+      setProgressValue(overAllPercentage);
+    }
+  }, [progressBarData]);
   return (
     <MainBox>
       <StyledBox>
@@ -75,7 +79,7 @@ const PersonalProfile = () => {
                 <UserImage src={state.userImg} alt="user" />
                 <UserData>
                   <UserTitle>{state.userName}</UserTitle>
-                  <UserRole color="#ffffff" fontSize="36px">
+                  <UserRole col or="#ffffff" fontSize="36px">
                     {state.userRole}
                   </UserRole>
                 </UserData>
