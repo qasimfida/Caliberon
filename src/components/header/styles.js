@@ -8,11 +8,11 @@ export const Navbar = styled(AppBar)(({ transparent }) => ({
   justifyContent: 'center',
   padding: '0',
   boxShadow: 'none',
-  transition: 'background .5s ease',
+  transition: ' .5s ease',
   background: transparent ? 'transparent' : '#fff',
   '.nav-links button': {
     color: transparent ? '#fff' : 'black',
-    transition: 'color .4s ease-in-out',
+    transition: '.4s ease-in-out',
   },
   '.h-100': {
     height: '100%',
@@ -48,7 +48,7 @@ export const ToolbarBox = styled(Toolbar)(
       color: primary?.main,
     },
     '.btn.MuiButtonBase-root.MuiButton-root.active': {
-      borderBottom: transparent ? `2px solid transparent` : `2px solid ${primary.main}`,
+      borderBottom: transparent ? '2px solid transparent' : `2px solid ${primary.main}`,
       color: primary?.main,
       borderRadius: '0',
     },

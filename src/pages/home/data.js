@@ -154,5 +154,5 @@ export const aboutUsData = {
   id: '1',
   title: 'Our vision',
   details:
-    'WeareAVO We create award winning websites,remarkable brand and cutting edge apps.Null am imperdiet,semn ibh fringill anibh.WeareAVO We create award winning websites,remarkable brand and cutting edge apps.Null am imperdiet ',
+    'WeareAVO We create award winning websites,remarkable brand and cutting edge apps.Null am imperdiet,semn ibh fringill anibh.WeareAVO We create. ',
 };

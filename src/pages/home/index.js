@@ -26,7 +26,6 @@ import sponsor8 from '../../assets/images/sponsor8.png';
 import NewsLetter from '../../components/NewsLetter';
 import OurBlogs from '../../components/OurBlogs';
 import AboutUs from '../../components/AboutUs';
-
 const HomePage = () => {
   const navigate = useNavigate();
   const ClickServices = () => {

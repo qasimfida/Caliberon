@@ -9,7 +9,6 @@ const About = () => {
     <MainBox>
       <MainSection />
       <Mission />
-      {/* <Contact /> */}
     </MainBox>
   );
 };

@@ -1,8 +1,39 @@
 import { Grid } from '@mui/material';
 import React from 'react';
 import Wrapper, { ImageWrapper, Img1, Img2, Img3, Details, Title, Paragraph } from './styles';
+import { Box } from '@mui/system';
+import GitLab from '../Svgs/GitLab';
+import BookOpen from '../Svgs/BookOpen';
+import { Hexagon } from '../Svgs/Hexagon';
+import Achivement from '../Achivement';
 
 const AboutUs = ({ img1, img2, img3, title, details, ...rest }) => {
+  const achivementData = [
+    {
+      icon: Hexagon,
+      totall: '920',
+      category: 'Book-Keeping',
+      id: '1',
+    },
+    {
+      icon: GitLab,
+      totall: '240',
+      category: 'Frontend',
+      id: '2',
+    },
+    {
+      icon: BookOpen,
+      totall: '500',
+      category: 'Marketing',
+      id: '3',
+    },
+    {
+      icon: Hexagon,
+      totall: '1000+',
+      category: 'Web-Flow',
+      id: '4',
+    },
+  ];
   return (
     <Wrapper>
       <Grid container spacing={4} {...rest}>
@@ -26,6 +57,11 @@ const AboutUs = ({ img1, img2, img3, title, details, ...rest }) => {
               anibh.WeareAVO We create award winning websites,remarkable brand and cutting edge apps.Null am imperdiet.
             </Paragraph>
             <Paragraph>{details}</Paragraph>
+            <Box display="flex">
+              {achivementData.map((item, id) => (
+                <Achivement key={id} img={item.icon} totall={item.totall} category={item.category} />
+              ))}
+            </Box>
           </Details>
         </Grid>
       </Grid>

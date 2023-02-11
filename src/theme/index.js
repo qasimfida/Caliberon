@@ -89,6 +89,7 @@ let theme = createTheme({
     },
     mediumGray: {
       main: '#d6d6d7',
+      100: '#d5d5d5',
     },
     black: {
       main: '#000000',
