@@ -7,11 +7,9 @@ import {
   UserImage,
   UserData,
   AboutDesc,
-  UserSocialIcons,
   MainBox,
   DescriptionBox,
   CustomizeAccordion,
-  ContactDetailsBox,
   ProgressContent,
   TimeLineWrap,
   AccordionTitle,
@@ -19,12 +17,26 @@ import {
   Heading,
   UserRole,
   MainWrapper,
+  AchivementWrapper,
+  SocialIcons,
+  IconBorder,
 } from './styles';
 import { useLocation } from 'react-router-dom';
-import { Instagram, LinkedIn, Twitter, Facebook, Phone, Mail } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { CircularProgress, LinearProgress } from '../../components/ProgressBar';
 import TimeLine from '../../components/TimeLine';
+import Achivement from '../../components/Achivement';
+import Airplay from '../../components/Svgs/Airplay';
+import { Hexagon } from '../../components/Svgs/Hexagon';
+import GitLab from '../../components/Svgs/GitLab';
+import BookOpen from '../../components/Svgs/BookOpen';
+import Section from '../../components/Section';
+// feather icons
+import FacebookFeather from '../../components/Svgs/Facebook';
+import LinkedinFeather from '../../components/Svgs/Linkedin';
+import TwitterFeather from '../../components/Svgs/Twitter';
+import MailFeather from '../../components/Svgs/Mail';
+import ContactForm from '../../components/contactForm';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
@@ -69,6 +81,32 @@ const PersonalProfile = () => {
       setProgressValue(overAllPercentage);
     }
   }, [progressBarData]);
+  const achievementData = [
+    {
+      icon: Airplay,
+      title: '920',
+      category: 'Book-Keeping',
+      id: '1',
+    },
+    {
+      icon: Hexagon,
+      title: '400',
+      category: 'Front-End',
+      id: '2',
+    },
+    {
+      icon: GitLab,
+      title: '1000',
+      category: 'UI/UX Designer',
+      id: '3',
+    },
+    {
+      icon: BookOpen,
+      title: '2000+',
+      category: 'Graphic',
+      id: '4',
+    },
+  ];
   return (
     <MainBox>
       <StyledBox>
@@ -88,6 +126,20 @@ const PersonalProfile = () => {
             <Grid item xs={12} sm={12} md={4}></Grid>
           </Grid>
         </Container>
+        <SocialIcons>
+          <IconBorder>
+            <FacebookFeather className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <LinkedinFeather className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <TwitterFeather className="social-icon" color="#fff" />
+          </IconBorder>
+          <IconBorder>
+            <MailFeather className="socialIcon" color="#fff" />
+          </IconBorder>
+        </SocialIcons>
       </StyledBox>
       <DescriptionBox>
         <Container>
@@ -103,25 +155,41 @@ const PersonalProfile = () => {
           </AboutDesc>
         </Container>
       </DescriptionBox>
-      <Container>
-        <Heading>Skills</Heading>
-        <ProgressContent>
-          <Grid container alignItems="center">
-            <Grid item xs={12} sm={6} md={7} lg={6} xl={8}>
-              {progressBarData.map((item, id) => (
-                <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
-              ))}
+      <Section>
+        <Container>
+          <Heading>Skills</Heading>
+          <ProgressContent>
+            <Grid container alignItems="center">
+              <Grid item xs={12} sm={6} md={7} lg={6} xl={8}>
+                {progressBarData.map((item, id) => (
+                  <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
+                ))}
+              </Grid>
+              <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
+                <CircularProgress title="OVER ALL PERCENTAGE" percentage={progressValue} size={200} thickness={5} />
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
-              <CircularProgress title="OVER ALL PERCENTAGE" percentage={progressValue} size={200} thickness={5} />
-            </Grid>
+          </ProgressContent>
+        </Container>
+      </Section>
+      <Section variant="very_black">
+        <Container>
+          <Grid container>
+            {achievementData.map((item, id) => (
+              <Grid item xs={12} sm={6} md={3}>
+                <AchivementWrapper>
+                  <Achivement key={id} img={item.icon} title={item.title} category={item.category} size="size" />
+                </AchivementWrapper>
+              </Grid>
+            ))}
           </Grid>
-        </ProgressContent>
-      </Container>
-
-      <TimeLineWrap>
-        <TimeLine />
-      </TimeLineWrap>
+        </Container>
+      </Section>
+      <Section>
+        <TimeLineWrap>
+          <TimeLine />
+        </TimeLineWrap>
+      </Section>
       <MainWrapper>
         <Container>
           <CustomizeAccordion>
@@ -147,18 +215,7 @@ const PersonalProfile = () => {
           </CustomizeAccordion>
         </Container>
       </MainWrapper>
-      <ContactDetailsBox>
-        <Container>
-          <UserSocialIcons>
-            <LinkedIn />
-            <Phone />
-            <Mail />
-            <Instagram />
-            <Facebook />
-            <Twitter />
-          </UserSocialIcons>
-        </Container>
-      </ContactDetailsBox>
+      <ContactForm />
     </MainBox>
   );
 };

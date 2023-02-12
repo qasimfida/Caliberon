@@ -43,7 +43,7 @@ export const StyledTypo = styled(Typography)(
   }) => ({
     color: white?.main,
     fontSize: '50px',
-    letterSpacing: '2px',
+    letterSpacing: '3px',
     lineHeight: '80px',
     width: '50%',
     fontWeight: '700',
@@ -115,13 +115,15 @@ export const Dot = styled('span')({
 });
 // Slide content
 export const SlideContent = styled(Box)({
-  textAlign: 'center',
-  fontFamily: 'Poppins',
-  marginTop: '16px',
-  fontSize: '15px',
   width: '45%',
+});
+export const BannerContent = styled(Typography)({
+  fontWeight: '300',
   lineHeight: '31px',
-  letterSpacing: '1px',
+  letterSpacing: '2px',
+  textAlign: 'center',
+  marginTop: '16px',
+  fontSize: '17px',
   color: '#eee',
 });
 
@@ -132,16 +134,12 @@ export const SocialIcons = styled(Box)(
       palette: { white },
     },
   }) => ({
-    marginTop: '3rem',
-    paddingRight: '3rem',
     position: 'absolute',
     bottom: '24px',
-    width: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
     zIndex: '111111',
-
     '& svgs': {
       marginRight: '2rem',
       color: white?.main,

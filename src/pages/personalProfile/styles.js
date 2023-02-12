@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Typography, Box, Accordion } from '@mui/material';
-import BgImg from '../../assets/images/bg-dark2.jpg';
+import BgImg from '../../assets/images/profile-cover.jpg';
 
 export const UserTitle = styled(Typography)(
   ({
@@ -35,7 +35,7 @@ export const AboutDesc = styled('p')(
 export const MainBox = styled(Box)(
   ({
     theme: {
-      palette: { white, primary, darkBlack },
+      palette: { white, darkBlack },
     },
   }) => ({
     backgroundColor: white?.main,
@@ -49,12 +49,59 @@ export const MainBox = styled(Box)(
       },
       '& .MuiAccordionSummary-expandIconWrapper ': {
         color: darkBlack?.main,
-        '& svg': {},
       },
       '& .MuiAccordionSummary-content p': {
         fontWeight: 'bold',
         fontSize: '20px',
       },
+    },
+  })
+);
+// icon wrapper
+export const SocialIcons = styled(Box)(
+  ({
+    theme: {
+      palette: { white },
+    },
+  }) => ({
+    position: 'absolute',
+    right: '35px',
+    bottom: '24px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    zIndex: '111111',
+    // border: '1px solid #fff',
+
+    '& svgs': {
+      marginRight: '2rem',
+      color: white?.main,
+      cursor: 'pointer',
+    },
+  })
+);
+
+export const IconBorder = styled(Box)(
+  ({
+    theme: {
+      palette: { darkGray },
+    },
+  }) => ({
+    height: '22px',
+    width: '22px',
+    border: `1px solid ${darkGray?.main}`,
+    display: 'flex',
+    justifyContent: 'center',
+    outline: 'none',
+    alignItems: 'center',
+    margin: '1px 6px',
+    padding: '8px',
+    cursor: 'pointer',
+    borderRadius: '50%',
+    transition: '.5s all ease',
+    '&:hover': {
+      transform: 'scale(1)',
+      background: '#4d4d4d',
     },
   })
 );
@@ -70,6 +117,7 @@ export const StyledBox = styled(Box)(
     objectFit: 'cover',
     backgroundSize: 'cover',
     display: 'flex',
+    border: '1px solid #fff',
     '&:before': {
       content: `' '`,
       backgroundColor: darkBlack?.main,
@@ -137,21 +185,7 @@ export const Heading = styled('h4')({
   marginBottom: '15px',
   letterSpacing: '2px',
 });
-export const UserSocialIcons = styled('div')(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    display: 'flex',
-    justifyContent: 'space-between',
-    '& svg': {
-      cursor: 'pointer',
-      color: white?.main,
-      fontSize: '34px',
-    },
-  })
-);
+
 export const MainWrapper = styled(Box)({
   margin: '4rem 0',
 });
@@ -187,7 +221,11 @@ export const ProgressWrapper = styled(Box)({
 export const ProgressContent = styled(Box)({
   marginTop: '40px',
 });
-
+export const AchivementWrapper = styled(Box)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
 // TimeLine Component
 export const TimeLineWrap = styled(Box)({
   height: 'auto',

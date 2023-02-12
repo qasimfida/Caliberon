@@ -34,13 +34,15 @@ const HomePage = () => {
 
   const sliderData = [
     {
-      title: 'Bussiness Private Limited Company.',
-      slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus.',
+      title: 'Bussiness Private Limited Company',
+      slideContent:
+        'A business plan will help you define your goals, target market, marketing strategies, and financial projections.',
       imgLink: BannerNew,
     },
     {
-      title: 'Bussiness Private Limited Company.',
-      slideContent: 'Tempore corrupti temporibus fuga earum asperiores fugit.Tempore corrupti temporibus .',
+      title: 'New Startup Of Our Software Company',
+      slideContent:
+        'Depending on the scope of your software project, you may need to hire a team of developers, designers, and other professionals.',
       imgLink: BannerNeww,
     },
   ];
@@ -110,7 +112,7 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <Button size="sm" variant="contained" onClick={ClickServices}>
+              <Button size="md" variant="contained" onClick={ClickServices}>
                 for more
               </Button>
             </SeeMore>

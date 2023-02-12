@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 import {
   BannerMainWrapper,
   StyledTypo,
@@ -10,6 +10,7 @@ import {
   WrapperDownIcon,
   ScrollButton,
   Dot,
+  BannerContent,
 } from './styles';
 // social icons
 import Facebook from '../../components/Svgs/Facebook';
@@ -40,7 +41,7 @@ const Banner = ({ key, item }) => {
         <BannerWrapper>
           <StyledTypo variant="h5">{item.title}</StyledTypo>
           <SlideContent>
-            <Typography variant="body1"> {item.slideContent}</Typography>
+            <BannerContent variant="body1"> {item.slideContent}</BannerContent>
           </SlideContent>
           <WrapperDownIcon>
             <ScrollButton href="#target-element" onClick={handleClick}>

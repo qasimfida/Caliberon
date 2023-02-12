@@ -1,11 +1,11 @@
 import React from 'react';
 import Wrapper, { AchievementTotall, SubTitle } from './styles';
 
-const Achivement = ({ img: Airplay, totall, category }) => {
+const Achivement = ({ img: Airplay, title, category, size, ...rest }) => {
   return (
-    <Wrapper>
+    <Wrapper {...rest} className={size}>
       <Airplay />
-      <AchievementTotall>{totall}</AchievementTotall>
+      <AchievementTotall>{title}</AchievementTotall>
       <SubTitle>{category}</SubTitle>
     </Wrapper>
   );

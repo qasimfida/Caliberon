@@ -8,14 +8,26 @@ const Wrapper = styled(Box)(
     },
   }) => ({
     color: mediumGray?.[100],
-    height: '160px',
-    width: '160px',
+    height: '180px',
+    width: '180px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     borderRadius: '8px',
+    '&.size': {
+      '& svg': {
+        width: '70px',
+        height: '70px',
+      },
+      '& .css-2u009e': {
+        fontSize: '25px',
+      },
+      '& .css-1ta1ohp': {
+        fontSize: '15px',
+      },
+    },
   })
 );
 
