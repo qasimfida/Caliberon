@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Paper, Box } from '@mui/material';
+import Button from '../../components/Button';
 
 export const Item = styled(Paper)({
   boxShadow: 'none',
@@ -13,6 +14,20 @@ export const SeeMore = styled(Box)`
   align-items: center;
   margin-top: 60px;
 `;
+export const MoreButton = styled(Button)({
+  transition: '.4s ease',
+  fontSize: '16px',
+  fontWeight: '400',
+  padding: '17px 10px',
+  '&.MuiButtonBase-root': {
+    '&:hover svg': {
+      transform: ' translateX(10px)',
+    },
+    '& svg': {
+      width: '38px',
+    },
+  },
+});
 export const SponsorsWrapper = styled(Box)(
   ({
     theme: {

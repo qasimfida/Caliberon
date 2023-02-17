@@ -1,12 +1,17 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-export const Heading = styled('h2')({
+export const Heading = styled('h2')(
+  ({
+    theme: {
+      palette: { primary },
+    },
+  }) => ({
+    margin: '0',
+    color: primary?.main,
     fontSize: '20px',
-    fontWeight: '500',
-})
-
-export const HeadingWrapper = styled('div')({
-})
-
-export const MenuLinksWraper = styled('div')({
-})
+    fontWeight: '600',
+    letterSpacing: '2px',
+    marginBottom: '2rem',
+    marginTop: '10px',
+  })
+);

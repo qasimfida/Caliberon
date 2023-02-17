@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Container } from '@mui/material';
+import { Container } from '@mui/material';
 import FooterItem from './footerItem';
 
-import {
+import Wrapper, {
   StyledGrid,
   DesignedBy,
   Item,
@@ -11,9 +11,15 @@ import {
   MenuLinks,
   Address,
   Contact,
-  IconsWrapper,
+  BoderRadius,
+  SocialIcon,
+  DepartmentWrapper,
 } from './styles';
-import { Instagram, LinkedIn, Twitter, Facebook } from '@mui/icons-material';
+import Facebook from '../../components/Svgs/Facebook';
+import Twitter from '../../components/Svgs/Twitter';
+import Linkedin from '../../components/Svgs/Linkedin';
+import Mail from '../../components/Svgs/Mail';
+import LogoLight from '../../assets/images/logo-light.png';
 
 const Footer = () => {
   const routes = [
@@ -39,61 +45,79 @@ const Footer = () => {
     },
   ];
   return (
-    <Box>
+    <Wrapper>
       <Container>
-        <StyledGrid container spacing={2}>
-          <StyledGrid item xs={12} md={4}>
-            <Item>
-              <FooterItem title={'Menu'}>
-                <LinksWrapper>
-                  {routes.map((item) => {
-                    return (
-                      <MenuLinks href={item.path} key={`route-${item.name}`}>
-                        {item.name}
-                      </MenuLinks>
-                    );
-                  })}
-                </LinksWrapper>
-              </FooterItem>
-            </Item>
+        <StyledGrid container spacing={8}>
+          <StyledGrid container item xs={12} md={4}>
+            <StyledGrid item xs={12} md={8}>
+              <Item>
+                <img src={LogoLight} height="50px" alt="logo" />
+                <FooterItem>
+                  <AddressWrapper>
+                    <Address>Here About Section includes a brief biography</Address>
+                  </AddressWrapper>
+                  <SocialIcon>
+                    <BoderRadius>
+                      <Facebook color={'#fff'} height={25} />
+                    </BoderRadius>
+                    <BoderRadius>
+                      <Twitter color={'#fff'} height={25} />
+                    </BoderRadius>
+                    <BoderRadius>
+                      <Linkedin color={'#fff'} height={25} />
+                    </BoderRadius>
+                    <BoderRadius>
+                      <Mail color={'#fff'} height={25} />
+                    </BoderRadius>
+                  </SocialIcon>
+                </FooterItem>
+              </Item>
+            </StyledGrid>
           </StyledGrid>
-          <StyledGrid item xs={12} md={4}>
-            <Item>
-              <FooterItem title={'Contact'}>
-                <AddressWrapper>
-                  <Address>
-                    Near Heli Chowk <br /> Zulfiqarabad <br /> Gilgit, 15100
-                  </Address>
-                  <Contact>
-                    contact@calibreoninternational.com <br />
-                    (647) 749-7224
-                  </Contact>
-                </AddressWrapper>
-              </FooterItem>
-            </Item>
-          </StyledGrid>
-          <StyledGrid item xs={12} md={4}>
-            <Item>
-              <FooterItem title={'About'}>
-                <AddressWrapper>
-                  <Address>
-                    Fint Cloud uses technology to streamline your accounting, save you time and money, and help you grow
-                    your business.
-                  </Address>
-                </AddressWrapper>
-                <IconsWrapper>
-                  <Facebook />
-                  <LinkedIn />
-                  <Twitter />
-                  <Instagram />
-                </IconsWrapper>
-              </FooterItem>
-            </Item>
+          <StyledGrid container item xs={12} md={8}>
+            <StyledGrid item xs={12} md={4}>
+              <Item>
+                <FooterItem title={'Menu'}>
+                  <LinksWrapper>
+                    {routes.map((item) => {
+                      return (
+                        <MenuLinks href={item.path} key={`route-${item.name}`}>
+                          {item.name}
+                        </MenuLinks>
+                      );
+                    })}
+                  </LinksWrapper>
+                </FooterItem>
+              </Item>
+            </StyledGrid>
+            <StyledGrid item xs={12} md={4}>
+              <FooterItem title={'Department'} />
+              <DepartmentWrapper>
+                <MenuLinks href="#">Marketing </MenuLinks>
+                <MenuLinks href="#">Lead Role</MenuLinks>
+                <MenuLinks href="#">Development</MenuLinks>
+                <MenuLinks href="#">Human Resource</MenuLinks>
+                <MenuLinks href="#">Finance</MenuLinks>
+              </DepartmentWrapper>
+            </StyledGrid>
+            <StyledGrid item xs={12} md={4}>
+              <Item>
+                <FooterItem title={'About'}>
+                  <AddressWrapper>
+                    <Address>Near Heli Chowk Zulfiqarabad Gilgit, 15100</Address>
+                    <Contact>
+                      contact@calibreoninternational.com <br />
+                      (647) 749-7224
+                    </Contact>
+                  </AddressWrapper>
+                </FooterItem>
+              </Item>
+            </StyledGrid>
           </StyledGrid>
         </StyledGrid>
       </Container>
-      <DesignedBy>© 2022 CALIBREON INTERNATIONAL PVT. LTD. ALL RIGHTS RESERVED. DESIGNED BY NORTHSPEX</DesignedBy>
-    </Box>
+      <DesignedBy>© 2022 Calibreon International Pvt. Ltd. All Rights Reserved. Design By NorthSpex</DesignedBy>
+    </Wrapper>
   );
 };
 

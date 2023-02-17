@@ -18,6 +18,9 @@ import BlogC from '../../assets/images/blog-c.jpg';
 import About1 from '../../assets/images/about1.jpg';
 import About2 from '../../assets/images/about2.jpg';
 import About3 from '../../assets/images/about3.jpg';
+import User1 from '../../assets/images/user-a.jpg';
+import User2 from '../../assets/images/user-b.jpg';
+import User3 from '../../assets/images/user-c.jpg';
 export const services = [
   {
     name: 'Ideate',
@@ -84,21 +87,21 @@ export const users = [
   {
     name: 'David Zun',
     role: 'Bookkeeper',
-    img: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img: 'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
     userDetails:
       'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
   },
   {
     name: 'Harry Potter',
     role: 'Web Developer',
-    img: 'https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img: 'https://images.unsplash.com/photo-1639747279286-c07eecb47a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     userDetails:
       'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
   },
   {
     name: 'Jonney Depp',
     role: 'Web Designer',
-    img: 'https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img: User3,
     userDetails:
       'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
   },

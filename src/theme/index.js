@@ -16,7 +16,6 @@ let theme = createTheme({
           props: { variant: 'outlined' },
           style: {
             color: '#fff',
-            // backgroundColor: '#fff',
             textTransform: 'none',
             borderColor: '#fff',
             '&:hover': {
@@ -48,19 +47,16 @@ let theme = createTheme({
           },
         },
         {
-          props: { variant: 'dark-version' },
+          props: { variant: 'light' },
           style: {
             backgroundColor: 'transparent',
-            padding: '5px 12px',
-            color: '#fff',
-            textTransform: 'uppercase',
-            letterSpacing: '4px',
-            fontSize: '13px',
-            fontWeight: '200',
-            paddingLeft: '10px !important',
-            transition: '.4s all ease',
+            color: 'black',
+            fontWeight: '400',
+            border: '2px solid #f15c27',
             '&:hover': {
-              color: '#f54c0a',
+              color: '#fff',
+              background: '#f15c27',
+              border: '2px solid transparent',
             },
           },
         },
@@ -111,6 +107,9 @@ let theme = createTheme({
     },
     hover_color: {
       main: '#4d4d4d',
+    },
+    text_light: {
+      main: '#c8c8c8',
     },
   },
 });

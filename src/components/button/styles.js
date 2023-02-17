@@ -10,7 +10,6 @@ const sizes = {
 export const StyledButton = styled(Button)(({ size }) => ({
   padding: '11px 15px',
   letterSpacing: '2px',
-  textTransform: 'uppercase',
   borderRadius: 'unset',
   height: sizes[size] || sizes['md'],
 }));

@@ -1,9 +1,9 @@
 import React from 'react';
 import Wrapper, { AchievementTotall, SubTitle } from './styles';
 
-const Achivement = ({ img: Airplay, title, category, size, ...rest }) => {
+const Achivement = ({ img: Airplay, title, category, ...rest }) => {
   return (
-    <Wrapper {...rest} className={size}>
+    <Wrapper {...rest}>
       <Airplay />
       <AchievementTotall>{title}</AchievementTotall>
       <SubTitle>{category}</SubTitle>

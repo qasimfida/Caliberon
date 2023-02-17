@@ -1,6 +1,6 @@
 import Carousel from '../../components/Slider';
 import { useNavigate } from 'react-router-dom';
-import Contact from '../../components/contactForm';
+// import Contact from '../../components/contactForm';
 import ProfileCard from '../../components/ProfileCard';
 import ServicesCard from '../../components/ServicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
@@ -11,8 +11,7 @@ import Section from '../../components/Section';
 import Banner from '../banner';
 import BannerNew from '../../assets/images/Background2.jpg';
 import BannerNeww from '../../assets/images/New-Banner.jpg';
-import { SeeMore, Item, SponsorsWrapper, CustomizeSlide, SlideWrapper, BlogsWrapper } from './styles';
-import Button from '../../components/Button';
+import { SeeMore, Item, SponsorsWrapper, CustomizeSlide, SlideWrapper, BlogsWrapper, MoreButton } from './styles';
 import Heading from '../../components/Heading';
 import Sponsor from '../../components/Sponsor';
 // sponsor images
@@ -26,10 +25,15 @@ import sponsor8 from '../../assets/images/sponsor8.png';
 import NewsLetter from '../../components/NewsLetter';
 import OurBlogs from '../../components/OurBlogs';
 import AboutUs from '../../components/AboutUs';
+import ArrowRight from '../../components/Svgs/ArrowRight';
+import ContactCard from '../../components/ContactCard';
 const HomePage = () => {
   const navigate = useNavigate();
   const ClickServices = () => {
     navigate('/services');
+  };
+  const ClickTeam = () => {
+    navigate('/allTeam');
   };
 
   const sliderData = [
@@ -112,9 +116,10 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <Button size="md" variant="contained" onClick={ClickServices}>
+              <MoreButton size="lg" variant="light" onClick={ClickServices}>
                 for more
-              </Button>
+                <ArrowRight />
+              </MoreButton>
             </SeeMore>
           </MainWrapper>
         </Container>
@@ -148,9 +153,10 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <Button variant="contained" onClick={ClickServices}>
-                See more
-              </Button>
+              <MoreButton size="lg" variant="light" onClick={ClickTeam}>
+                see more
+                <ArrowRight />
+              </MoreButton>
             </SeeMore>
           </MainWrapper>
         </Container>
@@ -225,7 +231,6 @@ const HomePage = () => {
           </Grid>
         </Container>
       </Section>
-      <Contact />
     </div>
   );
 };
