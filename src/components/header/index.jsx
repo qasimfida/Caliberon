@@ -4,7 +4,7 @@ import { Container } from '@mui/system';
 import { useNavigate, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '../Button';
-import { Navbar, LogoWrapper, ToolbarBox, LinksWrapper } from './styles';
+import { Navbar, LogoWrapper, ToolbarBox, LinksWrapper, ContactUs } from './styles';
 import logoDark from './../../assets/images/logo-main.png';
 import logoLight from './../../assets/images/logo-light.png';
 import useOnScroll from '../../customHooks/useOnScroll';
@@ -38,6 +38,7 @@ const Header = () => {
   };
   const scrollPosition = useOnScroll();
   let hasAffix = scrollPosition < 100;
+
   return (
     <Navbar id="header" transparent={hasAffix}>
       <Container className="h-100">
@@ -107,9 +108,9 @@ const Header = () => {
               </Button>
             ))}
           </LinksWrapper>
-          <Button size="lg" variant="contained" onClick={onClickContact}>
+          <ContactUs size="lg" variant="outlined" color="inherit" onClick={onClickContact} transparent={hasAffix}>
             Contact Us
-          </Button>
+          </ContactUs>
         </ToolbarBox>
       </Container>
     </Navbar>

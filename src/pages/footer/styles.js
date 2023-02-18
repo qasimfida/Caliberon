@@ -101,8 +101,9 @@ export const DesignedBy = styled('p')(
 );
 
 export const SocialIcon = styled(Box)({
+  height: '100px',
   display: 'flex',
-  marginTop: '30px',
+  alignItems: 'end',
 });
 export const BoderRadius = styled(Box)(
   ({

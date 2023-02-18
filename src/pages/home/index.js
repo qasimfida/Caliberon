@@ -1,6 +1,5 @@
 import Carousel from '../../components/Slider';
 import { useNavigate } from 'react-router-dom';
-// import Contact from '../../components/contactForm';
 import ProfileCard from '../../components/ProfileCard';
 import ServicesCard from '../../components/ServicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
@@ -26,7 +25,6 @@ import NewsLetter from '../../components/NewsLetter';
 import OurBlogs from '../../components/OurBlogs';
 import AboutUs from '../../components/AboutUs';
 import ArrowRight from '../../components/Svgs/ArrowRight';
-import ContactCard from '../../components/ContactCard';
 const HomePage = () => {
   const navigate = useNavigate();
   const ClickServices = () => {
@@ -116,7 +114,7 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <MoreButton size="lg" variant="light" onClick={ClickServices}>
+              <MoreButton size="lg" variant="outlined" color="black" onClick={ClickServices}>
                 for more
                 <ArrowRight />
               </MoreButton>
@@ -153,7 +151,7 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <MoreButton size="lg" variant="light" onClick={ClickTeam}>
+              <MoreButton size="lg" variant="outlined" color="black" onClick={ClickTeam}>
                 see more
                 <ArrowRight />
               </MoreButton>

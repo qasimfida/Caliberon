@@ -6,17 +6,13 @@ import Web from '../../assets/images/web.png';
 import App from '../../assets/images/app.png';
 import Business from '../../assets/images/business.png';
 import Marketing from '../../assets/images/marketing.png';
-import { useNavigate } from 'react-router-dom';
 import { MainBox, ServicesBox, GuidBox, GuidContent, CardsBox } from './styles';
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
 import MainSection from '../../components/Layout';
 import { MainWrapper } from '../../components/common';
-import ContactBanner from '../../components/ContactBanner';
 
 const Services = () => {
-  const navigate = useNavigate();
-
   const services = [
     {
       name: 'Ideate',
@@ -56,9 +52,7 @@ const Services = () => {
       serviceDetails: 'We also help you market your products through an online marketplace',
     },
   ];
-  const onClickContact = () => {
-    navigate('/contact');
-  };
+
   return (
     <MainBox>
       <MainSection />
@@ -98,7 +92,6 @@ const Services = () => {
           </MainWrapper>
         </ServicesBox>
       </Container>
-      <ContactBanner onClick={onClickContact} />
     </MainBox>
   );
 };

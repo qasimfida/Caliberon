@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { Toolbar, AppBar } from '@mui/material';
 import { Box } from '@mui/system';
+import Button from '../Button';
 
 export const Navbar = styled(AppBar)(({ transparent }) => ({
-  height: '72px',
+  height: '80px',
   boxSizing: 'border-box',
   justifyContent: 'center',
   padding: '0',
@@ -32,6 +33,21 @@ export const LogoWrapper = styled.div`
     height: 55px;
   }
 `;
+
+export const ContactUs = styled(Button)(
+  ({
+    theme: {
+      palette: { primary },
+    },
+    transparent,
+  }) => ({
+    // border: transparent ? '1px solid #fff' : `1px solid ${primary?.main}`,
+    // color: transparent ? '#fff' : `${primary?.main}`,
+    border: transparent ? '1px solid #fff' : `1px solid black`,
+    color: transparent ? '#fff' : `black`,
+    marginLeft: '20px',
+  })
+);
 export const ToolbarBox = styled(Toolbar)(
   ({
     theme: {

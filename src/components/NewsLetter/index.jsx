@@ -1,5 +1,5 @@
 import React from 'react';
-import Wrapper, { CustomButton, Input, Label, News, NewsWrapper, TextWrapper } from './styles';
+import Wrapper, { SubscribeButton, Input, Label, News, NewsWrapper, TextWrapper } from './styles';
 
 const NewsLetter = () => {
   return (
@@ -10,9 +10,9 @@ const NewsLetter = () => {
         </TextWrapper>
         <Wrapper component="form">
           <Input placeholder="Your Email" />
-          <CustomButton size="lg" variant="dark">
+          <SubscribeButton size="lg" variant="contained" color="black">
             Subscribe
-          </CustomButton>
+          </SubscribeButton>
         </Wrapper>
       </News>
     </NewsWrapper>

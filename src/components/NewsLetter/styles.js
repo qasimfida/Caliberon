@@ -40,7 +40,7 @@ export const Label = styled('h3')({
   textAlign: 'left',
   marginTop: '0',
 });
-export const CustomButton = styled(Button)({
+export const SubscribeButton = styled(Button)({
   right: '0',
   borderRadius: '0 4px 4px 0 !important',
   fontSize: '16px',

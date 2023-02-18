@@ -9,54 +9,46 @@ let theme = createTheme({
           style: {
             color: '#fff',
             background: '#f54c0a',
-            textTransform: 'none',
+          },
+        },
+        {
+          props: { variant: 'contained', color: 'black' },
+          style: {
+            color: '#fff',
+            background: 'black',
           },
         },
         {
           props: { variant: 'outlined' },
           style: {
+            color: '#f15c27',
+            border: '1px solid #f15c27',
+            background: 'white',
+          },
+        },
+        {
+          props: { variant: 'outlined', color: 'inherit' },
+          style: {
             color: '#fff',
-            textTransform: 'none',
-            borderColor: '#fff',
-            '&:hover': {
-              borderColor: '#fff',
+            border: '1px solid #fff',
+            background: 'transparent',
+            ':hover': {
+              background: '#f15c27',
               color: '#fff',
+              border: '1px solid #f15c27',
             },
           },
         },
         {
-          props: { variant: 'text' },
+          props: { variant: 'outlined', color: 'black' },
           style: {
-            color: '#444',
-            '&:hover': {
-              background: 'transparent',
-              color: '#f15c27',
-            },
-          },
-        },
-        {
-          props: { variant: 'dark' },
-          style: {
-            backgroundColor: '#323232',
-            color: '#fff',
-            padding: '15px 32px',
-            letterSpacing: '1.3px',
-            '&:hover': {
-              background: '#11141b',
-            },
-          },
-        },
-        {
-          props: { variant: 'light' },
-          style: {
-            backgroundColor: 'transparent',
             color: 'black',
-            fontWeight: '400',
-            border: '2px solid #f15c27',
-            '&:hover': {
+            border: '1px solid black',
+            background: 'white',
+            ':hover': {
               color: '#fff',
               background: '#f15c27',
-              border: '2px solid transparent',
+              border: '1px solid transparent',
             },
           },
         },

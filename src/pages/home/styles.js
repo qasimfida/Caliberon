@@ -15,16 +15,18 @@ export const SeeMore = styled(Box)`
   margin-top: 60px;
 `;
 export const MoreButton = styled(Button)({
-  transition: '.4s ease',
   fontSize: '16px',
   fontWeight: '400',
-  padding: '17px 10px',
+  padding: '18px 20px',
+  transition: '.3s ease',
   '&.MuiButtonBase-root': {
     '&:hover svg': {
-      transform: ' translateX(10px)',
+      transform: ' translateX(8px)',
     },
     '& svg': {
-      width: '38px',
+      marginLeft: '2px',
+      width: 'auto',
+      transition: '.2s ease-out',
     },
   },
 });
