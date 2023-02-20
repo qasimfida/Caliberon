@@ -47,7 +47,20 @@ let theme = createTheme({
             background: 'white',
             ':hover': {
               color: '#fff',
-              background: '#f15c27',
+              background: '#000',
+              border: '1px solid transparent',
+            },
+          },
+        },
+        {
+          props: { variant: 'outlined', color: 'primary' },
+          style: {
+            color: '#FF6600',
+            border: '1.5px solid #FF6600',
+            background: 'white',
+            ':hover': {
+              color: '#fff',
+              background: '#FF6600',
               border: '1px solid transparent',
             },
           },

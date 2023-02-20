@@ -10,7 +10,18 @@ import Section from '../../components/Section';
 import Banner from '../banner';
 import BannerNew from '../../assets/images/Background2.jpg';
 import BannerNeww from '../../assets/images/New-Banner.jpg';
-import { SeeMore, Item, SponsorsWrapper, CustomizeSlide, SlideWrapper, BlogsWrapper, MoreButton } from './styles';
+import {
+  SeeMore,
+  Item,
+  SponsorsWrapper,
+  CustomizeSlide,
+  SlideWrapper,
+  BlogsWrapper,
+  MoreButton,
+  VideoContent,
+  VideoTitle,
+  VideoDescription,
+} from './styles';
 import Heading from '../../components/Heading';
 import Sponsor from '../../components/Sponsor';
 // sponsor images
@@ -25,6 +36,7 @@ import NewsLetter from '../../components/NewsLetter';
 import OurBlogs from '../../components/OurBlogs';
 import AboutUs from '../../components/AboutUs';
 import ArrowRight from '../../components/Svgs/ArrowRight';
+import Video from '../../components/Video';
 const HomePage = () => {
   const navigate = useNavigate();
   const ClickServices = () => {
@@ -114,7 +126,7 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <MoreButton size="lg" variant="outlined" color="black" onClick={ClickServices}>
+              <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickServices}>
                 for more
                 <ArrowRight />
               </MoreButton>
@@ -122,6 +134,27 @@ const HomePage = () => {
           </MainWrapper>
         </Container>
       </Section>
+      <Section variant="very_black">
+        <Container>
+          <Grid container spacing={4}>
+            <Grid item md={6}>
+              <Video />
+            </Grid>
+            <Grid item md={6}>
+              <VideoContent>
+                <VideoTitle>Here is My Introduction</VideoTitle>
+                <VideoDescription>
+                  And lastly, we move to the third section. This section has the video’s title, the player slider, and
+                  the last group of controls. third section. This section has the video’s title, the player slider, and
+                  the last group of controls. third section. This section has the video’s title, the player slider, and
+                  the last group of controls.
+                </VideoDescription>
+              </VideoContent>
+            </Grid>
+          </Grid>
+        </Container>
+      </Section>
+      <Section></Section>
       <Section variant="very_black">
         <Container>
           <Heading className="sponsor_heading" title={'About Us.'} subTitle={'our company'} />

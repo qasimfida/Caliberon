@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Typography, Box, Accordion } from '@mui/material';
-import BgImg from '../../assets/images/profile-cover.jpg';
+import BgImg from '../../assets/images/cover.jpg';
 
 export const UserTitle = styled(Typography)(
   ({
@@ -116,6 +116,7 @@ export const StyledBox = styled(Box)(
     backgroundImage: `url(${BgImg})`,
     objectFit: 'cover',
     backgroundSize: 'cover',
+    backgroundPosition: ' right',
     display: 'flex',
     border: '1px solid #fff',
     '&:before': {

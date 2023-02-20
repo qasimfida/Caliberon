@@ -46,6 +46,27 @@ export const SponsorsWrapper = styled(Box)(
     },
   })
 );
+export const VideoContent = styled(Box)({});
+export const VideoTitle = styled('h1')(
+  ({
+    theme: {
+      palette: { primary },
+    },
+  }) => ({
+    margin: '0',
+    marginBottom: '30px',
+    color: primary?.main,
+    letterSpacing: '2px',
+    fontSize: '2rem',
+  })
+);
+export const VideoDescription = styled('p')({
+  color: '#fff',
+  letterSpacing: '1px',
+  fontWeight: '200',
+  fontSize: '1rem',
+  lineHeight: '2',
+});
 
 export const CustomizeSlide = styled(Box)(
   ({
