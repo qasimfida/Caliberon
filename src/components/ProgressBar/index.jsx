@@ -30,9 +30,9 @@ export const CircularProgress = ({ title, percentage, size, thickness, ...rest }
   );
 };
 
-export const LinearProgress = ({ label, percentage, ...rest }) => {
+export const LinearProgress = ({ label, className, percentage, ...rest }) => {
   return (
-    <LinearWrap>
+    <LinearWrap className={className}>
       <Label>{label}</Label>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Box sx={{ width: '100%', mr: 1 }}>

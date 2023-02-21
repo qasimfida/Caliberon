@@ -4,12 +4,12 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineContent from '@mui/lab/TimelineContent';
 
 export const StyledTimeLine = styled(Box)({
-  height: 'auto',
+  marginTop: '2rem',
 });
 
 // Title
 export const Title = styled('h6')({
-  fontSize: '22px',
+  fontSize: '26px',
   margin: '0px',
   fontWeight: '600',
   letterSpacing: '1.4px',
@@ -21,9 +21,9 @@ export const StyledContent = styled(TimelineContent)({
 });
 // Name
 export const Name = styled('h6')({
-  fontSize: '14px',
+  fontSize: '20px',
   margin: '0px',
-  fontWeight: '600',
+  fontWeight: '500',
   paddingBottom: '5px',
 });
 
@@ -32,7 +32,9 @@ export const Content = styled('p')({
   fontSize: '14px',
   margin: '0px',
   padding: ' 0px',
-  fontWeight: '500',
+  fontWeight: '400',
+  fontSize: '18px',
+  letterSpacing: '1px',
 });
 
 // Time line Separator
@@ -52,5 +54,8 @@ export const Date = styled('p')(
     margin: '0',
     padding: '10px 0',
     color: primary?.main,
+    fontSize: '20px',
+    fontWeight: '600',
+    letterSpacing: '1px',
   })
 );

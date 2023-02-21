@@ -11,7 +11,6 @@ import {
   DescriptionBox,
   CustomizeAccordion,
   ProgressContent,
-  TimeLineWrap,
   AccordionTitle,
   AccordionContent,
   Heading,
@@ -20,6 +19,7 @@ import {
   AchivementWrapper,
   SocialIcons,
   IconBorder,
+  AccordionSecond,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -36,7 +36,6 @@ import FacebookFeather from '../../components/Svgs/Facebook';
 import LinkedinFeather from '../../components/Svgs/Linkedin';
 import TwitterFeather from '../../components/Svgs/Twitter';
 import MailFeather from '../../components/Svgs/Mail';
-import ContactForm from '../../components/contactForm';
 
 const PersonalProfile = () => {
   const { state } = useLocation();
@@ -117,7 +116,7 @@ const PersonalProfile = () => {
                 <UserImage src={state.userImg} alt="user" />
                 <UserData>
                   <UserTitle>{state.userName}</UserTitle>
-                  <UserRole col or="#ffffff" fontSize="36px">
+                  <UserRole color="#ffffff" fontSize="36px">
                     {state.userRole}
                   </UserRole>
                 </UserData>
@@ -149,9 +148,9 @@ const PersonalProfile = () => {
             East Africa. He is a key member of audit and assurance practice of Islamabad and heads the Clients & Market
             and Human Resource functions of Islamabad practice and is the lead engagement partner of key Islamabad audit
             clients.
-            <br /> <br /> {state.userName} led team to carry out listing of Exchangeable Bonds of the largest oil & gas
-            company in Pakistan at London and Singapore stock exchanges and was a key member of listing the Global
-            Depository Shares of the same company at the London stock exchange.
+            <br /> <br /> led team to carry out listing of Exchangeable Bonds of the largest oil & gas company in
+            Pakistan at London and Singapore stock exchanges and was a key member of listing the Global Depository
+            Shares of the same company at the London stock exchange.
           </AboutDesc>
         </Container>
       </DescriptionBox>
@@ -162,7 +161,13 @@ const PersonalProfile = () => {
             <Grid container alignItems="center">
               <Grid item xs={12} sm={6} md={7} lg={6} xl={8}>
                 {progressBarData.map((item, id) => (
-                  <LinearProgress key={id} label={item.name} percentage={item.percentage} thickness={3} />
+                  <LinearProgress
+                    className={id === 0 ? 'mt-0' : 'mt-5'}
+                    key={id}
+                    label={item.name}
+                    percentage={item.percentage}
+                    thickness={3}
+                  />
                 ))}
               </Grid>
               <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
@@ -186,9 +191,10 @@ const PersonalProfile = () => {
         </Container>
       </Section>
       <Section>
-        <TimeLineWrap>
+        <Container>
+          <Heading>Experience</Heading>
           <TimeLine />
-        </TimeLineWrap>
+        </Container>
       </Section>
       <MainWrapper>
         <Container>
@@ -203,7 +209,7 @@ const PersonalProfile = () => {
               </AccordionContent>
             </AccordionDetails>
           </CustomizeAccordion>
-          <CustomizeAccordion>
+          <AccordionSecond>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
               <AccordionTitle>Area Of Need</AccordionTitle>
             </AccordionSummary>
@@ -212,10 +218,9 @@ const PersonalProfile = () => {
                 Consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
               </AccordionContent>
             </AccordionDetails>
-          </CustomizeAccordion>
+          </AccordionSecond>
         </Container>
       </MainWrapper>
-      <ContactForm />
     </MainBox>
   );
 };

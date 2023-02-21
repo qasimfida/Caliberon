@@ -7,24 +7,24 @@ import { TimelineConnector, TimelineDot } from '@mui/lab';
 const TimeLineComponent = () => {
   const timeLineData = [
     {
-      title: 'Experience',
+      title: 'Front-End',
       date: '2013 - Present',
-      name: 'Art Director - Facebook Inc.',
+      name: 'NorthSpex Pvt Ltd',
       content: 'Collaborate with creative and development teams on the execution of ideas.',
       id: '1',
       main: 'staticColor',
     },
     {
-      title: 'Education',
+      title: 'Book-Keeping',
       date: '2012 - Past',
-      name: 'Art Director - Facebook Inc.',
+      name: 'TechZoid Pvt Ltd',
       content: 'Collaborate with creative and development teams on the execution of ideas.',
       id: '2',
     },
     {
-      title: 'Studies',
+      title: 'Digital-Marketing',
       date: '2011 - Past',
-      name: 'Art Director - Facebook Inc.',
+      name: 'Uconnect Pvt Ltd',
       content: 'Collaborate with creative and development teams on the execution of ideas.',
       id: '3',
     },

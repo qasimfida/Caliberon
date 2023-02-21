@@ -44,13 +44,15 @@ export const LinearWrap = styled('div')({
   '& p': {
     textAlign: 'left',
   },
+  '&.mt-5': {
+    marginTop: '20px',
+  },
 });
 
 export const Label = styled('h3')({
   textAlign: 'start',
   margin: '0',
   fontSize: '1.2rem',
-  paddingTop: '22px',
   fontWeight: '400',
   lineHeight: '1.5',
   marginBottom: '15px',

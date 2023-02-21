@@ -20,17 +20,11 @@ export const UserRole = styled('h5')({
   fontWeight: '300',
   letterSpacing: '1.4px',
 });
-export const AboutDesc = styled('p')(
-  ({
-    theme: {
-      palette: { white, darkGray },
-    },
-  }) => ({
-    letterSpacing: '0.8px',
-    fontSize: (props) => (props.fontSize === '36px' ? '36px' : '24px'),
-    color: (props) => (props.color === white.main ? white.main : darkGray),
-  })
-);
+export const AboutDesc = styled('p')({
+  letterSpacing: '1px',
+  fontSize: '18px',
+  fontWeight: '400',
+});
 
 export const MainBox = styled(Box)(
   ({
@@ -179,24 +173,32 @@ export const HeadingA = styled('h4')({
 });
 export const Heading = styled('h4')({
   margin: '0',
-  textTransform: 'capitalize',
-  fontSize: '2rem',
+  fontSize: '32px',
   fontWeight: '600',
   lineHeight: '1.5',
-  marginBottom: '15px',
+  marginBottom: '2.3rem',
   letterSpacing: '2px',
+  textTransform: 'capitalize',
 });
 
 export const MainWrapper = styled(Box)({
   margin: '4rem 0',
 });
 export const CustomizeAccordion = styled(Accordion)({
-  outline: 'none',
   position: 'unset',
-  boxShadow: 'none',
+  // boxShadow: 'none',
   svg: {
     fontSize: '2.5rem',
-    paddingRight: '2rem',
+  },
+});
+export const AccordionSecond = styled(Accordion)({
+  position: 'rlative',
+  // boxShadow: 'none',
+  marginTop: '2rem',
+  svg: {
+    position: 'absolute',
+    right: '20%',
+    fontSize: '2.5rem',
   },
 });
 
@@ -211,6 +213,9 @@ export const AccordionTitle = styled('h2')({
 // Accordion Content
 export const AccordionContent = styled('p')({
   padding: '0px 8px',
+  fontSize: '18px',
+  fontWeight: '400',
+  letterSpacing: '1px',
 });
 
 // ProcessBar Title
@@ -226,12 +231,4 @@ export const AchivementWrapper = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-});
-// TimeLine Component
-export const TimeLineWrap = styled(Box)({
-  height: 'auto',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
 });

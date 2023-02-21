@@ -18,9 +18,9 @@ import {
   SlideWrapper,
   BlogsWrapper,
   MoreButton,
-  VideoContent,
-  VideoTitle,
-  VideoDescription,
+  // VideoContent,
+  // VideoTitle,
+  // VideoDescription,
 } from './styles';
 import Heading from '../../components/Heading';
 import Sponsor from '../../components/Sponsor';
@@ -36,7 +36,7 @@ import NewsLetter from '../../components/NewsLetter';
 import OurBlogs from '../../components/OurBlogs';
 import AboutUs from '../../components/AboutUs';
 import ArrowRight from '../../components/Svgs/ArrowRight';
-import Video from '../../components/Video';
+// import Video from '../../components/Video';
 const HomePage = () => {
   const navigate = useNavigate();
   const ClickServices = () => {
@@ -134,7 +134,7 @@ const HomePage = () => {
           </MainWrapper>
         </Container>
       </Section>
-      <Section variant="very_black">
+      {/* <Section variant="very_black">
         <Container>
           <Grid container spacing={4}>
             <Grid item md={6}>
@@ -153,8 +153,7 @@ const HomePage = () => {
             </Grid>
           </Grid>
         </Container>
-      </Section>
-      <Section></Section>
+      </Section> */}
       <Section variant="very_black">
         <Container>
           <Heading className="sponsor_heading" title={'About Us.'} subTitle={'our company'} />
