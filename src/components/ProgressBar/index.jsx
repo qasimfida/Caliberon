@@ -39,7 +39,7 @@ export const LinearProgress = ({ label, className, percentage, ...rest }) => {
           <CustomizeLinearProgress variant="determinate" value={percentage} valueBuffer={percentage} {...rest} />
         </Box>
         <Box sx={{ minWidth: 35 }}>
-          <Typography variant="body2" color="text.secondary">{`${Math.round(percentage)}%`}</Typography>
+          <Typography variant="body2" fontSize={16} color="text.secondary">{`${Math.round(percentage)}%`}</Typography>
         </Box>
       </Box>
     </LinearWrap>

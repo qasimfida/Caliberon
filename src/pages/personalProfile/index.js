@@ -19,7 +19,7 @@ import {
   AchivementWrapper,
   SocialIcons,
   IconBorder,
-  AccordionSecond,
+  SubHeading,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -144,6 +144,7 @@ const PersonalProfile = () => {
         <Container>
           <AboutDesc>
             <Heading>Intoduction</Heading>
+            <SubHeading>What you know about our team ?</SubHeading>
             {state.userName} has a diversified experience of over 25 years within and outside profession in Pakistan and
             East Africa. He is a key member of audit and assurance practice of Islamabad and heads the Clients & Market
             and Human Resource functions of Islamabad practice and is the lead engagement partner of key Islamabad audit
@@ -157,9 +158,10 @@ const PersonalProfile = () => {
       <Section>
         <Container>
           <Heading>Skills</Heading>
+          <SubHeading>Here our skills display</SubHeading>
           <ProgressContent>
-            <Grid container alignItems="center">
-              <Grid item xs={12} sm={6} md={7} lg={6} xl={8}>
+            <Grid container alignItems="center" spacing={8}>
+              <Grid item xs={12} sm={12} md={7} lg={6} xl={8}>
                 {progressBarData.map((item, id) => (
                   <LinearProgress
                     className={id === 0 ? 'mt-0' : 'mt-5'}
@@ -170,8 +172,8 @@ const PersonalProfile = () => {
                   />
                 ))}
               </Grid>
-              <Grid item xs={12} sm={6} md={5} lg={6} xl={4}>
-                <CircularProgress title="OVER ALL PERCENTAGE" percentage={progressValue} size={200} thickness={5} />
+              <Grid item xs={12} sm={12} md={5} lg={6} xl={4}>
+                <CircularProgress title="Over All Percentage" percentage={progressValue} size={200} thickness={5} />
               </Grid>
             </Grid>
           </ProgressContent>
@@ -193,11 +195,14 @@ const PersonalProfile = () => {
       <Section>
         <Container>
           <Heading>Experience</Heading>
+          <SubHeading>If you interested to know more about us </SubHeading>
           <TimeLine />
         </Container>
       </Section>
       <MainWrapper>
         <Container>
+          <Heading>More About</Heading>
+          <SubHeading>You Must to know about our Team</SubHeading>
           <CustomizeAccordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
               <AccordionTitle>Area of Experties</AccordionTitle>
@@ -209,16 +214,17 @@ const PersonalProfile = () => {
               </AccordionContent>
             </AccordionDetails>
           </CustomizeAccordion>
-          <AccordionSecond>
+          <CustomizeAccordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-              <AccordionTitle>Area Of Need</AccordionTitle>
+              <AccordionTitle>Area of Experties</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <AccordionContent>
-                Consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                blandit leo lobortis eget.ss
               </AccordionContent>
             </AccordionDetails>
-          </AccordionSecond>
+          </CustomizeAccordion>
         </Container>
       </MainWrapper>
     </MainBox>

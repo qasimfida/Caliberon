@@ -9,7 +9,7 @@ export const StyledTimeLine = styled(Box)({
 
 // Title
 export const Title = styled('h6')({
-  fontSize: '26px',
+  fontSize: '24px',
   margin: '0px',
   fontWeight: '600',
   letterSpacing: '1.4px',
@@ -21,7 +21,7 @@ export const StyledContent = styled(TimelineContent)({
 });
 // Name
 export const Name = styled('h6')({
-  fontSize: '20px',
+  fontSize: '18px',
   margin: '0px',
   fontWeight: '500',
   paddingBottom: '5px',
@@ -29,11 +29,10 @@ export const Name = styled('h6')({
 
 // Content
 export const Content = styled('p')({
-  fontSize: '14px',
   margin: '0px',
   padding: ' 0px',
   fontWeight: '400',
-  fontSize: '18px',
+  fontSize: '16px',
   letterSpacing: '1px',
 });
 

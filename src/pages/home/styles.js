@@ -16,7 +16,7 @@ export const SeeMore = styled(Box)`
 `;
 export const MoreButton = styled(Button)({
   fontSize: '16px',
-  fontWeight: '400',
+  fontWeight: '500',
   padding: '18px 20px',
   transition: '.3s ease',
   '&.MuiButtonBase-root': {

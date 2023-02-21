@@ -24,6 +24,8 @@ export const CustomizeCircularProgress = styled(CircularProgress)`
 export const Percent = styled('span')({
   position: 'absolute',
   fontWeight: '500',
+  fontSize: '20px',
+  letterSpacing: '1px',
 });
 export const CustomizeLinearProgress = styled(LinearProgress)``;
 const StyledProgressBar = styled(Box)({
@@ -36,7 +38,7 @@ export const ProgressWrap = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   '.css-ahj2mt-MuiTypography-root': {
-    position: 'absolute',
+    // position: 'absolute',
     fontSize: '20px',
   },
 });
@@ -52,7 +54,7 @@ export const LinearWrap = styled('div')({
 export const Label = styled('h3')({
   textAlign: 'start',
   margin: '0',
-  fontSize: '1.2rem',
+  fontSize: '18px',
   fontWeight: '400',
   lineHeight: '1.5',
   marginBottom: '15px',
@@ -61,9 +63,9 @@ export const Label = styled('h3')({
 export const Title = styled('h2')({
   textAlign: 'center',
   margin: '0',
-  fontSize: '1.2rem',
+  fontSize: '18px',
   paddingTop: '22px',
-  fontWeight: '400',
+  fontWeight: '500',
   lineHeight: '1.5',
   marginBottom: '15px',
   letterSpacing: '2px',

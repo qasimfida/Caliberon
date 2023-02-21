@@ -8,7 +8,7 @@ export const UserTitle = styled(Typography)(
       palette: { white },
     },
   }) => ({
-    fontSize: '44px',
+    fontSize: '32px',
     color: white?.main,
     fontWeight: '500',
   })
@@ -16,13 +16,13 @@ export const UserTitle = styled(Typography)(
 export const UserRole = styled('h5')({
   margin: '0',
   color: '#eee',
-  fontSize: '26px',
+  fontSize: '20px',
   fontWeight: '300',
   letterSpacing: '1.4px',
 });
 export const AboutDesc = styled('p')({
   letterSpacing: '1px',
-  fontSize: '18px',
+  fontSize: '16px',
   fontWeight: '400',
 });
 
@@ -173,11 +173,19 @@ export const HeadingA = styled('h4')({
 });
 export const Heading = styled('h4')({
   margin: '0',
-  fontSize: '32px',
+  fontSize: '28px',
   fontWeight: '600',
   lineHeight: '1.5',
-  marginBottom: '2.3rem',
   letterSpacing: '2px',
+  textTransform: 'capitalize',
+});
+export const SubHeading = styled('p')({
+  margin: '0',
+  fontSize: '20px',
+  fontWeight: '300',
+  letterSpacing: '2px',
+  marginTop: '5px',
+  marginBottom: '2.3rem',
   textTransform: 'capitalize',
 });
 
@@ -187,6 +195,8 @@ export const MainWrapper = styled(Box)({
 export const CustomizeAccordion = styled(Accordion)({
   position: 'unset',
   // boxShadow: 'none',
+  borderBottom: '1px solid #aaaaaa',
+  marginTop: '2px',
   svg: {
     fontSize: '2.5rem',
   },
@@ -194,7 +204,6 @@ export const CustomizeAccordion = styled(Accordion)({
 export const AccordionSecond = styled(Accordion)({
   position: 'rlative',
   // boxShadow: 'none',
-  marginTop: '2rem',
   svg: {
     position: 'absolute',
     right: '20%',
@@ -205,8 +214,8 @@ export const AccordionSecond = styled(Accordion)({
 // Accordion Content
 export const AccordionTitle = styled('h2')({
   padding: '0px 25px',
-  fontSize: '22px',
-  fontWeight: '600',
+  fontSize: '20px',
+  fontWeight: '500',
   letterSpacing: '1.2px',
 });
 

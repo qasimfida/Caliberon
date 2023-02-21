@@ -183,7 +183,7 @@ const HomePage = () => {
               ))}
             </Grid>
             <SeeMore>
-              <MoreButton size="lg" variant="outlined" color="black" onClick={ClickTeam}>
+              <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickTeam}>
                 see more
                 <ArrowRight />
               </MoreButton>

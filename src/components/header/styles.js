@@ -41,11 +41,15 @@ export const ContactUs = styled(Button)(
     },
     transparent,
   }) => ({
-    // border: transparent ? '1px solid #fff' : `1px solid ${primary?.main}`,
-    // color: transparent ? '#fff' : `${primary?.main}`,
     border: transparent ? '1px solid #fff' : `1px solid black`,
-    color: transparent ? '#fff' : `black`,
+    color: transparent ? `#fff` : 'black',
+
     marginLeft: '20px',
+    '&:hover': {
+      background: transparent ? `${primary?.main}` : 'black',
+      color: transparent ? `#fff` : '#fff',
+      border: transparent ? `1px solid ${primary?.main}` : `1px solid transparent`,
+    },
   })
 );
 export const ToolbarBox = styled(Toolbar)(

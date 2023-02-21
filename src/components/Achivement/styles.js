@@ -51,7 +51,7 @@ export const SubTitle = styled('p')(
     },
   }) => ({
     color: mediumGray?.[100],
-    fontSize: '12px',
+    fontSize: '14px',
     fontWeight: '300',
     letterSpacing: '2px',
     margin: '0',
