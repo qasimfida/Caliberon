@@ -1,29 +1,31 @@
 import styled from '@emotion/styled';
 import { Typography, Box } from '@mui/material';
 
-export const MissionHeading = styled(Typography)(
+export const MissionHeading = styled('h4')(
   ({
     theme: {
       palette: { black },
     },
   }) => ({
-    fontFamily: 'Poppins',
-    fontSize: '44px',
+    margin: '0',
+    fontSize: '28px',
     color: black?.main,
-    fontWeight: 'bold',
-    lineHeight: '1',
+    fontWeight: '600',
+    letterSpacing: '2px',
+    textTransform: 'capitalize',
   })
 );
-export const TeamSubHeading = styled(Typography)(
+export const SubHeading = styled('p')(
   ({
     theme: {
       palette: { primary },
     },
   }) => ({
-    fontFamily: 'Poppins',
-    fontSize: '20px',
+    margin: '0',
+    fontSize: '22px',
     color: primary?.main,
-    lineHeight: '4',
+    fontWeight: '300',
+    letterSpacing: '1px',
   })
 );
 
@@ -33,13 +35,12 @@ export const MissionDesc = styled(Typography)(
       palette: { lightGray },
     },
   }) => ({
-    fontFamily: 'Poppins',
-    letterSpacing: '0.22px',
-    fontSize: '15px',
+    letterSpacing: '1x',
+    fontSize: '16px',
     color: lightGray?.main,
     lineHeight: '1.5',
-    marginTop: '40px',
-    marginBottom: '40px',
+    marginTop: '24px',
+    fontWeight: '300',
   })
 );
 
@@ -49,13 +50,10 @@ export const StyledBox = styled(Box)(
       palette: { white },
     },
   }) => ({
-    padding: '80px 0',
     backgroundColor: white?.main,
-    position: 'relative',
   })
 );
 export const ImagesBox = styled(Box)({
-  padding: '80px 0px',
   display: 'flex',
   justifyContent: 'center',
   position: 'relative',
@@ -137,8 +135,10 @@ export const TeamBox = styled(Box)(
     backgroundColor: white?.main,
     position: 'relative',
     textAlign: 'center',
+    marginTop: '16px',
   })
 );
 export const TeamCards = styled(Box)({
   marginTop: '8rem',
+  padding: '0',
 });

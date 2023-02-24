@@ -8,9 +8,10 @@ export const Navbar = styled(AppBar)(({ transparent }) => ({
   boxSizing: 'border-box',
   justifyContent: 'center',
   padding: '0',
-  boxShadow: 'none',
+  boxShadow: transparent ? 'none' : ` rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px`,
   transition: ' .5s ease',
   background: transparent ? 'transparent' : '#fff',
+  zIndex: '111',
   '.nav-links button': {
     color: transparent ? '#fff' : 'black',
     transition: '.4s ease-in-out',
@@ -41,15 +42,9 @@ export const ContactUs = styled(Button)(
     },
     transparent,
   }) => ({
-    border: transparent ? '1px solid #fff' : `1px solid black`,
-    color: transparent ? `#fff` : 'black',
-
     marginLeft: '20px',
-    '&:hover': {
-      background: transparent ? `${primary?.main}` : 'black',
-      color: transparent ? `#fff` : '#fff',
-      border: transparent ? `1px solid ${primary?.main}` : `1px solid transparent`,
-    },
+    transition: '.5s ease',
+    '&:hover': {},
   })
 );
 export const ToolbarBox = styled(Toolbar)(

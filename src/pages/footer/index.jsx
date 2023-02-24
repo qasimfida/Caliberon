@@ -116,7 +116,7 @@ const Footer = () => {
           </StyledGrid>
         </StyledGrid>
       </Container>
-      <DesignedBy>© 2022 Calibreon International Pvt. Ltd. All Rights Reserved. Design By NorthSpex</DesignedBy>
+      <DesignedBy>© 2022 Calibreon International Pvt. Ltd. All Rights Reserved.</DesignedBy>
     </Wrapper>
   );
 };

@@ -65,7 +65,7 @@ const ContactForm = () => {
                   <StyledInput placeholder="Email Adress" />
                   <StyledTextArea aria-label="Hello" placeholder="Message" minRows={5} />
                 </InputWrapper>
-                <ContactButton variant="outlined">
+                <ContactButton variant="outlined" color="inherit">
                   Send Message <SendIcon className="ml-2" fontSize="small" />
                 </ContactButton>
               </FormWrapper>

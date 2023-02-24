@@ -108,7 +108,7 @@ const Header = () => {
               </Button>
             ))}
           </LinksWrapper>
-          <ContactUs size="lg" variant="outlined" color="inherit" onClick={onClickContact} transparent={hasAffix}>
+          <ContactUs size="lg" variant="outlined" color={hasAffix ? 'white' : 'black'} onClick={onClickContact}>
             Contact Us
           </ContactUs>
         </ToolbarBox>

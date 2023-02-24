@@ -27,15 +27,15 @@ let theme = createTheme({
           },
         },
         {
-          props: { variant: 'outlined', color: 'inherit' },
+          props: { variant: 'outlined', color: 'white' },
           style: {
             color: '#fff',
             border: '1px solid #fff',
             background: 'transparent',
             ':hover': {
-              background: '#f15c27',
-              color: '#fff',
-              border: '1px solid #f15c27',
+              background: '#fff',
+              color: '#000',
+              border: '1px solid #fff',
             },
           },
         },

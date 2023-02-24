@@ -46,7 +46,7 @@ export const SponsorsWrapper = styled(Box)(
     },
   })
 );
-export const VideoContent = styled(Box)({});
+// export const VideoContent = styled(Box)({});
 export const VideoTitle = styled('h1')(
   ({
     theme: {

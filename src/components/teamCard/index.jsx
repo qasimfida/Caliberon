@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Image,
   ImageWrapper,
@@ -8,17 +8,19 @@ import {
   UserDetails,
   DetailsWrapper,
   TeamCardContentWrapper,
-} from "./styles";
+} from './styles';
 
-const TeamCard = ({ userImg, userName, userRole, userDetails }) => {
+const TeamCard = ({ userImg, userName, userRole, userDetails, abbreviation, ...rest }) => {
   return (
-    <TeamCardWrapper>
+    <TeamCardWrapper {...rest}>
       <ImageWrapper>
         <Image src={userImg} alt={userName} />
       </ImageWrapper>
       <TeamCardContentWrapper>
         <UserName>{userName}</UserName>
-        <UserRole>{userRole}</UserRole>
+        <UserRole>
+          {userRole} <br /> {abbreviation}
+        </UserRole>
         <DetailsWrapper>
           <UserDetails>{userDetails}</UserDetails>
         </DetailsWrapper>

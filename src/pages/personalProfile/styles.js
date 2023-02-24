@@ -64,8 +64,7 @@ export const SocialIcons = styled(Box)(
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    zIndex: '111111',
-    // border: '1px solid #fff',
+    zIndex: '1',
 
     '& svgs': {
       marginRight: '2rem',

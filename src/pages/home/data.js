@@ -18,8 +18,6 @@ import BlogC from '../../assets/images/blog-c.jpg';
 import About1 from '../../assets/images/about1.jpg';
 import About2 from '../../assets/images/about2.jpg';
 import About3 from '../../assets/images/about3.jpg';
-import User1 from '../../assets/images/user-a.jpg';
-import User2 from '../../assets/images/user-b.jpg';
 import User3 from '../../assets/images/user-c.jpg';
 export const services = [
   {
