@@ -6,7 +6,6 @@ import {
   InputWrapper,
   StyledInput,
   StyledTextArea,
-  ContactDetails,
   ContactItem,
   IconsWrapper,
   Title,
@@ -14,12 +13,11 @@ import {
   Text,
   ContactButton,
   IconBorder,
+  StyledSection,
 } from './styles';
 import SendIcon from '@mui/icons-material/Send';
-import { MainWrapper } from '../../components/common';
 import { useLocation } from 'react-router-dom';
 import Heading from '../Heading';
-import Section from '../Section';
 // social icons
 import Facebook from '../../components/Svgs/Facebook';
 import LinkedIn from '../Svgs/Linkedin';
@@ -42,7 +40,7 @@ const ContactForm = () => {
     },
   ];
   return (
-    <Section variant={'dark_black'}>
+    <StyledSection variant={'dark_black'}>
       <Container>
         {location.pathname === '/contact' ? null : (
           <>
@@ -55,62 +53,58 @@ const ContactForm = () => {
             ></Heading>
           </>
         )}
-        <MainWrapper>
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={6}>
-              <FormWrapper>
-                <Title variant="h4">Get in touch.</Title>
-                <InputWrapper>
-                  <StyledInput placeholder="Name" className="colorChanged" />
-                  <StyledInput placeholder="Email Adress" />
-                  <StyledTextArea aria-label="Hello" placeholder="Message" minRows={5} />
-                </InputWrapper>
-                <ContactButton variant="outlined" color="inherit">
-                  Send Message <SendIcon className="ml-2" fontSize="small" />
-                </ContactButton>
-              </FormWrapper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <ContactWrapper>
-                <Title variant="h4">Contact Info.</Title>
-                <ContactDetails>
-                  <SubTitle>Let's talk</SubTitle>
-                  {contactDetails.map(({ label }, index) => (
-                    <ContactItem key={`contact-${index}`}>
-                      <Text color={'primary'} title="details">
-                        {label}
-                      </Text>
-                    </ContactItem>
-                  ))}
-                  <SubTitle>Meet us</SubTitle>
-                  {visit.map(({ label }, index) => (
-                    <ContactItem key={`contact-${index}`}>
-                      <Text color={'primary'} title="details">
-                        {label}
-                      </Text>
-                    </ContactItem>
-                  ))}
-                </ContactDetails>
-                <IconsWrapper>
-                  <IconBorder>
-                    <Facebook className="social-icon" color="#fff" />
-                  </IconBorder>
-                  <IconBorder>
-                    <LinkedIn className="social-icon" color="#fff" />
-                  </IconBorder>
-                  <IconBorder>
-                    <Twitter className="social-icon" color="#fff" />
-                  </IconBorder>
-                  <IconBorder>
-                    <Mail className="socialIcon" color="#fff" />
-                  </IconBorder>
-                </IconsWrapper>
-              </ContactWrapper>
-            </Grid>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={6}>
+            <FormWrapper>
+              <Title variant="h4">Get in touch.</Title>
+              <InputWrapper>
+                <StyledInput placeholder="Name" className="colorChanged" />
+                <StyledInput placeholder="Email Adress" />
+                <StyledTextArea aria-label="Hello" placeholder="Message" minRows={5} />
+              </InputWrapper>
+              <ContactButton variant="outlined" color="white">
+                Send Message <SendIcon className="ml-2" fontSize="small" />
+              </ContactButton>
+            </FormWrapper>
           </Grid>
-        </MainWrapper>
+          <Grid item xs={12} md={6}>
+            <ContactWrapper>
+              <Title variant="h4">Contact Info.</Title>
+              <SubTitle>Let's talk</SubTitle>
+              {contactDetails.map(({ label }, index) => (
+                <ContactItem key={`contact-${index}`}>
+                  <Text color={'primary'} title="details">
+                    {label}
+                  </Text>
+                </ContactItem>
+              ))}
+              <SubTitle>Meet us</SubTitle>
+              {visit.map(({ label }, index) => (
+                <ContactItem key={`contact-${index}`}>
+                  <Text color={'primary'} title="details">
+                    {label}
+                  </Text>
+                </ContactItem>
+              ))}
+              <IconsWrapper>
+                <IconBorder>
+                  <Facebook className="social-icon" color="#fff" />
+                </IconBorder>
+                <IconBorder>
+                  <LinkedIn className="social-icon" color="#fff" />
+                </IconBorder>
+                <IconBorder>
+                  <Twitter className="social-icon" color="#fff" />
+                </IconBorder>
+                <IconBorder>
+                  <Mail className="socialIcon" color="#fff" />
+                </IconBorder>
+              </IconsWrapper>
+            </ContactWrapper>
+          </Grid>
+        </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 };
 

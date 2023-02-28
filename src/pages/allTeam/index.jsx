@@ -7,6 +7,7 @@ import { Grid } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { teamMembers } from './data';
 import { useNavigate } from 'react-router-dom';
+import Section from '../../components/Section/index';
 
 const AllTeams = () => {
   const navigate = useNavigate();
@@ -23,33 +24,37 @@ const AllTeams = () => {
   return (
     <>
       <MainSection />
-      <Container>
-        {teamMembers.map((items, key) => (
-          <div key={`members ${key}`}>
-            <TeamMembersWrapper>
-              <DepartmentHeading>{items.title}</DepartmentHeading>
-              <Description onClick={() => handleClick(items)}>
-                {' '}
-                View all <ArrowForwardIcon />
-              </Description>
-            </TeamMembersWrapper>
-            <Grid container spacing={[4]}>
-              {items.data.slice(0, 3).map((item, key) => (
-                <Grid item xs={12} sm={4} md={4} key={`data ${key}`}>
-                  <Item>
-                    <ProfileCard
-                      userImg={item.img}
-                      userName={item.name}
-                      userRole={item.role}
-                      userDetails={item.userDetails}
-                    />
-                  </Item>
+      <Section>
+        <Container>
+          {teamMembers.map((items, key) => (
+            <div key={`members ${key}`}>
+              <TeamMembersWrapper>
+                <DepartmentHeading>{items.title}</DepartmentHeading>
+                <Description onClick={() => handleClick(items)}>
+                  View all <ArrowForwardIcon />
+                </Description>
+              </TeamMembersWrapper>
+
+              <Section>
+                <Grid container spacing={[4]}>
+                  {items.data.slice(0, 3).map((item, key) => (
+                    <Grid item xs={12} sm={4} md={4} key={`data ${key}`}>
+                      <Item>
+                        <ProfileCard
+                          userImg={item.img}
+                          userName={item.name}
+                          userRole={item.role}
+                          userDetails={item.userDetails}
+                        />
+                      </Item>
+                    </Grid>
+                  ))}
                 </Grid>
-              ))}
-            </Grid>
-          </div>
-        ))}
-      </Container>
+              </Section>
+            </div>
+          ))}
+        </Container>
+      </Section>
     </>
   );
 };

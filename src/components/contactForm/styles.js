@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Typography, Box, Input, TextareaAutosize } from '@mui/material';
 import Button from '../Button';
+import Section from '../Section';
 
 export const ContactWrapper = styled('div')({
   padding: '0 20px',
@@ -151,7 +152,9 @@ export const ContactButton = styled(Button)(({ theme: { palette: lightGray } }) 
   textTransform: 'uppercase',
   border: `1px solid ${lightGray[100]} !important`,
 }));
-export const ContactDetails = styled(Box)({});
+export const StyledSection = styled(Section)({
+  marginBottom: '4rem',
+});
 export const ContactItem = styled(Box)(
   ({
     theme: {

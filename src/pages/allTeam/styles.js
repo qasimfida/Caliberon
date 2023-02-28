@@ -11,10 +11,12 @@ export const DepartmentHeading = styled.h2`
   padding: 5px 0;
 `;
 export const TeamMembersWrapper = styled(Box)({
-  padding: '20px 0',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+});
+export const ProfileWrapper = styled(Box)({
+  marginBottom: '60px',
 });
 export const Description = styled('p')(
   ({

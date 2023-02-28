@@ -5,7 +5,6 @@ import ServicesCard from '../../components/ServicesCard';
 import TestimonialsCard from '../../components/testimonialsCard';
 import { Container, Grid } from '@mui/material';
 import { services, testimonialsData, users, blogDatas, aboutUsData } from './data';
-import { MainWrapper } from '../../components/common';
 import Section from '../../components/Section';
 import Banner from '../banner';
 import BannerNew from '../../assets/images/Background2.jpg';
@@ -112,26 +111,24 @@ const HomePage = () => {
       <Section id="target-element">
         <Container>
           <Heading title={'Services.'} subTitle={'we offer'} dark />
-          <MainWrapper>
-            <Grid container spacing={[3]}>
-              {services.map((item, key) => (
-                <Grid item xs={12} sm={6} md={3} key={`services-${key}`}>
-                  <ServicesCard
-                    serviceImg={item.img}
-                    serviceName={item.name}
-                    serviceDetails={item.serviceDetails}
-                    active={item.active}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-            <SeeMore>
-              <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickServices}>
-                for more
-                <ArrowRight />
-              </MoreButton>
-            </SeeMore>
-          </MainWrapper>
+          <Grid container spacing={[3]}>
+            {services.map((item, key) => (
+              <Grid item xs={12} sm={6} md={3} key={`services-${key}`}>
+                <ServicesCard
+                  serviceImg={item.img}
+                  serviceName={item.name}
+                  serviceDetails={item.serviceDetails}
+                  active={item.active}
+                />
+              </Grid>
+            ))}
+          </Grid>
+          <SeeMore>
+            <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickServices}>
+              for more
+              <ArrowRight />
+            </MoreButton>
+          </SeeMore>
         </Container>
       </Section>
       {/* <Section variant="very_black">
@@ -167,28 +164,26 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading title={'Team.'} subTitle={'our employees'} dark />
-          <MainWrapper>
-            <Grid container spacing={[4]}>
-              {users.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4}>
-                  <Item key={`user-${key}`}>
-                    <ProfileCard
-                      userImg={item.img}
-                      userName={item.name}
-                      userRole={item.role}
-                      userDetails={item.userDetails}
-                    />
-                  </Item>
-                </Grid>
-              ))}
-            </Grid>
-            <SeeMore>
-              <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickTeam}>
-                see more
-                <ArrowRight />
-              </MoreButton>
-            </SeeMore>
-          </MainWrapper>
+          <Grid container spacing={[4]}>
+            {users.map((item, key) => (
+              <Grid item xs={12} sm={6} md={4}>
+                <Item key={`user-${key}`}>
+                  <ProfileCard
+                    userImg={item.img}
+                    userName={item.name}
+                    userRole={item.role}
+                    userDetails={item.userDetails}
+                  />
+                </Item>
+              </Grid>
+            ))}
+          </Grid>
+          <SeeMore>
+            <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickTeam}>
+              see more
+              <ArrowRight />
+            </MoreButton>
+          </SeeMore>
         </Container>
       </Section>
       <Section variant="very_black">

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Typography, Box, Accordion } from '@mui/material';
+import { Typography, Box, Accordion, AccordionSummary } from '@mui/material';
 import BgImg from '../../assets/images/cover.jpg';
 
 export const UserTitle = styled(Typography)(
@@ -178,52 +178,55 @@ export const Heading = styled('h4')({
   letterSpacing: '2px',
   textTransform: 'capitalize',
 });
-export const SubHeading = styled('p')({
-  margin: '0',
-  fontSize: '20px',
-  fontWeight: '300',
-  letterSpacing: '2px',
-  marginTop: '5px',
-  marginBottom: '2.3rem',
-  textTransform: 'capitalize',
-});
+export const SubHeading = styled('p')(
+  ({
+    theme: {
+      palette: { primary },
+    },
+  }) => ({
+    margin: '0',
+    fontSize: '20px',
+    fontWeight: '300',
+    letterSpacing: '2px',
+    marginTop: '5px',
+    marginBottom: '2.3rem',
+    textTransform: 'capitalize',
+    color: primary?.main,
+  })
+);
 
-export const MainWrapper = styled(Box)({
-  margin: '4rem 0',
-});
-export const CustomizeAccordion = styled(Accordion)({
+export const CustomizeAccordion = styled(Accordion)(({ change }) => ({
   position: 'unset',
-  // boxShadow: 'none',
-  borderBottom: '1px solid #aaaaaa',
-  marginTop: '2px',
+  border: '1px solid #aaaaaa',
+  padding: '16px 0 !important',
+  marginBottom: '0 !important',
+  boxShadow: 'none',
   svg: {
     fontSize: '2.5rem',
   },
-});
-export const AccordionSecond = styled(Accordion)({
-  position: 'rlative',
-  // boxShadow: 'none',
-  svg: {
-    position: 'absolute',
-    right: '20%',
-    fontSize: '2.5rem',
-  },
+  ...(change === 'border-bottom-none' && {
+    borderBottom: '1px solid transparent',
+  }),
+}));
+export const StyledSummary = styled(AccordionSummary)({
+  margin: '0 26px',
 });
 
 // Accordion Content
 export const AccordionTitle = styled('h2')({
-  padding: '0px 25px',
   fontSize: '20px',
   fontWeight: '500',
   letterSpacing: '1.2px',
+  margin: '0',
 });
 
 // Accordion Content
 export const AccordionContent = styled('p')({
-  padding: '0px 8px',
+  padding: '0px 25px !important',
   fontSize: '18px',
-  fontWeight: '400',
+  fontWeight: '300',
   letterSpacing: '1px',
+  lineHeight: '1.5',
 });
 
 // ProcessBar Title

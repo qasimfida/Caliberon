@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Container, Grid, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import {
   UserTitle,
   StyledBox,
@@ -15,11 +15,11 @@ import {
   AccordionContent,
   Heading,
   UserRole,
-  MainWrapper,
   AchivementWrapper,
   SocialIcons,
   IconBorder,
   SubHeading,
+  StyledSummary,
 } from './styles';
 import { useLocation } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -199,34 +199,30 @@ const PersonalProfile = () => {
           <TimeLine />
         </Container>
       </Section>
-      <MainWrapper>
+      <Section>
         <Container>
           <Heading>More About</Heading>
           <SubHeading>You Must to know about our Team</SubHeading>
-          <CustomizeAccordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+          <CustomizeAccordion change="border-bottom-none">
+            <StyledSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
               <AccordionTitle>Area of Experties</AccordionTitle>
-            </AccordionSummary>
-            <AccordionDetails>
-              <AccordionContent>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                blandit leo lobortis eget.ss
-              </AccordionContent>
-            </AccordionDetails>
+            </StyledSummary>
+            <AccordionContent>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
+              leo lobortis eget.ss
+            </AccordionContent>
           </CustomizeAccordion>
           <CustomizeAccordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-              <AccordionTitle>Area of Experties</AccordionTitle>
-            </AccordionSummary>
-            <AccordionDetails>
-              <AccordionContent>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                blandit leo lobortis eget.ss
-              </AccordionContent>
-            </AccordionDetails>
+            <StyledSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+              <AccordionTitle>Lorem ipsum dolor</AccordionTitle>
+            </StyledSummary>
+            <AccordionContent>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
+              leo lobortis eget.ss
+            </AccordionContent>
           </CustomizeAccordion>
         </Container>
-      </MainWrapper>
+      </Section>
     </MainBox>
   );
 };

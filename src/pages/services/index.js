@@ -1,16 +1,14 @@
 import React from 'react';
-import { Container, Grid } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import Ideate from '../../assets/images/ideate.png';
 import Design from '../../assets/images/design.png';
-import Web from '../../assets/images/web.png';
-import App from '../../assets/images/app.png';
 import Business from '../../assets/images/business.png';
 import Marketing from '../../assets/images/marketing.png';
-import { MainBox, ServicesBox, GuidBox, GuidContent, CardsBox } from './styles';
+import { GuidBox, GuidContent, StyledSection } from './styles';
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
 import MainSection from '../../components/Layout';
-import { MainWrapper } from '../../components/common';
+import { Section } from '../../components/common';
 
 const Services = () => {
   const services = [
@@ -27,12 +25,12 @@ const Services = () => {
     },
     {
       name: 'Web Development',
-      img: Web,
+      img: Business,
       serviceDetails: 'We help develop company websites to be more professional and attractive',
     },
     {
       name: 'App Development',
-      img: App,
+      img: Marketing,
       serviceDetails: 'We help develop company mobile apps to be more professional and attractive',
     },
     {
@@ -48,51 +46,49 @@ const Services = () => {
     },
     {
       name: 'Degital Marketing',
-      img: Marketing,
+      img: Design,
       serviceDetails: 'We also help you market your products through an online marketplace',
     },
   ];
 
   return (
-    <MainBox>
+    <Box>
       <MainSection />
       <Container>
-        <ServicesBox>
-          <CardsBox>
-            <Grid container spacing={[3]}>
-              {services.map((item, key) => (
-                <Grid item xs={12} sm={6} md={4} key={`service-${key}`}>
-                  <ServicesCard
-                    serviceImg={item.img}
-                    serviceName={item.name}
-                    serviceDetails={item.serviceDetails}
-                    active={item.active}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </CardsBox>
-          <MainWrapper>
-            <Grid container spacing={[1]}>
-              <Grid item xs={12} sm={6} md={6}>
-                <GuidBox>
-                  <GuidContent>
-                    <h3>Forensics</h3>
-                    <p>
-                      Assisting clients in achieving the highest levels of business integrity through the prevention,
-                      detection, and investigation of fraud and misconduct.
-                    </p>
-                  </GuidContent>
-                </GuidBox>
+        <StyledSection>
+          <Grid container spacing={[3]}>
+            {services.map((item, key) => (
+              <Grid item xs={12} sm={6} md={4} key={`service-${key}`}>
+                <ServicesCard
+                  serviceImg={item.img}
+                  serviceName={item.name}
+                  serviceDetails={item.serviceDetails}
+                  active={item.active}
+                />
               </Grid>
-              <Grid item xs={12} sm={6} md={6}>
-                <Viewed />
-              </Grid>
+            ))}
+          </Grid>
+        </StyledSection>
+        <Section>
+          <Grid container spacing={[1]}>
+            <Grid item xs={12} sm={6} md={6}>
+              <GuidBox>
+                <GuidContent>
+                  <h3>Forensics</h3>
+                  <p>
+                    Assisting clients in achieving the highest levels of business integrity through the prevention,
+                    detection, and investigation of fraud and misconduct.
+                  </p>
+                </GuidContent>
+              </GuidBox>
             </Grid>
-          </MainWrapper>
-        </ServicesBox>
+            <Grid item xs={12} sm={6} md={6}>
+              <Viewed />
+            </Grid>
+          </Grid>
+        </Section>
       </Container>
-    </MainBox>
+    </Box>
   );
 };
 

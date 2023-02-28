@@ -10,7 +10,7 @@ import {
   ServicesContentWrapper,
 } from './styles';
 
-const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
+const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active, ...rest }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`/services/${serviceName}`, {
@@ -22,7 +22,7 @@ const ServicesCard = ({ serviceImg, serviceName, serviceDetails, active }) => {
     });
   };
   return (
-    <ServicesWrapper active={active} onClick={handleClick}>
+    <ServicesWrapper active={active} onClick={handleClick} {...rest}>
       <ImageWrapper>
         <Image src={serviceImg} alt={serviceName} />
       </ImageWrapper>

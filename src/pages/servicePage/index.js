@@ -4,7 +4,6 @@ import MainSection from '../../components/Layout';
 import { Heading, Description, MainWrapper } from '../../components/common';
 import { Container, Grid } from '@mui/material';
 import ServicesItem from '../../components/serviceItems';
-import Contact from '../../components/contactForm';
 import Image from '../../assets/images/guide.jpg';
 import { useLocation } from 'react-router-dom';
 
@@ -65,9 +64,6 @@ const ServicePage = () => {
             </Grid>
           </Grid>
         </Container>
-      </MainWrapper>
-      <MainWrapper>
-        <Contact />
       </MainWrapper>
     </MainBox>
   );

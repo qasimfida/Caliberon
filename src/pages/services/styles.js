@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import BgImg from '../../assets/images/guide.jpg';
 import { Box } from '@mui/material';
+import { Section } from '../../components/common';
 
 export const StyledBox = styled(Box)(
   ({
@@ -14,23 +15,11 @@ export const StyledBox = styled(Box)(
     position: 'relative',
   })
 );
-export const MainBox = styled(Box)({
+
+export const StyledSection = styled(Section)({
   position: 'relative',
 });
-export const ServicesBox = styled(Box)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    position: 'relative',
-    backgroundColor: white?.main,
-    paddingLeft: '24px',
-    paddingRight: '24px',
-    paddingBottom: '24px',
-    margin: '3rem 0',
-  })
-);
+
 export const GuidBox = styled(Box)({
   width: '100%',
   height: '20rem',
@@ -56,7 +45,3 @@ export const GuidContent = styled(Box)(
     padding: '0 24px',
   })
 );
-export const CardsBox = styled(Box)({
-  position: 'relative',
-  padding: '24px 0',
-});

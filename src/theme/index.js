@@ -19,6 +19,15 @@ let theme = createTheme({
           },
         },
         {
+          props: { variant: 'text' },
+          style: {
+            color: '#fff',
+            ':hover': {
+              background: 'transparent',
+            },
+          },
+        },
+        {
           props: { variant: 'outlined' },
           style: {
             color: '#f15c27',

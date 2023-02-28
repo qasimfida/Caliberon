@@ -11,7 +11,7 @@ export const Navbar = styled(AppBar)(({ transparent }) => ({
   boxShadow: transparent ? 'none' : ` rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px`,
   transition: ' .5s ease',
   background: transparent ? 'transparent' : '#fff',
-  zIndex: '111',
+  zIndex: '999',
   '.nav-links button': {
     color: transparent ? '#fff' : 'black',
     transition: '.4s ease-in-out',
@@ -35,18 +35,10 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const ContactUs = styled(Button)(
-  ({
-    theme: {
-      palette: { primary },
-    },
-    transparent,
-  }) => ({
-    marginLeft: '20px',
-    transition: '.5s ease',
-    '&:hover': {},
-  })
-);
+export const ContactUs = styled(Button)({
+  marginLeft: '20px',
+  transition: '.5s ease',
+});
 export const ToolbarBox = styled(Toolbar)(
   ({
     theme: {
@@ -62,14 +54,18 @@ export const ToolbarBox = styled(Toolbar)(
     '& .btn:hover': {
       color: primary?.main,
     },
+    '.btn.MuiButtonBase-root.MuiButton-root': {
+      transition: 'all .2s ease',
+      borderBottom: '2px solid transparent',
+      borderRadius: ' 0',
+      fontSize: ' 12px',
+      padding: '10px',
+    },
     '.btn.MuiButtonBase-root.MuiButton-root.active': {
       borderBottom: transparent ? '2px solid transparent' : `2px solid ${primary.main}`,
       color: primary?.main,
       borderRadius: '0',
-    },
-    '.btn.MuiButtonBase-root.MuiButton-root.nav-buttons': {
-      fontWeight: '500',
-      fontSize: '12px',
+      fontSize: ' 14px',
     },
   })
 );
