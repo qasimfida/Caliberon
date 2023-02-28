@@ -20,7 +20,9 @@ const Profile = ({ userImg, userName, userRole, userDetails }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/home/contact/${userName}`, {
+    let name = userName.toLowerCase().split(' ').join('-');
+
+    navigate(`/home/contact/${name}`, {
       state: {
         userName: userName,
         userImg: userImg,

@@ -8,7 +8,6 @@ import { GuidBox, GuidContent, StyledSection } from './styles';
 import ServicesCard from '../../components/ServicesCard';
 import Viewed from '../../components/viewItems';
 import MainSection from '../../components/Layout';
-import { Section } from '../../components/common';
 
 const Services = () => {
   const services = [
@@ -69,24 +68,22 @@ const Services = () => {
             ))}
           </Grid>
         </StyledSection>
-        <Section>
-          <Grid container spacing={[1]}>
-            <Grid item xs={12} sm={6} md={6}>
-              <GuidBox>
-                <GuidContent>
-                  <h3>Forensics</h3>
-                  <p>
-                    Assisting clients in achieving the highest levels of business integrity through the prevention,
-                    detection, and investigation of fraud and misconduct.
-                  </p>
-                </GuidContent>
-              </GuidBox>
-            </Grid>
-            <Grid item xs={12} sm={6} md={6}>
-              <Viewed />
-            </Grid>
+        <Grid container spacing={[1]}>
+          <Grid item xs={12} sm={6} md={6}>
+            <GuidBox>
+              <GuidContent>
+                <h3>Forensics</h3>
+                <p>
+                  Assisting clients in achieving the highest levels of business integrity through the prevention,
+                  detection, and investigation of fraud and misconduct.
+                </p>
+              </GuidContent>
+            </GuidBox>
           </Grid>
-        </Section>
+          <Grid item xs={12} sm={6} md={6}>
+            <Viewed />
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );

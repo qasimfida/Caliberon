@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
-import { MissionHeading, StyledBox, MissionDesc, ImagesBox, TeamBox, TeamCards, SubHeading } from './styles';
+import { StyledBox, MissionDesc, ImagesBox, TeamBox, TeamCards } from './styles';
 import Img1 from '../../assets/images/about1.jpg';
 import Img2 from '../../assets/images/about2.jpg';
 import Img3 from '../../assets/images/about3.jpg';
@@ -9,6 +9,7 @@ import FounderImg1 from '../../assets/images/cofounder-1.jpg';
 import FounderImg2 from '../../assets/images/cofounder-2.jpg';
 import FounderImg3 from '../../assets/images/cofounder-3.jpg';
 import { Section } from '../common';
+import Heading from '../Heading/index';
 
 const Mission = () => {
   const users = [
@@ -43,8 +44,7 @@ const Mission = () => {
         <Container>
           <Grid container spacing={[4]}>
             <Grid item xs={12} sm={12} md={6}>
-              <MissionHeading>Our Mission is Clear</MissionHeading>
-              <SubHeading>What you known about our company?</SubHeading>
+              <Heading title="Our Mission is Clear" subTitle="What you known about our company?" />
               <MissionDesc>
                 We’re a team of dedicated, perceptive experts in the field of finances and accounting and we use cloud
                 technology to automate your accounting, streamline your bookkeeping, and help your business grow.
@@ -65,8 +65,7 @@ const Mission = () => {
       <Section>
         <Container>
           <TeamBox>
-            <MissionHeading>Meet the Co-Founders</MissionHeading>
-            <SubHeading>We are here for you</SubHeading>
+            <Heading title="Meet the Co-Founders" subTitle="We are here for you" />
           </TeamBox>
           <TeamCards>
             <Grid container spacing={2}>

@@ -1,39 +1,35 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/styles';
 import { Box } from '@mui/system';
 
-const Wrapper = styled(Box)(({ alignLeft }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: alignLeft ? 'start' : 'center',
-  height: '100%',
-}));
+const Wrapper = styled(Box)({});
 
-export const SubTitle = styled('span')(
+export const MissionHeading = styled('h4')(
+  ({
+    theme: {
+      palette: { black },
+    },
+  }) => ({
+    margin: '0',
+    fontSize: '28px',
+    color: black?.main,
+    fontWeight: '600',
+    letterSpacing: '2px',
+    textTransform: 'capitalize',
+  })
+);
+
+export const SubHeading = styled('p')(
   ({
     theme: {
       palette: { primary },
     },
   }) => ({
+    margin: '0',
+    fontSize: '22px',
     color: primary?.main,
     fontWeight: '300',
-    fontSize: '17px',
-    textTransform: 'uppercase',
-    letterSpacing: '14px',
-    marginBottom: '5px',
-    display: 'inline-block',
+    letterSpacing: '1px',
   })
 );
-
-export const Title = styled('h3')(({ dark, theme: { palette } }) => ({
-  margin: '0px',
-  textTransform: 'uppercase',
-  fontSize: '4rem',
-  letterSpacing: '6px',
-  fontWeight: '700',
-  color: dark ? palette.black.main : palette.white.main,
-  padding: '10px 0 0',
-  display: 'inline-block',
-}));
 
 export default Wrapper;

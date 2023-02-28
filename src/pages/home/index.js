@@ -21,7 +21,7 @@ import {
   // VideoTitle,
   // VideoDescription,
 } from './styles';
-import Heading from '../../components/Heading';
+import Heading from '../../components/MainHeading';
 import Sponsor from '../../components/Sponsor';
 // sponsor images
 import sponsor2 from '../../assets/images/sponsor2.png';

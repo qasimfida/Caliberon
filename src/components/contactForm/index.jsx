@@ -17,7 +17,7 @@ import {
 } from './styles';
 import SendIcon from '@mui/icons-material/Send';
 import { useLocation } from 'react-router-dom';
-import Heading from '../Heading';
+import Heading from '../MainHeading';
 // social icons
 import Facebook from '../../components/Svgs/Facebook';
 import LinkedIn from '../Svgs/Linkedin';

@@ -1,13 +1,12 @@
 import React from 'react';
-
 import { MainBox, ServicesItemWrapper, Item } from './styles';
 import MainSection from '../../components/Layout';
 import { Description } from '../../components/common';
 import { Container, Grid } from '@mui/material';
 import ServicesItem from '../../components/serviceItems';
-import Contact from '../../components/contactForm';
 import ProfileCard from '../../components/ProfileCard';
 import { useLocation } from 'react-router-dom';
+import Section from '../../components/Section';
 
 const TeamPage = () => {
   const { state } = useLocation();
@@ -15,20 +14,22 @@ const TeamPage = () => {
     <MainBox>
       <MainSection teamName={state.teamName} />
       <Container>
-        <Grid container spacing={[4]}>
-          {state.teamData.map((item, key) => (
-            <Grid item xs={12} sm={4} md={4} key={`data ${key}`}>
-              <Item>
-                <ProfileCard
-                  userImg={item.img}
-                  userName={item.name}
-                  userRole={item.role}
-                  userDetails={item.userDetails}
-                />
-              </Item>
-            </Grid>
-          ))}
-        </Grid>
+        <Section>
+          <Grid container spacing={[4]}>
+            {state.teamData.map((item, key) => (
+              <Grid item xs={12} sm={4} md={4} key={`data ${key}`}>
+                <Item>
+                  <ProfileCard
+                    userImg={item.img}
+                    userName={item.name}
+                    userRole={item.role}
+                    userDetails={item.userDetails}
+                  />
+                </Item>
+              </Grid>
+            ))}
+          </Grid>
+        </Section>
         <ServicesItemWrapper>
           <Description>Our Teams</Description>
           {state.data.map((item, key) => (
@@ -38,7 +39,6 @@ const TeamPage = () => {
           ))}
         </ServicesItemWrapper>
       </Container>
-      <Contact />
     </MainBox>
   );
 };

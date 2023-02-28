@@ -153,7 +153,7 @@ export const ContactButton = styled(Button)(({ theme: { palette: lightGray } }) 
   border: `1px solid ${lightGray[100]} !important`,
 }));
 export const StyledSection = styled(Section)({
-  marginBottom: '4rem',
+  borderBottom: '1px solid #323232',
 });
 export const ContactItem = styled(Box)(
   ({

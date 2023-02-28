@@ -1,5 +1,8 @@
-import ImgA from './../../assets/images/about1.jpg';
-import ImgB from './../../assets/images/about2.jpg';
+import User1 from '../../assets/images/all-team-user1.jpg';
+import User2 from '../../assets/images/all-team-user2.jpg';
+import User3 from '../../assets/images/all-team-user3.jpg';
+import User4 from '../../assets/images/all-team-user4.jpg';
+import User5 from '../../assets/images/all-team-user5.jpg';
 
 export const teamMembers = [
   {
@@ -8,7 +11,7 @@ export const teamMembers = [
       {
         name: 'Mian Dad',
         role: 'Bookkeeper',
-        img: ImgB,
+        img: User1,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -16,28 +19,28 @@ export const teamMembers = [
       {
         name: 'Fayyaz',
         role: 'Web Developer',
-        img: ImgA,
+        img: User2,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: ImgA,
+        img: User3,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Qasim',
         role: 'Web Developer',
-        img: ImgA,
+        img: User4,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: ImgA,
+        img: User5,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -49,7 +52,7 @@ export const teamMembers = [
       {
         name: 'Mian Dad',
         role: 'Bookkeeper',
-        img: ImgB,
+        img: User5,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -57,28 +60,28 @@ export const teamMembers = [
       {
         name: 'Fayyaz',
         role: 'Web Developer',
-        img: ImgA,
+        img: User2,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Kaleem',
         role: 'Web Developer',
-        img: ImgB,
+        img: User4,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Qasim',
         role: 'Web Developer',
-        img: ImgB,
+        img: User3,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: ImgA,
+        img: User1,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },

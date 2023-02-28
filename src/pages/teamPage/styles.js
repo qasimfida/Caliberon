@@ -10,7 +10,7 @@ export const ServicesItemWrapper = styled('div')(
   }) => ({
     backgroundColor: lightnessWhite.main,
     padding: '40px',
-    margin: '2rem 0',
+    marginBottom: '60px',
   })
 );
 export const Item = styled(Paper)({

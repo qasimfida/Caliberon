@@ -24,8 +24,6 @@ export const Heading = styled(Typography)`
 `;
 
 export const Description = styled(Typography)((props) => ({
-  fontFamily: 'Poppins',
-  letterSpacing: '0.22px',
   fontSize: props.title === 'subheading' ? '24px' : props.title === 'details' ? '16px' : '20px',
   color: props.color === 'primary' ? sectionVarients.primary.color : sectionVarients.white.color,
   lineHeight: props.variant === 'span' ? '2.5' : '1.5',
@@ -40,6 +38,7 @@ export const Description = styled(Typography)((props) => ({
   justifyContent: props.title === 'more' ? 'center' : '',
   alignItems: props.title === 'more' ? 'center' : '',
   cursor: props.title === 'more' ? 'pointer' : '',
+  letterSpacing: '1px',
   '&:hover': {
     color: props.title === 'more' ? '#f54c0a' : '',
     fontWeight: props.title === 'more' ? 'bold' : '',

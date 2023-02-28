@@ -1,11 +1,12 @@
 import React from 'react';
-import { MainBox, ServicesItemWrapper, ServicesImageWrapper } from './styles';
+import { ServicesItemWrapper, ServicesImageWrapper } from './styles';
 import MainSection from '../../components/Layout';
-import { Heading, Description, MainWrapper } from '../../components/common';
+import { Description, MainWrapper } from '../../components/common';
 import { Container, Grid } from '@mui/material';
 import ServicesItem from '../../components/serviceItems';
 import Image from '../../assets/images/guide.jpg';
 import { useLocation } from 'react-router-dom';
+import Heading from '../../components/Heading';
 
 const ServicePage = () => {
   const { state } = useLocation();
@@ -20,17 +21,17 @@ const ServicePage = () => {
       servicesName: 'Marketing Research',
     },
     {
-      servicesName: 'finance',
+      servicesName: 'Finance',
     },
   ];
   return (
-    <MainBox>
+    <>
       <MainSection serviceName={state.serviceName} />
       <MainWrapper>
         <Container>
           <Grid container spacing={[8]}>
             <Grid item xs={12} sm={6} md={8}>
-              <Heading variant="h3">Business Growth Management</Heading>
+              <Heading title="Business Growth Management" subTitle="Quality of future-proof manufactured products!" />
               <Description>
                 Continually myocardinate holistic mindshare with client-based web services. Assertively e-enable
                 catalysts for change before tested markets. intermandated applications. Conveniently predominate
@@ -65,7 +66,7 @@ const ServicePage = () => {
           </Grid>
         </Container>
       </MainWrapper>
-    </MainBox>
+    </>
   );
 };
 

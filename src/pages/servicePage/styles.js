@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 
-export const MainBox = styled(Box)({});
 export const ServicesItemWrapper = styled(Box)(
   ({
     theme: {
@@ -12,15 +11,9 @@ export const ServicesItemWrapper = styled(Box)(
     padding: '40px',
   })
 );
-export const ServicesImageWrapper = styled(Box)(
-  ({
-    theme: {
-      palette: { lightnessWhite },
-    },
-  }) => ({
-    marginTop: '40px',
-    '& img': {
-      width: '100%',
-    },
-  })
-);
+export const ServicesImageWrapper = styled(Box)({
+  marginTop: '80px',
+  '& img': {
+    width: '100%',
+  },
+});

@@ -9,11 +9,12 @@ import { teamMembers } from './data';
 import { useNavigate } from 'react-router-dom';
 import Section from '../../components/Section/index';
 
-const AllTeams = () => {
+const AllTeams = ({ ...rest }) => {
   const navigate = useNavigate();
 
   const handleClick = (e) => {
-    navigate(`/team/${e.title}`, {
+    let teamTitle = e.title.toLowerCase().split(' ').join('-');
+    navigate(`/team/${teamTitle}`, {
       state: {
         teamName: e.title,
         teamData: e.data,

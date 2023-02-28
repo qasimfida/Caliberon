@@ -43,6 +43,7 @@ export const ServicesWrapper = styled('div')(({ active }) => ({
   transition: '0.3s all ease-in',
   padding: '30px 0',
   border: '1px solid #e5e5e5',
+  cursor: 'pointer',
 }));
 
 export const Image = styled('img')({

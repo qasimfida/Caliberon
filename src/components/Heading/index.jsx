@@ -1,10 +1,11 @@
-import Wrapper, { SubTitle, Title } from './styles';
+import React from 'react';
+import Wrapper, { MissionHeading, SubHeading } from './styles';
 
-const Heading = ({ title, subTitle, alignLeft, dark, ...rest }) => {
+const Heading = ({ title, subTitle, ...rest }) => {
   return (
-    <Wrapper alignLeft={alignLeft} {...rest}>
-      <SubTitle>{subTitle}</SubTitle>
-      <Title dark={dark}>{title}</Title>
+    <Wrapper {...rest}>
+      <MissionHeading>{title}</MissionHeading>
+      <SubHeading>{subTitle}</SubHeading>
     </Wrapper>
   );
 };
