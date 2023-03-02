@@ -3,7 +3,6 @@ import { Box } from '@mui/system';
 
 const Wrapper = styled(Box)({
   width: '100%',
-  marginTop: '70px',
 });
 export const ImageWrapper = styled(Box)({
   width: '100%',

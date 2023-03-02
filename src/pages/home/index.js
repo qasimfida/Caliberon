@@ -245,7 +245,7 @@ const HomePage = () => {
         <Container>
           <Grid container alignItems="center">
             <Grid item xs={12} md={6}>
-              <Heading alignLeft title={'join us'} subTitle={'news letter.'} dark />
+              <Heading alignLeft marginBottomZero title={'join us'} subTitle={'news letter.'} dark />
             </Grid>
             <Grid container item xs={12} md={6}>
               <NewsLetter />

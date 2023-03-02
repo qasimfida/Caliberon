@@ -28,6 +28,7 @@ export const Title = styled(Typography)({
   fontWeight: 600,
   color: 'black',
   marginBottom: '2rem',
+  letterSpacing: '1.4px',
 });
 export const Text = styled(Typography)({
   fontSize: '1rem',

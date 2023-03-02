@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { Box } from '@mui/system';
 
-const Wrapper = styled(Box)(({ alignLeft }) => ({
+const Wrapper = styled(Box)(({ alignLeft, marginBottomZero }) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: alignLeft ? 'start' : 'center',
   height: '100%',
-  marginBottom: '45px',
+  marginBottom: marginBottomZero ? '0' : '45px',
 }));
 
 export const SubTitle = styled('span')(

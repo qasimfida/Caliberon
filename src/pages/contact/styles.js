@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 export const MapSection = styled(Box)(
   ({
@@ -17,40 +17,5 @@ export const MapSection = styled(Box)(
     '@media (max-width: 700px)': {
       flexWrap: 'wrap',
     },
-  })
-);
-export const Wrapper = styled(Box)({
-  display: 'flex',
-  flexDirection: 'column',
-  alignISStems: 'center',
-  padding: '61px',
-  height: '300px',
-});
-export const Title = styled(Typography)(
-  ({
-    theme: {
-      palette: { black },
-    },
-  }) => ({
-    fontFamily: 'Poppins',
-    fontSize: '44px',
-    color: black?.main,
-    fontWeight: 'bold',
-    lineHeight: '1',
-  })
-);
-export const Para = styled(Typography)(
-  ({
-    theme: {
-      palette: { lightGray },
-    },
-  }) => ({
-    fontFamily: 'Poppins',
-    letterSpacing: '0.22px',
-    fontSize: '15px',
-    color: lightGray?.main,
-    lineHeight: '1.5',
-    marginTop: '40px',
-    marginBottom: '40px',
   })
 );

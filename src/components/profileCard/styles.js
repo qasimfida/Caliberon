@@ -105,7 +105,7 @@ export const IconsWrapper = styled(Box)(
 export const IconBorder = styled(Box)(
   ({
     theme: {
-      palette: { darkGray },
+      palette: { darkGray, white },
     },
   }) => ({
     height: '22px',
@@ -117,12 +117,20 @@ export const IconBorder = styled(Box)(
     alignItems: 'center',
     margin: '1px 6px',
     padding: '8px',
-    zIndex: '0',
     cursor: 'pointer',
     borderRadius: '50%',
     transition: '.5s all ease',
+    '& svg ': {
+      color: '#e3dddd',
+      transform: 'scale(1.3)',
+      padding: '2px',
+      transition: '.2s all ease',
+    },
+    '&:hover svg': {
+      color: white?.main,
+      transform: 'scale(1.4)',
+    },
     '&:hover': {
-      transform: 'scale(1)',
       background: '#4d4d4d',
     },
   })

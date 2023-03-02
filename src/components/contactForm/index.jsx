@@ -56,7 +56,7 @@ const ContactForm = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <FormWrapper>
-              <Title variant="h4">Get in touch.</Title>
+              <Title variant="h4">Get in touch</Title>
               <InputWrapper>
                 <StyledInput placeholder="Name" />
                 <StyledInput placeholder="Email Adress" />
@@ -69,7 +69,7 @@ const ContactForm = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <ContactWrapper>
-              <Title variant="h4">Contact Info.</Title>
+              <Title variant="h4">Contact information</Title>
               <SubTitle>Let's talk</SubTitle>
               {contactDetails.map(({ label }, index) => (
                 <ContactItem key={`contact-${index}`}>
