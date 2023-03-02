@@ -51,16 +51,16 @@ const Banner = ({ key, item }) => {
         </BannerWrapper>
         <SocialIcons>
           <IconBorder>
-            <Facebook className="social-icon" color="#fff" />
+            <Facebook className="social-icon" />
           </IconBorder>
           <IconBorder>
-            <LinkedIn className="social-icon" color="#fff" />
+            <LinkedIn className="social-icon" />
           </IconBorder>
           <IconBorder>
-            <Twitter className="social-icon" color="#fff" />
+            <Twitter className="social-icon" />
           </IconBorder>
           <IconBorder>
-            <Mail className="socialIcon" color="#fff" />
+            <Mail className="socialIcon" />
           </IconBorder>
         </SocialIcons>
       </Container>

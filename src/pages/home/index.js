@@ -15,7 +15,6 @@ import {
   SponsorsWrapper,
   CustomizeSlide,
   SlideWrapper,
-  BlogsWrapper,
   MoreButton,
   // VideoContent,
   // VideoTitle,
@@ -206,24 +205,22 @@ const HomePage = () => {
       <Section>
         <Container>
           <Heading title={'our blogs.'} subTitle={'latest news'} dark />
-          <BlogsWrapper>
-            <Grid container spacing={4}>
-              {blogDatas.map((item, id) => (
-                <Grid item xs={4} md={4}>
-                  <OurBlogs
-                    key={id}
-                    profile={item.img}
-                    title={item.title}
-                    subTitle={item.subTitle}
-                    details={item.details}
-                    date={item.date}
-                    month={item.month}
-                    btnValue={item.button}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </BlogsWrapper>
+          <Grid container spacing={4}>
+            {blogDatas.map((item, id) => (
+              <Grid item xs={4} md={4}>
+                <OurBlogs
+                  key={id}
+                  profile={item.img}
+                  title={item.title}
+                  subTitle={item.subTitle}
+                  details={item.details}
+                  date={item.date}
+                  month={item.month}
+                  btnValue={item.button}
+                />
+              </Grid>
+            ))}
+          </Grid>
         </Container>
       </Section>
       <Section variant="very_black">

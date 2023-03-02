@@ -1,10 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.f6932a07.css",
-    "main.js": "/static/js/main.7be5e345.js",
-    "static/media/bg-dark2.jpg": "/static/media/bg-dark2.dc6defc06a73a676fa2f.jpg",
-    "static/media/Background2.jpg": "/static/media/Background2.7c1c8d14f19f65fa97f7.jpg",
-    "static/media/team.jpg": "/static/media/team.72e8d17b616d810f8fdf.jpg",
+    "main.js": "/static/js/main.d07a64b4.js",
+    "static/media/all-team-user2.jpg": "/static/media/all-team-user2.fc0296b15f525caff81f.jpg",
+    "static/media/all-team-user1.jpg": "/static/media/all-team-user1.9327a4a842dbbe9e1a75.jpg",
+    "static/media/all-team-user3.jpg": "/static/media/all-team-user3.7741356df8d530a1a62c.jpg",
+    "static/media/all-team-user4.jpg": "/static/media/all-team-user4.d7757790abd50d43e67c.jpg",
+    "static/media/cofounder-2.jpg": "/static/media/cofounder-2.720a16beb5b808a03dd6.jpg",
+    "static/media/cofounder-1.jpg": "/static/media/cofounder-1.abbda54969cda75fe395.jpg",
+    "static/media/all-team-user5.jpg": "/static/media/all-team-user5.3dc498b033a6cb89bf9f.jpg",
+    "static/media/user-c.jpg": "/static/media/user-c.cea254d31252e6c39b5a.jpg",
+    "static/media/Background2.jpg": "/static/media/Background2.bcf1bd1b82e454a84d8b.jpg",
+    "static/media/cofounder-3.jpg": "/static/media/cofounder-3.0d81a92774e7caa9c061.jpg",
     "static/media/Testimonial-image1.jpg": "/static/media/Testimonial-image1.38c981c69ce60d47c9c6.jpg",
     "static/media/New-Banner.jpg": "/static/media/New-Banner.56d7a4e724030b1d8ceb.jpg",
     "static/media/cover.jpg": "/static/media/cover.605bfb1504c8575230a1.jpg",
@@ -22,12 +29,10 @@
     "static/media/sponsor6.png": "/static/media/sponsor6.797bebbc5e54fe1d3017.png",
     "static/media/collabration.png": "/static/media/collabration.cde9f2c26f7247b65d78.png",
     "static/media/Sponsors1.png": "/static/media/Sponsors1.f6d33617e892916778d6.png",
-    "static/media/web.png": "/static/media/web.1e77da129b668301ee2a.png",
     "static/media/sponsor5.png": "/static/media/sponsor5.fd805c710849d24b6e97.png",
     "static/media/design.png": "/static/media/design.258d262a11de1d51fa6b.png",
     "static/media/logo-main.png": "/static/media/logo-main.ddf40c9212c00bd3aca1.png",
     "static/media/marketing.png": "/static/media/marketing.7c8e66a5596ff2cf36e9.png",
-    "static/media/app.png": "/static/media/app.82d012372393cb459d40.png",
     "static/media/social-activity.png": "/static/media/social-activity.9b0c33ce296c267bd518.png",
     "static/media/guide.jpg": "/static/media/guide.262d2a1263be134589c6.jpg",
     "static/media/ideate.png": "/static/media/ideate.d595d518e898655d2f65.png",
@@ -40,10 +45,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.f6932a07.css.map": "/static/css/main.f6932a07.css.map",
-    "main.7be5e345.js.map": "/static/js/main.7be5e345.js.map"
+    "main.d07a64b4.js.map": "/static/js/main.d07a64b4.js.map"
   },
   "entrypoints": [
     "static/css/main.f6932a07.css",
-    "static/js/main.7be5e345.js"
+    "static/js/main.d07a64b4.js"
   ]
 }

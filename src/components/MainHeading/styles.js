@@ -7,6 +7,7 @@ const Wrapper = styled(Box)(({ alignLeft }) => ({
   justifyContent: 'center',
   alignItems: alignLeft ? 'start' : 'center',
   height: '100%',
+  marginBottom: '45px',
 }));
 
 export const SubTitle = styled('span')(
@@ -20,20 +21,17 @@ export const SubTitle = styled('span')(
     fontSize: '17px',
     textTransform: 'uppercase',
     letterSpacing: '14px',
-    marginBottom: '5px',
     display: 'inline-block',
   })
 );
 
 export const Title = styled('h3')(({ dark, theme: { palette } }) => ({
-  margin: '0px',
+  margin: '0',
   textTransform: 'uppercase',
   fontSize: '4rem',
   letterSpacing: '6px',
   fontWeight: '700',
   color: dark ? palette.black.main : palette.white.main,
-  padding: '10px 0 0',
-  display: 'inline-block',
 }));
 
 export default Wrapper;

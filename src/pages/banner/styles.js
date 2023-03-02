@@ -140,18 +140,13 @@ export const SocialIcons = styled(Box)(
     alignItems: 'center',
     justifyContent: 'flex-start',
     zIndex: '111111',
-    '& svgs': {
-      marginRight: '2rem',
-      color: white?.main,
-      cursor: 'pointer',
-    },
   })
 );
 
 export const IconBorder = styled(Box)(
   ({
     theme: {
-      palette: { darkGray },
+      palette: { darkGray, white },
     },
   }) => ({
     height: '22px',
@@ -166,8 +161,17 @@ export const IconBorder = styled(Box)(
     cursor: 'pointer',
     borderRadius: '50%',
     transition: '.5s all ease',
+    '& svg ': {
+      color: '#e3dddd',
+      transform: 'scale(1.3)',
+      padding: '2px',
+      transition: '.2s all ease',
+    },
+    '&:hover svg': {
+      color: white?.main,
+      transform: 'scale(1.4)',
+    },
     '&:hover': {
-      transform: 'scale(1)',
       background: '#4d4d4d',
     },
   })

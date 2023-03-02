@@ -17,52 +17,32 @@ export const ContactMessage = styled(Typography)(
       palette: { primary },
     },
   }) => ({
-    fontFamily: 'Poppins',
     fontSize: '32px',
     textAlign: 'center',
     fontWeight: 600,
     color: primary?.main,
   })
 );
-export const Title = styled(Typography)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    fontSize: '2rem',
-    fontWeight: 600,
-    color: white?.main,
-    marginBottom: '2rem',
-  })
-);
-export const Text = styled(Typography)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    fontFamily: 'Poppins',
-    fontSize: '1rem',
-    fontWeight: 100,
-    margin: '4px',
-    color: white?.main,
-    letterSpacing: '1.2px',
-  })
-);
-export const SubTitle = styled(Typography)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    fontSize: '1rem',
-    fontWeight: 500,
-    color: white?.main,
-    marginTop: '56px',
-    marginBottom: '12px',
-  })
-);
+export const Title = styled(Typography)({
+  fontSize: '2rem',
+  fontWeight: 600,
+  color: 'black',
+  marginBottom: '2rem',
+});
+export const Text = styled(Typography)({
+  fontSize: '1rem',
+  fontWeight: 300,
+  margin: '4px',
+  color: 'black',
+  letterSpacing: '1px',
+});
+export const SubTitle = styled(Typography)({
+  fontSize: '1rem',
+  fontWeight: 500,
+  color: 'black',
+  marginTop: '56px',
+  marginBottom: '12px',
+});
 export const ContactText = styled(Typography)(
   ({
     theme: {
@@ -78,18 +58,10 @@ export const ContactText = styled(Typography)(
   })
 );
 
-export const FormWrapper = styled(Box)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    // backgroundColor: white?.main,
-    boxSizing: 'border-box',
-    // padding: '40px 20px',
-    borderRadius: '10px',
-  })
-);
+export const FormWrapper = styled(Box)({
+  boxSizing: 'border-box',
+  borderRadius: '10px',
+});
 
 export const InputWrapper = styled(Box)({
   display: 'block',
@@ -99,7 +71,7 @@ export const InputWrapper = styled(Box)({
 export const StyledInput = styled(Input)(
   ({
     theme: {
-      palette: { primary, lightGray, white },
+      palette: { dark_black },
     },
   }) => ({
     width: '100%',
@@ -113,81 +85,69 @@ export const StyledInput = styled(Input)(
       display: 'none',
     },
     '& input': {
-      color: white.main,
+      color: dark_black?.main,
       padding: '12px 0',
-      borderBottom: `1px solid ${white?.main} !important`,
+      paddingRight: '6px',
+      borderBottom: `1px solid #6f6363c7 !important`,
+      transition: '.3s ease all',
     },
     '& input:focus': {
-      color: '#fff',
-      outline: 'none',
-      borderBottom: `1px solid ${white?.main} !important`,
+      borderBottom: `1px solid black !important`,
     },
   })
 );
-export const StyledTextArea = styled(TextareaAutosize)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    width: '100%',
-    margin: '20px 0',
-    borderBottom: `1px solid ${white?.main} !important`,
-    borderTop: 'none',
-    borderLeft: 'none',
-    borderRight: 'none',
-    fontSize: '16px',
-    fontFamily: 'Poppins',
-    color: white.main,
-    background: 'transparent',
-    '&:focus-visible': {
-      outline: 'none',
-      borderBottom: `1px solid ${white?.main} !important`,
-    },
-  })
-);
+export const StyledTextArea = styled(TextareaAutosize)({
+  width: '100%',
+  margin: '20px 0',
+  borderTop: 'none',
+  borderLeft: 'none',
+  borderRight: 'none',
+  fontSize: '16px',
+  fontWeight: '500',
+  transition: '.3s ease all',
+  '&:focus-visible': {
+    outline: 'none',
+    borderBottom: `1px solid #6f6363c7  !important`,
+  },
+  '&:focus': {
+    borderBottom: `1px solid black  !important`,
+  },
+});
 
-export const ContactButton = styled(Button)(({ theme: { palette: lightGray } }) => ({
+export const ContactButton = styled(Button)({
   height: '48px',
   textTransform: 'uppercase',
-  border: `1px solid ${lightGray[100]} !important`,
-}));
-export const StyledSection = styled(Section)({
-  borderBottom: '1px solid #323232',
+  color: 'black',
+  border: `1px solid black`,
 });
+export const StyledSection = styled(Section)({});
 export const ContactItem = styled(Box)(
   ({
     theme: {
-      palette: { white },
+      palette: { very_black },
     },
   }) => ({
     display: 'flex',
     alignItems: 'center',
     '& svg': {
       display: 'none',
-      color: white?.main,
+      color: very_black?.main,
       fontSize: '1rem',
     },
   })
 );
 
 // icon wrapper
-export const IconsWrapper = styled(Box)(
-  ({
-    theme: {
-      palette: { white },
-    },
-  }) => ({
-    marginTop: '3rem',
-    display: 'flex',
-    paddingRight: '3rem',
-    '& svgs': {
-      marginRight: '2rem',
-      color: white?.main,
-      cursor: 'pointer',
-    },
-  })
-);
+export const IconsWrapper = styled(Box)({
+  marginTop: '3rem',
+  display: 'flex',
+  paddingRight: '3rem',
+  '& svgs': {
+    marginRight: '2rem',
+    color: 'black',
+    cursor: 'pointer',
+  },
+});
 
 export const IconBorder = styled(Box)(
   ({
@@ -195,6 +155,9 @@ export const IconBorder = styled(Box)(
       palette: { darkGray },
     },
   }) => ({
+    '& svgs': {
+      color: darkGray?.main,
+    },
     height: '22px',
     width: '22px',
     border: `1px solid ${darkGray?.main}`,
@@ -212,6 +175,7 @@ export const IconBorder = styled(Box)(
     '&:hover': {
       transform: 'scale(1)',
       background: '#4d4d4d',
+      color: '#fff',
     },
   })
 );

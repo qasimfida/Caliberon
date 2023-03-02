@@ -40,7 +40,7 @@ const ContactForm = () => {
     },
   ];
   return (
-    <StyledSection variant={'dark_black'}>
+    <StyledSection>
       <Container>
         {location.pathname === '/contact' ? null : (
           <>
@@ -58,11 +58,11 @@ const ContactForm = () => {
             <FormWrapper>
               <Title variant="h4">Get in touch.</Title>
               <InputWrapper>
-                <StyledInput placeholder="Name" className="colorChanged" />
+                <StyledInput placeholder="Name" />
                 <StyledInput placeholder="Email Adress" />
                 <StyledTextArea aria-label="Hello" placeholder="Message" minRows={5} />
               </InputWrapper>
-              <ContactButton variant="outlined" color="white">
+              <ContactButton variant="outlined" color="black">
                 Send Message <SendIcon className="ml-2" fontSize="small" />
               </ContactButton>
             </FormWrapper>
@@ -73,31 +73,27 @@ const ContactForm = () => {
               <SubTitle>Let's talk</SubTitle>
               {contactDetails.map(({ label }, index) => (
                 <ContactItem key={`contact-${index}`}>
-                  <Text color={'primary'} title="details">
-                    {label}
-                  </Text>
+                  <Text title="details">{label}</Text>
                 </ContactItem>
               ))}
               <SubTitle>Meet us</SubTitle>
               {visit.map(({ label }, index) => (
                 <ContactItem key={`contact-${index}`}>
-                  <Text color={'primary'} title="details">
-                    {label}
-                  </Text>
+                  <Text title="details">{label}</Text>
                 </ContactItem>
               ))}
               <IconsWrapper>
                 <IconBorder>
-                  <Facebook className="social-icon" color="#fff" />
+                  <Facebook className="social-icon" />
                 </IconBorder>
                 <IconBorder>
-                  <LinkedIn className="social-icon" color="#fff" />
+                  <LinkedIn className="social-icon" />
                 </IconBorder>
                 <IconBorder>
-                  <Twitter className="social-icon" color="#fff" />
+                  <Twitter className="social-icon" />
                 </IconBorder>
                 <IconBorder>
-                  <Mail className="socialIcon" color="#fff" />
+                  <Mail className="socialIcon" />
                 </IconBorder>
               </IconsWrapper>
             </ContactWrapper>

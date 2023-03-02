@@ -170,8 +170,5 @@ export const SlideWrapper = styled(Box)(
 );
 
 // blogs wrapper styles
-export const BlogsWrapper = styled(Box)({
-  marginTop: '70px',
-});
 
 export const SponsorWrapper = styled(Box)({});

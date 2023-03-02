@@ -1,7 +1,7 @@
 import { Container } from '@mui/system';
 import React from 'react';
 import MainSection from '../../components/Layout';
-import { DepartmentHeading, Item, TeamMembersWrapper, Description } from './styles';
+import { DepartmentHeading, Item, TeamMembersWrapper, ViewAll } from './styles';
 import ProfileCard from '../../components/ProfileCard';
 import { Grid } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -31,12 +31,12 @@ const AllTeams = ({ ...rest }) => {
             <div key={`members ${key}`}>
               <TeamMembersWrapper>
                 <DepartmentHeading>{items.title}</DepartmentHeading>
-                <Description onClick={() => handleClick(items)}>
+                <ViewAll onClick={() => handleClick(items)}>
                   View all <ArrowForwardIcon />
-                </Description>
+                </ViewAll>
               </TeamMembersWrapper>
 
-              <Section>
+              <Section spacing={8}>
                 <Grid container spacing={[4]}>
                   {items.data.slice(0, 3).map((item, key) => (
                     <Grid item xs={12} sm={4} md={4} key={`data ${key}`}>
