@@ -6,6 +6,18 @@ export const Item = styled(Paper)({
   borderBottomLeftRadius: 'none',
   borderTopLeftRadius: 'none',
 });
+export const Filters = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  height: '60px',
+  boxSizing: 'border-box',
+});
+export const SearchBar = styled('div')({
+  display: 'flex',
+  width: '200px',
+  border: '1px solid black',
+});
 
 export const DepartmentHeading = styled.h2`
   padding: 5px 0;

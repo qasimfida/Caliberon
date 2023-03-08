@@ -30,22 +30,16 @@ export const MoreButton = styled(Button)({
     },
   },
 });
-export const SponsorsWrapper = styled(Box)(
-  ({
-    theme: {
-      palette: { primary, gradient },
+export const SponsorsWrapper = styled(Box)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '@media(max-width: 992px)': {
+    '.sponsor_heading': {
+      alignItems: 'center',
     },
-  }) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    '@media(max-width: 992px)': {
-      '.sponsor_heading': {
-        alignItems: 'center',
-      },
-    },
-  })
-);
+  },
+});
 // export const VideoContent = styled(Box)({});
 export const VideoTitle = styled('h1')(
   ({

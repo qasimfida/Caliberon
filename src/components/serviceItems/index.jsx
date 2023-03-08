@@ -1,6 +1,5 @@
 import React from 'react';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { ServicesWrapper, UserName } from './styles';
+import { ServicesWrapper, StyledForwardIcon, UserName } from './styles';
 import { useNavigate } from 'react-router-dom';
 
 const ServicesItem = ({ serviceName, teamName, teamData, data }) => {
@@ -20,7 +19,7 @@ const ServicesItem = ({ serviceName, teamName, teamData, data }) => {
   return (
     <ServicesWrapper onClick={handleClick}>
       <UserName>{serviceName ? serviceName : teamName}</UserName>
-      <ArrowForwardIcon />
+      <StyledForwardIcon />
     </ServicesWrapper>
   );
 };

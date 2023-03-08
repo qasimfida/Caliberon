@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export const UserName = styled.h4`
   font-family: Poppins;
@@ -17,17 +18,25 @@ export const ServicesWrapper = styled('div')(
     justifyContent: 'space-between',
     backgroundColor: white?.main,
     padding: '20px 24px',
-    marginBottom: '14px',
     cursor: 'pointer',
+    transition: '.5s ease all ',
     '&:hover': {
+      color: primary?.main,
+    },
+    '&:hover svg': {
       color: primary?.main,
     },
     '&:last-child': {
       marginBottom: 0,
     },
-    '& svg': {
-      color: primary?.main,
-      marginLeft: '1rem',
+  })
+);
+export const StyledForwardIcon = styled(ArrowForwardIcon)(
+  ({
+    theme: {
+      palette: { primary, very_black },
     },
+  }) => ({
+    color: very_black?.main,
   })
 );

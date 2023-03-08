@@ -1,13 +1,16 @@
 import { Container } from '@mui/system';
 import React from 'react';
 import MainSection from '../../components/Layout';
-import { DepartmentHeading, Item, TeamMembersWrapper, ViewAll } from './styles';
+import { DepartmentHeading, Filters, Item, TeamMembersWrapper, ViewAll } from './styles';
 import ProfileCard from '../../components/ProfileCard';
 import { Grid } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { teamMembers } from './data';
 import { useNavigate } from 'react-router-dom';
 import Section from '../../components/Section/index';
+import Dropdown from '../../components/Dropdown';
+import SearchBar from '../../components/SearchBar';
+import Sort from '../../components/Sort';
 
 const AllTeams = ({ ...rest }) => {
   const navigate = useNavigate();
@@ -25,8 +28,13 @@ const AllTeams = ({ ...rest }) => {
   return (
     <>
       <MainSection />
-      <Section>
+      <Section {...rest}>
         <Container>
+          <Filters>
+            <Dropdown />
+            <SearchBar />
+            <Sort />
+          </Filters>
           {teamMembers.map((items, key) => (
             <div key={`members ${key}`}>
               <TeamMembersWrapper>
@@ -35,7 +43,6 @@ const AllTeams = ({ ...rest }) => {
                   View all <ArrowForwardIcon />
                 </ViewAll>
               </TeamMembersWrapper>
-
               <Section spacing={8}>
                 <Grid container spacing={[4]}>
                   {items.data.slice(0, 3).map((item, key) => (
