@@ -6,7 +6,7 @@ const SearchBar = () => {
   return (
     <Wrapper component="form">
       <Input placeholder="Search" />
-      <SearchWrapper size="lg" variant="outlined">
+      <SearchWrapper size="lg" variant="contained" color="black">
         <Search />
       </SearchWrapper>
     </Wrapper>

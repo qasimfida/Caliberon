@@ -1,22 +1,31 @@
 import styled from '@emotion/styled';
-import { Paper, Box } from '@mui/material';
+import { Paper, Box, Grid } from '@mui/material';
 
+export const TitleBar = styled(Box)({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  marginTop: '16px',
+});
 export const Item = styled(Paper)({
   boxShadow: 'none',
   borderBottomLeftRadius: 'none',
-  borderTopLeftRadius: 'none',
+  borderRadius: 'unset',
 });
-export const Filters = styled('div')({
+export const Filters = styled(Grid)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   height: '60px',
-  boxSizing: 'border-box',
+});
+export const SearchWrapper = styled(Grid)({
+  display: 'flex',
+  alignItems: 'center',
+  overflow: 'hidden',
 });
 export const SearchBar = styled('div')({
   display: 'flex',
   width: '200px',
-  border: '1px solid black',
 });
 
 export const DepartmentHeading = styled.h2`
@@ -43,6 +52,7 @@ export const ViewAll = styled('p')(
     alignItems: 'center',
     fontSize: '1.2rem',
     cursor: 'pointer',
+    letterSpacing: '2px',
     color: darkGray.main,
     margin: 0,
     '& svg': {

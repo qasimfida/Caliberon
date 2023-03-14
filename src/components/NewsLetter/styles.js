@@ -42,7 +42,6 @@ export const Label = styled('h3')({
 });
 export const SubscribeButton = styled(Button)({
   right: '0',
-  borderRadius: '0 4px 4px 0 !important',
   fontSize: '16px',
   transition: '.6s all ease',
   height: '48px',

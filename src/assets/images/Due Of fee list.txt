@@ -1,0 +1,11 @@
+Name               Father Name      Month   		Due-Fee
+1.Ajmal-Karim	 Sahib dullah	February		4000
+2.Salah Ud Din	 Sayouj Khan	January/February  8000
+3.Tanvir Ali	 Muhammad Jan	Februray		4000
+4.Saad Sardar	Sardar Khan		Februray		4000
+5.Ali Haidar 	Baigi Khan		Februray		3000
+6.Israr Azam baig	Sher Azam baig	Februray		3000
+7.Saqlain Mushtaq	Maqsad Baig		Februray		3000
+8.Sherzad Khan	Sherbaz Khan	Februray		4000
+9.Ramish Khan	Muzafar Khan	January/Februray	8000
+10.Shoaib Sultan	Maher Karim		Februray		4000
