@@ -115,7 +115,7 @@ export const IconBorder = styled(Box)(
     justifyContent: 'center',
     outline: 'none',
     alignItems: 'center',
-    margin: '1px 6px',
+    marginRight: '10px',
     padding: '8px',
     cursor: 'pointer',
     borderRadius: '50%',

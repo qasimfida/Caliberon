@@ -10,7 +10,7 @@ const Wrapper = styled(Box)({
   width: '100%',
   '& input': {
     height: '100%',
-    paddingRight: '2rem',
+    paddingRight: '1rem',
     paddingLeft: '1rem',
     transition: '.4s all ease',
     boxSizing: 'border-box',
@@ -27,6 +27,7 @@ const Wrapper = styled(Box)({
 export const Input = styled(InputBase)(() => ({
   height: '100%',
   width: '100%',
+  padding: '0',
 }));
 export const SearchWrapper = styled(Button)({
   display: 'flex',

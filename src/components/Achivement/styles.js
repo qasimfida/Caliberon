@@ -16,6 +16,7 @@ const Wrapper = styled(Box)(
     alignItems: 'center',
     textAlign: 'center',
     borderRadius: '8px',
+    cursor: 'pointer',
     '&.size': {
       '& svg': {
         width: '70px',

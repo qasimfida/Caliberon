@@ -36,13 +36,12 @@ const Header = () => {
   const onClickContact = () => {
     navigate('/contact');
   };
-  const scrollPosition = useOnScroll();
-  let hasAffix = scrollPosition < 100;
-
+  const scroll = useOnScroll();
+  let hasAffix = scroll < 100;
   return (
-    <Navbar id="header" transparent={hasAffix}>
+    <Navbar id="header" scroll={scroll}>
       <Container className="h-100">
-        <ToolbarBox className="h-100" transparent={hasAffix}>
+        <ToolbarBox className="h-100" scroll={scroll}>
           <LogoWrapper>
             {hasAffix ? <img src={logoLight} alt="white logo " /> : <img src={logoDark} alt="black logo" />}
           </LogoWrapper>
@@ -102,7 +101,7 @@ const Header = () => {
                 variant="text"
                 onClick={() => onClickLink(item.path)}
                 className={`btn h-100 ${item.path === active ? 'active' : 'nav-buttons'}`}
-                id={item.id}
+                // id={item.id}
               >
                 {item.title}
               </Button>

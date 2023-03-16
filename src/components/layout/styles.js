@@ -71,10 +71,12 @@ export const Details = styled(Box)(
       color: mediumGray.main,
       '& a': {
         fontSize: '16px',
+        transition: '.3s all',
+        padding: '0 4px',
         '&:hover': {
           color: white?.main,
           textDecoration: 'none',
-          fontWeight: 'bold',
+          fontWeight: '400',
         },
       },
     },

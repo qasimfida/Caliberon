@@ -33,16 +33,14 @@ export const Title = styled(Typography)({
 export const Text = styled(Typography)({
   fontSize: '1rem',
   fontWeight: 300,
-  margin: '4px',
   color: 'black',
   letterSpacing: '1px',
+  lineHeight: '1px',
 });
 export const SubTitle = styled(Typography)({
   fontSize: '1rem',
   fontWeight: 500,
   color: 'black',
-  marginTop: '56px',
-  marginBottom: '12px',
 });
 export const ContactText = styled(Typography)(
   ({
@@ -51,7 +49,6 @@ export const ContactText = styled(Typography)(
     },
   }) => ({
     display: 'flex',
-    marginTop: '20px',
     fontSize: '1.3rem',
     fontWeight: 100,
     color: white?.main,
@@ -120,6 +117,7 @@ export const ContactButton = styled(Button)({
   textTransform: 'uppercase',
   color: 'black',
   border: `1px solid black`,
+  transition: '.4s all',
 });
 export const StyledSection = styled(Section)({});
 export const ContactItem = styled(Box)(
@@ -130,6 +128,8 @@ export const ContactItem = styled(Box)(
   }) => ({
     display: 'flex',
     alignItems: 'center',
+    paddingTop: '0',
+    marginTop: '0',
     '& svg': {
       display: 'none',
       color: very_black?.main,
@@ -140,7 +140,6 @@ export const ContactItem = styled(Box)(
 
 // icon wrapper
 export const IconsWrapper = styled(Box)({
-  marginTop: '3rem',
   display: 'flex',
   paddingRight: '3rem',
   '& svgs': {

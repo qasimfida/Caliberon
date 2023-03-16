@@ -5,7 +5,7 @@ const Control = styled(FormControl)({
   display: 'flex',
   marginLeft: '2rem',
   width: '180px',
-  background: 'black',
+  background: '#11141b',
   '& .MuiInputBase-root': {
     border: 'none',
     width: '100%',
@@ -42,7 +42,7 @@ export const Wrapper = styled(Box)({
 export const DefaultValue = styled('p')({
   margin: '0',
   letterSpacing: '.9px',
-  fontWeight: '500',
+  fontWeight: '400',
   fontSize: '18px',
 });
 export const Item = styled('p')({

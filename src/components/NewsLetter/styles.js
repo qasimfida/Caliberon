@@ -16,7 +16,7 @@ const Wrapper = styled(Paper)(
     '& input': {
       border: '1px solid #aaaaaa69',
       height: '48px',
-      paddingRight: '2rem',
+      paddingRight: '1rem',
       paddingLeft: '1rem',
       transition: '.4s all ease',
       boxSizing: 'border-box',

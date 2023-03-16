@@ -6,7 +6,6 @@ import User5 from '../../assets/images/all-team-user5.jpg';
 
 export const teamMembers = [
   {
-    title: 'Bookeeping & Accounts',
     data: [
       {
         name: 'Mian Dad',
@@ -26,14 +25,14 @@ export const teamMembers = [
       {
         name: 'Aleem',
         role: 'Web Developer',
-        img: User3,
+        img: User4,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
       {
         name: 'Qasim',
         role: 'Web Developer',
-        img: User4,
+        img: User1,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
@@ -44,26 +43,7 @@ export const teamMembers = [
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },
-    ],
-  },
-  {
-    title: 'Amazon FBA & Digital Marketing',
-    data: [
-      {
-        name: 'Mian Dad',
-        role: 'Bookkeeper',
-        img: User5,
-        userDetails:
-          'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
-      },
 
-      {
-        name: 'Fayyaz',
-        role: 'Web Developer',
-        img: User2,
-        userDetails:
-          'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
-      },
       {
         name: 'Kaleem',
         role: 'Web Developer',
@@ -82,6 +62,34 @@ export const teamMembers = [
         name: 'Aleem',
         role: 'Web Developer',
         img: User1,
+        userDetails:
+          'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+      },
+      {
+        name: 'Jack',
+        role: 'Digital Marketing',
+        img: User2,
+        userDetails:
+          'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+      },
+      {
+        name: 'Qasim',
+        role: 'Web Developer',
+        img: User3,
+        userDetails:
+          'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+      },
+      {
+        name: 'Aleem',
+        role: 'Web Developer',
+        img: User1,
+        userDetails:
+          'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
+      },
+      {
+        name: 'Jack',
+        role: 'Digital Marketing',
+        img: User2,
         userDetails:
           'Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum',
       },

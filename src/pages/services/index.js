@@ -35,7 +35,6 @@ const Services = () => {
     {
       name: 'Business Growth',
       img: Business,
-      active: true,
       serviceDetails: 'We also provide services by providing input for your business growth',
     },
     {
@@ -48,6 +47,11 @@ const Services = () => {
       img: Design,
       serviceDetails: 'We also help you market your products through an online marketplace',
     },
+    {
+      name: 'Ideate',
+      img: Ideate,
+      serviceDetails: 'We help you develop creative ideas so that your business can grow more rapidly',
+    },
   ];
 
   return (
@@ -57,13 +61,8 @@ const Services = () => {
         <StyledSection>
           <Grid container spacing={[3]}>
             {services.map((item, key) => (
-              <Grid item xs={12} sm={6} md={4} key={`service-${key}`}>
-                <ServicesCard
-                  serviceImg={item.img}
-                  serviceName={item.name}
-                  serviceDetails={item.serviceDetails}
-                  active={item.active}
-                />
+              <Grid item xs={12} sm={6} md={3} key={`service-${key}`}>
+                <ServicesCard serviceImg={item.img} serviceName={item.name} serviceDetails={item.serviceDetails} />
               </Grid>
             ))}
           </Grid>

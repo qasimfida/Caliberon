@@ -5,7 +5,8 @@ export const TitleBar = styled(Box)({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginTop: '16px',
+  marginTop: '20px',
+  marginBottom: '30px',
 });
 export const Item = styled(Paper)({
   boxShadow: 'none',
@@ -32,12 +33,7 @@ export const DepartmentHeading = styled.h2`
   padding: 5px 0;
   margin: 0;
 `;
-export const TeamMembersWrapper = styled(Box)({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginTop: '16px',
-});
+
 export const ProfileWrapper = styled(Box)({
   marginBottom: '60px',
 });
@@ -60,3 +56,11 @@ export const ViewAll = styled('p')(
     },
   })
 );
+
+export const LoadMoreBtn = styled('div')({
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: '40px',
+});

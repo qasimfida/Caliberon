@@ -102,7 +102,7 @@ const Footer = () => {
             </StyledGrid>
             <StyledGrid item xs={12} md={4}>
               <Item>
-                <FooterItem title={'About'}>
+                <FooterItem title={'Contact'}>
                   <AddressWrapper>
                     <Address>Near Heli Chowk Zulfiqarabad Gilgit, 15100</Address>
                     <Contact>

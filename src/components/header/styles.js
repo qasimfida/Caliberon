@@ -3,24 +3,28 @@ import { Toolbar, AppBar } from '@mui/material';
 import { Box } from '@mui/system';
 import Button from '../Button';
 
-export const Navbar = styled(AppBar)(({ transparent }) => ({
-  height: '80px',
-  boxSizing: 'border-box',
-  justifyContent: 'center',
-  padding: '0',
-  boxShadow: transparent ? 'none' : ` rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px`,
-  transition: ' .5s ease',
-  background: transparent ? 'transparent' : '#fff',
-  zIndex: '999',
-  '.nav-links button': {
-    color: transparent ? '#fff' : 'black',
-    transition: '.4s ease-in-out',
-  },
-  '.h-100': {
-    height: '100%',
+export const Navbar = styled(AppBar)(({ scroll }) => {
+  const transparent = parseInt(scroll) < 100;
+  return {
+    height: '80px',
     boxSizing: 'border-box',
-  },
-}));
+    justifyContent: 'center',
+    paddingLeft: '0px !important',
+    paddingRight: '0px !important',
+    boxShadow: transparent ? 'none' : ` rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px`,
+    transition: ' .5s ease',
+    backgroundColor: transparent ? 'transparent' : '#fff',
+    zIndex: '999',
+    '.nav-links button': {
+      color: transparent ? '#fff' : 'black',
+      transition: '.4s ease-in-out',
+    },
+    '.h-100': {
+      height: '100%',
+      boxSizing: 'border-box',
+    },
+  };
+});
 
 export const LinksWrapper = styled(Box)({
   flexGrow: 1,

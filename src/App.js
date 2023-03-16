@@ -56,7 +56,7 @@ function App(props) {
         <Route path="/team/:name" element={<TeamPage />}></Route>
       </Routes>
       <ScrollTop trigger={scrollPosition > 700} handleClick={handleClick}>
-        <Fab size="small" sx={{}} aria-label="scroll back to top">
+        <Fab className="styled-fab" variant="outlined" color="primary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

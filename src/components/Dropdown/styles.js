@@ -4,11 +4,11 @@ import { FormControl, Select } from '@mui/material';
 const Control = styled(FormControl)({
   display: 'flex',
   width: '100%',
-  background: 'black',
+  background: '#11141b',
   color: '#fff',
 
   '& fieldset': {
-    borderColor: '#a9a6a6',
+    borderColor: '##11141b',
     borderRight: 'none',
     borderRadius: 'unset',
     width: '100% !important',
@@ -16,11 +16,11 @@ const Control = styled(FormControl)({
   '& .MuiInputBase-root': {
     '&:hover fieldset': {
       borderWidth: '1px',
-      borderColor: '#a9a6a6',
+      borderColor: '##11141b',
     },
     '&.Mui-focused fieldset': {
       borderWidth: '1px',
-      borderColor: '#a9a6a6',
+      borderColor: '##11141b',
     },
   },
   '& .MuiSelect-icon': {
@@ -29,7 +29,7 @@ const Control = styled(FormControl)({
   },
   '& svg': {
     fontSize: '32px',
-    color: '#000',
+    color: '#11141b',
   },
 });
 
@@ -39,8 +39,8 @@ export const StyledSelect = styled(Select)({
 export const DefaultValue = styled('p')({
   margin: '0',
   letterSpacing: '.9px',
-  fontWeight: '500',
   fontSize: '18px',
+  fontWeight: '400',
 });
 export const Item = styled('p')({
   margin: '0',

@@ -22,6 +22,7 @@ const Sort = ({ ...rest }) => {
           displayEmpty
           IconComponent={ExpandMoreTwoToneIcon}
           MenuProps={{
+            disableScrollLock: true,
             getContentAnchorEl: null,
             anchorOrigin: {
               vertical: 'bottom',

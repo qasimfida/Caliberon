@@ -19,6 +19,7 @@ const Dropdown = ({ ...rest }) => {
         IconComponent={ExpandMoreTwoToneIcon}
         sx={{ color: '#fff' }}
         MenuProps={{
+          disableScrollLock: true,
           getContentAnchorEl: null,
           anchorOrigin: {
             vertical: 'bottom',
