@@ -228,7 +228,7 @@ const HomePage = () => {
           <Container>
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <Heading className="sponsor_heading" alignLeft title={'clients.'} subTitle={'our team'} />
+                <Heading className="sponsor_heading" alignLeft title={'clients.'} subTitle={'our top'} />
               </Grid>
               <Grid container item xs={12} md={8} spacing={4}>
                 {sponsors.map((sponsor, id) => (

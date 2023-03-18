@@ -14,6 +14,7 @@ import {
   ContactButton,
   IconBorder,
   StyledSection,
+  ContactDetails,
 } from './styles';
 import SendIcon from '@mui/icons-material/Send';
 import { useLocation } from 'react-router-dom';
@@ -70,12 +71,12 @@ const ContactForm = () => {
           <Grid item xs={12} md={6}>
             <ContactWrapper>
               <Title variant="h4">Contact information</Title>
-              <SubTitle>Let's talk</SubTitle>
-              {contactDetails.map(({ label }, index) => (
-                <ContactItem key={`contact-${index}`}>
+              <ContactDetails>
+                <SubTitle>Let's talk</SubTitle>
+                {contactDetails.map(({ label }) => (
                   <Text title="details">{label}</Text>
-                </ContactItem>
-              ))}
+                ))}
+              </ContactDetails>
               <SubTitle>Meet us</SubTitle>
               {visit.map(({ label }, index) => (
                 <ContactItem key={`contact-${index}`}>

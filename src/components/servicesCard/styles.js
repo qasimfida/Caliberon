@@ -40,10 +40,14 @@ export const ServicesWrapper = styled('div')(({ active }) => ({
   alignItems: 'center',
   position: 'relative',
   boxShadow: active ? 'rgba(17, 17, 26, 0.1) 0px 0px 16px' : ' ',
-  transition: '0.3s all ease-in',
+  transition: '0.1s all ',
   padding: '30px 0',
   border: '1px solid #e5e5e5',
   cursor: 'pointer',
+  '&:hover': {
+    transform: 'scale(1.02)',
+    boxShadow: ' rgba(149, 157, 165, 0.2) 0px 8px 24px',
+  },
 }));
 
 export const Image = styled('img')({
@@ -68,7 +72,7 @@ export const DetailsSection = styled('div')(
     '& svg': {
       color: primary?.main,
       marginLeft: '.5rem',
-      transition: '0.3s all ease',
+      transition: '0.2s all ease',
     },
     '&:hover': {
       fontWeight: 'bold',

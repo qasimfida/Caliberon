@@ -8,7 +8,6 @@ export const ContactWrapper = styled('div')({
   display: 'flex',
   height: '100%',
   flexDirection: 'column',
-  justifyContent: 'space-between',
 });
 
 export const ContactMessage = styled(Typography)(
@@ -35,12 +34,13 @@ export const Text = styled(Typography)({
   fontWeight: 300,
   color: 'black',
   letterSpacing: '1px',
-  lineHeight: '1px',
+  marginTop: '22px',
 });
 export const SubTitle = styled(Typography)({
-  fontSize: '1rem',
+  fontSize: '1.1rem',
   fontWeight: 500,
   color: 'black',
+  marginTop: '26px',
 });
 export const ContactText = styled(Typography)(
   ({
@@ -120,6 +120,9 @@ export const ContactButton = styled(Button)({
   transition: '.4s all',
 });
 export const StyledSection = styled(Section)({});
+export const ContactDetails = styled('div')({
+  marginBottom: '20px',
+});
 export const ContactItem = styled(Box)(
   ({
     theme: {
@@ -142,6 +145,7 @@ export const ContactItem = styled(Box)(
 export const IconsWrapper = styled(Box)({
   display: 'flex',
   paddingRight: '3rem',
+  marginTop: '20px',
   '& svgs': {
     marginRight: '2rem',
     color: 'black',
@@ -165,11 +169,11 @@ export const IconBorder = styled(Box)(
     justifyContent: 'center',
     outline: 'none',
     alignItems: 'center',
-    margin: '1px 6px',
     padding: '8px',
     zIndex: '0',
     cursor: 'pointer',
     borderRadius: '50%',
+    marginRight: '10px',
     transition: '.5s all ease',
 
     '&:hover': {

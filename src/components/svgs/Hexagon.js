@@ -10,7 +10,7 @@ export const Hexagon = () => {
       fill="none"
       stroke="currentColor"
       strokeWidth="1"
-      strokeLlinecap="round"
+      strokellinecap="round"
       strokeLinejoin="round"
       className="feather feather-hexagon"
     >
