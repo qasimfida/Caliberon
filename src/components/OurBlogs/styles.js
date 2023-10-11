@@ -1,5 +1,6 @@
 import { styled } from '@mui/styles';
 import { Box } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled(Box)(
   ({
@@ -33,6 +34,31 @@ export const Information = styled(Box)(({ theme }) => ({
   display: 'flex',
   marginBottom: '20px',
 }));
+export const By = styled('h4')(
+  ({
+    theme: {
+      palette: { white },
+    },
+  }) => ({
+    textTransform: 'uppercase',
+    margin: '0',
+    fontWeight: '400',
+    fontSize: '15px',
+    marginRight: '25px',
+    color: white?.main,
+  })
+);
+export const Category = styled('a')(
+  ({
+    theme: {
+      palette: { primary },
+    },
+  }) => ({
+    textDecoration: 'none',
+    fontSize: '16px',
+    color: primary?.main,
+  })
+);
 export const Title = styled('h4')(
   ({
     theme: {
@@ -47,18 +73,7 @@ export const Title = styled('h4')(
     color: white?.main,
   })
 );
-export const SubTitle = styled('a')(
-  ({
-    theme: {
-      palette: { primary },
-    },
-  }) => ({
-    textDecoration: 'none',
-    fontSize: '16px',
-    color: primary?.main,
-  })
-);
-export const Details = styled('p')(({ theme }) => ({
+export const Description = styled('p')(({ theme }) => ({
   fontWeight: '200',
   fontSize: '17px',
   color: '#d5d5d5',
@@ -96,9 +111,10 @@ export const Month = styled('p')({
   color: 'black',
 });
 
-export const ButtonWrapper = styled(Box)(({ theme }) => ({
+export const ButtonWrapper = styled(Link)(({ theme }) => ({
   padding: '10px',
   marginBottom: '12px',
+  textDecoration: 'none',
 }));
 
 export default Wrapper;

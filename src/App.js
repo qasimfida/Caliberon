@@ -16,6 +16,7 @@ import Services from './pages/services';
 import ServicePage from './pages/servicePage';
 import AllTeams from './pages/allTeam';
 import TeamPage from './pages/teamPage';
+import SingleBlog from './pages/singleBlog';
 import useOnScroll from './customHooks/useOnScroll';
 
 function ScrollTop(props) {
@@ -52,8 +53,9 @@ function App(props) {
         <Route path="/home/contact/:name" element={<PersonalProfile />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/services/:name" element={<ServicePage />}></Route>
-        <Route path="/team" element={<AllTeams />}></Route>
+        <Route path="/team" element={<AllTeams />} />
         <Route path="/team/:name" element={<TeamPage />}></Route>
+        <Route path="/blogs/:name" element={<SingleBlog />}></Route>
       </Routes>
       <ScrollTop trigger={scrollPosition > 700} handleClick={handleClick}>
         <Fab className="styled-fab" variant="outlined" color="primary" size="small" aria-label="scroll back to top">

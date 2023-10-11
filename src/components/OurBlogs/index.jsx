@@ -4,17 +4,18 @@ import Wrapper, {
   Img,
   Information,
   TextWrapper,
-  Title,
-  SubTitle,
-  Details,
+  By,
+  Category,
+  Description,
   ButtonWrapper,
   Badge,
   BadgeWrapper,
   Date,
   Month,
+  Title,
 } from './styles';
 
-const OurBlogs = ({ profile, title, subTitle, details, date, month, btnValue, ...rest }) => {
+const OurBlogs = ({ profile, title, by, category, description, date, month, ...rest }) => {
   return (
     <Wrapper {...rest}>
       <Img>
@@ -22,10 +23,11 @@ const OurBlogs = ({ profile, title, subTitle, details, date, month, btnValue, ..
       </Img>
       <TextWrapper>
         <Information>
-          <Title>{title}</Title>
-          <SubTitle>{subTitle}</SubTitle>
+          <By>{by}</By>
+          <Category>{category}</Category>
         </Information>
-        <Details>{details}</Details>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
         <BadgeWrapper>
           <Badge>
             <Date>{date}</Date>
@@ -33,8 +35,8 @@ const OurBlogs = ({ profile, title, subTitle, details, date, month, btnValue, ..
           </Badge>
         </BadgeWrapper>
       </TextWrapper>
-      <ButtonWrapper>
-        <Button variant="dark-version">{btnValue}</Button>
+      <ButtonWrapper to={`/blogs/${title.toLowerCase().split(' ').join('-')}`}>
+        <Button>Read More</Button>
       </ButtonWrapper>
     </Wrapper>
   );

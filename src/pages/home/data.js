@@ -21,41 +21,34 @@ import About3 from '../../assets/images/about3.jpg';
 import User3 from '../../assets/images/user-c.jpg';
 export const services = [
   {
+    title: '1',
     name: 'Ideate',
     img: Ideate,
     serviceDetails: 'We help you develop creative ideas,We can grow.',
   },
+  { title: '2', name: 'Business Growth', img: Business, serviceDetails: 'We can grow your business,We help you.' },
   {
-    name: 'Business Growth',
-    img: Business,
-    serviceDetails: 'We can grow your business,We help you.',
-  },
-  {
+    title: '1',
     name: 'Digital Marketing',
     img: Marketing,
     serviceDetails: 'market your products online,We can grow your.',
   },
   {
+    title: '1',
     name: 'Project Creation',
     img: RealState,
     serviceDetails: 'market your products online,We help you develop',
   },
   {
+    title: '1',
     name: 'Marketing Strategy',
     img: Strategy,
     serviceDetails: 'We help you develop creative ideas,We can grow.',
   },
+  { title: '1', name: 'Social Activity', img: Social, serviceDetails: 'We can grow your business,We help you.' },
+  { title: '1', name: 'Cloud Service', img: Cloud, serviceDetails: 'market your products online,We can grow your.' },
   {
-    name: 'Social Activity',
-    img: Social,
-    serviceDetails: 'We can grow your business,We help you.',
-  },
-  {
-    name: 'Cloud Service',
-    img: Cloud,
-    serviceDetails: 'market your products online,We can grow your.',
-  },
-  {
+    title: '1',
     name: 'Collaboration',
     img: Collabration,
     serviceDetails: 'market your products online,We help you develop.',
@@ -63,6 +56,7 @@ export const services = [
 ];
 export const testimonialsData = [
   {
+    title: '1',
     authorName: 'Ronald Richards',
     authorDetails: 'Co-Foundar,Calibreon',
     comment:
@@ -122,30 +116,30 @@ export const sponsors = [
 export const blogDatas = [
   {
     img: BlogA,
-    title: 'by / Admin',
-    subTitle: 'WordPress',
-    details: 'The Start-Up Ultimate Guide to Make Your WordPress Journal.',
+    title: 'The Importance of Education',
+    by: 'by / Admin',
+    category: 'WordPress',
+    description: 'The Start-Up Ultimate Guide to Make Your WordPress Journal.',
     date: '07',
     month: 'Aug',
-    button: 'Read More',
   },
   {
     img: BlogB,
-    title: 'by / Admin',
-    subTitle: 'Book Keeping',
-    details: 'The Start-Up Ultimate Guide to Make Your WordPress Journal.',
+    title: 'Challenges in Education',
+    by: 'by / Admin',
+    category: 'Book Keeping',
+    description: 'The Start-Up Ultimate Guide to Make Your WordPress Journal.',
     date: '16',
     month: 'Aug',
-    button: 'Read More',
   },
   {
     img: BlogC,
-    title: 'by / Admin',
-    subTitle: 'Frontend',
-    details: 'The Start-Up Ultimate Guide to Make Your WordPress Journal.',
+    title: 'Lifelong Learning',
+    by: 'by / Admin',
+    category: 'Frontend',
+    description: 'The Start-Up Ultimate Guide to Make Your WordPress Journal.',
     date: '29',
     month: 'Aug',
-    button: 'Read More',
   },
 ];
 export const aboutUsData = {

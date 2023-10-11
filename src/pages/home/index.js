@@ -40,6 +40,7 @@ const HomePage = () => {
   const ClickServices = () => {
     navigate('/services');
   };
+
   const ClickTeam = () => {
     navigate('/allTeam');
   };
@@ -124,7 +125,7 @@ const HomePage = () => {
           </Grid>
           <SeeMore>
             <MoreButton size="lg" variant="outlined" color="primary" onClick={ClickServices}>
-              for more
+              for more1
               <ArrowRight />
             </MoreButton>
           </SeeMore>
@@ -212,11 +213,11 @@ const HomePage = () => {
                   key={id}
                   profile={item.img}
                   title={item.title}
-                  subTitle={item.subTitle}
-                  details={item.details}
+                  by={item.by}
+                  category={item.category}
+                  description={item.description}
                   date={item.date}
                   month={item.month}
-                  btnValue={item.button}
                 />
               </Grid>
             ))}
